@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import servicesBg from '@/assets/images/services/services.png';
+import servicesBg from '@/assets/images/services/services.webp';
 
 const features = [
     {
@@ -41,8 +41,8 @@ const features = [
 ];
 
 // Cards strictly on LEFT and RIGHT sides of the circle
-// Left: 150°, 180°, 210° — Right: 330°, 0°, 30°
-const cardAngles = [150, 180, 210, 330, 0, 30];
+const desktopAngles = [150, 180, 210, 330, 0, 30];
+const mobileAngles = [120, 180, 240, 300, 0, 60];
 
 const Features = () => {
     const sectionRef = useRef(null);
@@ -91,33 +91,36 @@ const Features = () => {
         };
     }, []);
 
-    const radius = isMobile ? 100 : 280;
+    const radius = isMobile ? 85 : 280;
     const centerX = isMobile ? 150 : 380;
-    const centerY = isMobile ? 110 : 280;
+    const centerY = isMobile ? 100 : 280;
     
     const containerW = isMobile ? 300 : 760;
-    const containerH = isMobile ? 220 : 560;
+    const containerH = isMobile ? 190 : 560;
 
     return (
-        <section ref={sectionRef} className="relative w-full overflow-hidden">
+        <section ref={sectionRef} className="relative w-full overflow-hidden bg-white">
             
             {/* Background Image — parallax, no fade */}
             <img 
                 ref={imgRef}
                 src={servicesBg} 
                 alt="" 
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
                 style={{ transform: 'translateY(0) scale(1.1)' }}
             />
+            {/* Very little bit white fade overlay */}
+            <div className="absolute inset-0 bg-white/20 z-0 pointer-events-none"></div>
 
             {/* Content Layer */}
             <div className="relative z-10 pt-[50px] pb-[60px] min-[820px]:pt-[60px] min-[820px]:pb-[80px]">
                 
                 {/* Header — at the very top, bold and big */}
                 <div className="relative z-10 px-[20px] min-[820px]:px-[60px] max-w-[1200px] mx-auto mb-[20px] min-[820px]:mb-[10px]">
-                    <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-white tracking-[-1px]">
+                    <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                         Headstart Programs<br />
-                        <span className="text-white/80 font-medium">unlock your potential!</span>
+                        <span className="text-primary font-medium">unlock your potential!</span>
                     </h2>
                 </div>
 
@@ -156,7 +159,7 @@ const Features = () => {
                         >
                             {/* The visible light circle border */}
                             <div 
-                                className="absolute rounded-full border border-white/20"
+                                className="absolute rounded-full border border-primary/20"
                                 style={{
                                     width: `${radius * 2}px`,
                                     height: `${radius * 2}px`,
@@ -168,7 +171,7 @@ const Features = () => {
 
                             {/* Cards positioned along left and right arcs only */}
                             {features.map((f, i) => {
-                                const angleDeg = cardAngles[i];
+                                const angleDeg = isMobile ? mobileAngles[i] : desktopAngles[i];
                                 const angleRad = (angleDeg * Math.PI) / 180;
                                 const x = centerX + radius * Math.cos(angleRad);
                                 const y = centerY + radius * Math.sin(angleRad);
@@ -177,7 +180,7 @@ const Features = () => {
                                     <div
                                         key={i}
                                         ref={el => cardsRef.current[i] = el}
-                                        className={`absolute bg-white transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(88,51,94,0.25)] group cursor-pointer flex items-center shadow-[0_4px_20px_rgba(88,51,94,0.15)] ${
+                                        className={`absolute bg-white transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(147,51,234,0.25)] group cursor-pointer flex items-center shadow-[0_4px_20px_rgba(147,51,234,0.15)] ${
                                             isMobile 
                                                 ? "rounded-[10px] p-[8px] pr-[12px] gap-[8px] w-[140px]" 
                                                 : "rounded-[14px] p-[16px] gap-[12px] w-[210px]"
@@ -189,12 +192,12 @@ const Features = () => {
                                             willChange: 'transform'
                                         }}
                                     >
-                                        <div className={`bg-[#9333ea] flex items-center justify-center flex-none transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 ${
+                                        <div className={`bg-primary flex items-center justify-center flex-none transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 ${
                                             isMobile ? "w-[28px] h-[28px] rounded-[6px]" : "w-[40px] h-[40px] rounded-[10px]"
                                         }`}>
                                             {React.cloneElement(f.icon, { className: isMobile ? 'w-[14px] h-[14px] fill-none stroke-white stroke-[1.8]' : 'w-[20px] h-[20px] fill-none stroke-white stroke-[1.8]' })}
                                         </div>
-                                        <span className={`font-quicksand font-semibold leading-[1.35] text-[#161616] ${
+                                        <span className={`font-semibold leading-[1.35] text-[#161616] ${
                                             isMobile ? "text-[10px]" : "text-[13px]"
                                         }`}>{f.title}</span>
                                     </div>
@@ -205,6 +208,12 @@ const Features = () => {
                 </div>
 
             </div>
+
+            {/* Top Gradient Fade from Hero */}
+            <div className="absolute top-0 left-0 right-0 h-[120px] bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
+            
+            {/* Bottom Gradient Fade to ServiceCards */}
+            <div className="absolute bottom-0 left-0 right-0 h-[120px] bg-gradient-to-t from-[#faf8fb] to-transparent z-10 pointer-events-none"></div>
         </section>
     );
 };

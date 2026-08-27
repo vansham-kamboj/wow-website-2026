@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // Layout
@@ -6,53 +6,56 @@ import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
 
 // Pages
-import Home from '@/pages/Home';
-import AboutUs from '@/pages/AboutUs';
-import Contact from '@/pages/Contact';
+const Home = lazy(() => import('@/pages/Home'));
+const AboutUs = lazy(() => import('@/pages/AboutUs'));
+const Contact = lazy(() => import('@/pages/Contact'));
 
 // Services
-import ServicesLanding from '@/pages/services/ServicesLanding';
-import ApplicationProcess from '@/pages/services/ApplicationProcess';
-import FinancialAid from '@/pages/services/FinancialAid';
-import VisaAssessment from '@/pages/services/VisaAssessment';
-import InterviewPreparation from '@/pages/services/InterviewPreparation';
-import AirTicket from '@/pages/services/AirTicket';
-import PostVisaServices from '@/pages/services/PostVisaServices';
+const ServicesLanding = lazy(() => import('@/pages/services/ServicesLanding'));
+const FreeCounselling = lazy(() => import('@/pages/services/FreeCounselling'));
+const ApplicationProcess = lazy(() => import('@/pages/services/ApplicationProcess'));
+const FinancialAid = lazy(() => import('@/pages/services/FinancialAid'));
+const VisaAssessment = lazy(() => import('@/pages/services/VisaAssessment'));
+const InterviewPreparation = lazy(() => import('@/pages/services/InterviewPreparation'));
+const AirTicket = lazy(() => import('@/pages/services/AirTicket'));
+const PostVisaServices = lazy(() => import('@/pages/services/PostVisaServices'));
 
 // Coaching
-import CoachingLanding from '@/pages/coaching/CoachingLanding';
-import IELTS from '@/pages/coaching/IELTS';
-import GRE from '@/pages/coaching/GRE';
-import PTE from '@/pages/coaching/PTE';
-import Duolingo from '@/pages/coaching/Duolingo';
-import SAT from '@/pages/coaching/SAT';
-import TOEFL from '@/pages/coaching/TOEFL';
+const CoachingLanding = lazy(() => import('@/pages/coaching/CoachingLanding'));
+const IELTS = lazy(() => import('@/pages/coaching/IELTS'));
+const GRE = lazy(() => import('@/pages/coaching/GRE'));
+const PTE = lazy(() => import('@/pages/coaching/PTE'));
+const Duolingo = lazy(() => import('@/pages/coaching/Duolingo'));
+const SAT = lazy(() => import('@/pages/coaching/SAT'));
+const TOEFL = lazy(() => import('@/pages/coaching/TOEFL'));
 
 // Countries
-import CountryLanding from '@/pages/country/CountryLanding';
-import USA from '@/pages/country/USA';
-import Canada from '@/pages/country/Canada';
-import UK from '@/pages/country/UK';
-import Australia from '@/pages/country/Australia';
-import NewZealand from '@/pages/country/NewZealand';
-import Germany from '@/pages/country/Germany';
+const CountryLanding = lazy(() => import('@/pages/country/CountryLanding'));
+const USA = lazy(() => import('@/pages/country/USA'));
+const Canada = lazy(() => import('@/pages/country/Canada'));
+const UK = lazy(() => import('@/pages/country/UK'));
+const Australia = lazy(() => import('@/pages/country/Australia'));
+const NewZealand = lazy(() => import('@/pages/country/NewZealand'));
+const Germany = lazy(() => import('@/pages/country/Germany'));
 
 // Blogs
-import BlogList from '@/pages/blogs/BlogList';
-import BlogDetail from '@/pages/blogs/BlogDetail';
+const BlogList = lazy(() => import('@/pages/blogs/BlogList'));
+const BlogDetail = lazy(() => import('@/pages/blogs/BlogDetail'));
 
 const AppRoutes = () => {
     return (
         <div className="relative z-0 min-h-screen flex flex-col">
             <Header />
             <main className="flex-grow">
-                <Routes>
+                                <Suspense fallback={<div className="flex h-[50vh] w-full items-center justify-center text-primary font-bold">Loading...</div>}>
+                    <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about-us" element={<AboutUs />} />
                     <Route path="/contact" element={<Contact />} />
 
                     {/* Services Routes */}
                     <Route path="/services" element={<ServicesLanding />} />
+                    <Route path="/services/free-counselling" element={<FreeCounselling />} />
                     <Route path="/services/application-process" element={<ApplicationProcess />} />
                     <Route path="/services/financial-aid" element={<FinancialAid />} />
                     <Route path="/services/visa-assessment" element={<VisaAssessment />} />
@@ -81,7 +84,8 @@ const AppRoutes = () => {
                     {/* Blogs Routes */}
                     <Route path="/blogs" element={<BlogList />} />
                     <Route path="/blogs/:slug" element={<BlogDetail />} />
-                </Routes>
+                                    </Routes>
+                </Suspense>
             </main>
             <Footer />
         </div>

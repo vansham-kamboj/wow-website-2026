@@ -17,8 +17,8 @@ const Home = () => {
             <Features />
             <ServiceCards />
             <Countries />
-            <StudentReviews />
             <WhyChooseUs />
+            <StudentReviews />
             <FAQ />
         </>
     );

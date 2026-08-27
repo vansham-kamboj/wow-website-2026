@@ -1,18 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
-import footerBg from '@/assets/images/footer img.png';
-import { FiCheckCircle, FiAward, FiGlobe, FiUsers, FiTrendingUp, FiShield } from 'react-icons/fi';
+import footerBg from '@/assets/images/footer_img.webp';
+import { CheckCircle, Award, Globe, Users, TrendingUp, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Card from '@/components/common/Card';
 
 const featuresData = [
     // Outer Arch (4 cards) - ring: 'outer'
-    { icon: <FiTrendingUp />, title: "Zero Rejection Risk", angle: 145, ring: 'outer' },
-    { icon: <FiAward />, title: "Certified Visa Experts", angle: 215, ring: 'outer' },
-    { icon: <FiGlobe />, title: "Flawless Documentation", angle: 325, ring: 'outer' },
-    { icon: <FiCheckCircle />, title: "100% Transparent Pricing", angle: 35, ring: 'outer' },
+    { icon: <TrendingUp />, title: "Zero Rejections", angle: 145, ring: 'outer' },
+    { icon: <Award />, title: "Certified Experts", angle: 215, ring: 'outer' },
+    { icon: <Globe />, title: "Perfect Docs", angle: 325, ring: 'outer' },
+    { icon: <CheckCircle />, title: "Transparent Fees", angle: 35, ring: 'outer' },
     
     // Inner Arch (2 cards) - ring: 'inner'
-    { icon: <FiUsers />, title: "Faster Processing Time", angle: 200, ring: 'inner' },
-    { icon: <FiShield />, title: "Free Qualification Check", angle: 340, ring: 'inner' }
+    { icon: <Users />, title: "Fast Processing", angle: 200, ring: 'inner' },
+    { icon: <Shield />, title: "Free Check", angle: 340, ring: 'inner' }
 ];
 
 const WhyChooseUs = () => {
@@ -72,16 +73,19 @@ const WhyChooseUs = () => {
     const centerY = containerH / 2;
 
     return (
-        <section ref={sectionRef} className="relative w-full overflow-hidden">
+        <section ref={sectionRef} className="relative w-full overflow-hidden bg-[#faf8fb]">
             
             {/* Background Image — parallax with NO fade/overlay */}
             <img 
                 ref={imgRef}
                 src={footerBg} 
                 alt="" 
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
                 style={{ transform: 'translateY(0) scale(1.1)' }}
             />
+            {/* Very little bit white fade overlay */}
+            <div className="absolute inset-0 bg-white/20 z-0 pointer-events-none"></div>
 
             {/* Content Layer */}
             <div className="relative z-10 py-[40px] min-[1100px]:py-[40px] px-[20px] min-[820px]:px-[60px] max-w-[1400px] mx-auto flex flex-col min-[1100px]:flex-row items-center justify-between gap-[40px] min-[1100px]:gap-[20px]">
@@ -90,7 +94,7 @@ const WhyChooseUs = () => {
                 <div className="w-full min-[1100px]:w-[35%] text-left z-20">
                     <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                         Why Choose Us<br />
-                        <span className="text-[#9333ea] font-medium">your trusted education partner!</span>
+                        <span className="text-primary font-medium">your trusted education partner!</span>
                     </h2>
                     <p className="text-[16px] text-[#555] mt-[24px] leading-[1.6]">
                         We don't just process applications; we craft success stories. Our team of certified experts ensures your journey is smooth, transparent, and built for approval.
@@ -140,7 +144,7 @@ const WhyChooseUs = () => {
                         >
                             {/* Outer circle border */}
                             <div 
-                                className="absolute rounded-full border-[1.5px] border-[#9333ea]/20"
+                                className="absolute rounded-full border-[1.5px] border-primary/20"
                                 style={{
                                     width: `${outerRadius * 2}px`,
                                     height: `${outerRadius * 2}px`,
@@ -152,7 +156,7 @@ const WhyChooseUs = () => {
 
                             {/* Inner circle border */}
                             <div 
-                                className="absolute rounded-full border-[1.5px] border-[#9333ea]/30"
+                                className="absolute rounded-full border-[1.5px] border-primary/30"
                                 style={{
                                     width: `${innerRadius * 2}px`,
                                     height: `${innerRadius * 2}px`,
@@ -170,13 +174,14 @@ const WhyChooseUs = () => {
                                 const y = centerY + radius * Math.sin(angleRad);
 
                                 return (
-                                    <div
+                                    <Card
                                         key={i}
                                         ref={el => cardsRef.current[i] = el}
-                                        className={`absolute bg-white flex items-center shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-[#f0eaf2] will-change-transform transition-all duration-300 hover:scale-[1.03] cursor-pointer z-10 group ${
+                                        hoverEffect={false}
+                                        className={`!absolute flex items-center will-change-transform hover:scale-[1.03] cursor-pointer z-10 group ${
                                             isMobile 
-                                                ? "rounded-[10px] p-[8px] pr-[12px] gap-[8px] w-[150px]" 
-                                                : "rounded-[14px] p-[14px] gap-[12px] w-[260px]"
+                                                ? "rounded-[10px] !p-[8px] !pr-[12px] gap-[8px] w-[150px]" 
+                                                : "rounded-[14px] !p-[14px] gap-[12px] w-[260px]"
                                         }`}
                                         style={{
                                             left: `${x}px`,
@@ -184,15 +189,15 @@ const WhyChooseUs = () => {
                                             transform: 'translate(-50%, -50%)'
                                         }}
                                     >
-                                        <div className={`bg-[#9333ea] flex items-center justify-center flex-none transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 ${
+                                        <div className={`bg-primary flex items-center justify-center flex-none transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 ${
                                             isMobile ? "w-[26px] h-[26px] rounded-[6px]" : "w-[36px] h-[36px] rounded-[8px]"
                                         }`}>
                                             {React.cloneElement(f.icon, { className: isMobile ? 'w-[14px] h-[14px] text-white' : 'w-[18px] h-[18px] text-white' })}
                                         </div>
-                                        <span className={`font-quicksand font-bold text-[#161616] ${
+                                        <span className={`font-bold text-[#161616] ${
                                             isMobile ? "text-[10px] leading-[1.2]" : "text-[13px] leading-[1.35]"
                                         }`}>{f.title}</span>
-                                    </div>
+                                    </Card>
                                 );
                             })}
 
@@ -205,7 +210,7 @@ const WhyChooseUs = () => {
                                     transform: 'translate(-50%, -50%)'
                                 }}
                             >
-                                <Button variant="custom" className={`bg-[#9333ea] hover:bg-[#7e22ce] text-white transition-all duration-300 shadow-md hover:shadow-lg h-auto font-quicksand font-bold ${
+                                <Button variant="custom" className={`bg-primary hover:bg-primary-hover text-white transition-all duration-300 shadow-md hover:shadow-lg h-auto font-bold ${
                                     isMobile ? "px-[16px] py-[10px] rounded-[6px] text-[12px]" : "px-[32px] py-[14px] rounded-[8px] text-[15px]"
                                 }`}>
                                     Get Free Consulting
@@ -216,6 +221,9 @@ const WhyChooseUs = () => {
                 </div>
 
             </div>
+
+            {/* Bottom Gradient Fade for Section Bridging */}
+            <div className="absolute bottom-0 left-0 right-0 h-[100px] bg-gradient-to-t from-[#f8f5fa] to-transparent z-10 pointer-events-none"></div>
         </section>
     );
 };

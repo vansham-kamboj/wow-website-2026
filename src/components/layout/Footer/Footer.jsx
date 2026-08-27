@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Mail, Phone, ArrowUp } from 'lucide-react';
 import './Footer.css';
 import logoImg from '@/assets/images/logo.png';
 
@@ -19,30 +21,30 @@ const Footer = () => {
               top: '-600px',
               right: '-400px',
               borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(192,38,211,0.25) 0%, rgba(192,38,211,0.15) 40%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(147,51,234,0.15) 0%, rgba(147,51,234,0.08) 40%, transparent 70%)',
           }}
       ></div>
 
       <div className="relative z-10">
         <div className="footer-contact-row-gray">
           <div className="footer-contact-item-gray">
-            <i className="fas fa-envelope" />
+            <Mail size={18} />
             <a href="mailto:Brd.wowemeralds@gmail.com">Brd.wowemeralds@gmail.com</a>
           </div>
           <div className="footer-contact-item-gray">
-            <i className="fas fa-phone" />
+            <Phone size={18} />
             <a href="tel:+919925944556">+91 9925944556</a>
           </div>
           <div className="footer-contact-item-gray">
-            <i className="fas fa-phone" />
+            <Phone size={18} />
             <a href="tel:+919924944556">+91 9924944556</a>
           </div>
           <div className="social-icons-gray">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin-in" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
           </div>
         </div>
@@ -67,37 +69,37 @@ const Footer = () => {
           <div className="footer-column-gray">
             <h3>Services</h3>
             <ul>
-              <li>Free Counselling</li>
-              <li>Application Process</li>
-              <li>Financial Aid</li>
-              <li>Visa Assessment</li>
-              <li>Interview Preparation</li>
-              <li>Air Ticket</li>
-              <li>Post Visa Services</li>
+              <li><Link to="/services/free-counselling">Free Counselling</Link></li>
+              <li><Link to="/services/application-process">Application Process</Link></li>
+              <li><Link to="/services/financial-aid">Financial Aid</Link></li>
+              <li><Link to="/services/visa-assessment">Visa Assessment</Link></li>
+              <li><Link to="/services/interview-preparation">Interview Preparation</Link></li>
+              <li><Link to="/services/air-ticket">Air Ticket</Link></li>
+              <li><Link to="/services/post-visa-services">Post Visa Services</Link></li>
             </ul>
           </div>
 
           <div className="footer-column-gray">
             <h3>Coaching</h3>
             <ul>
-              <li>IELTS Academic / General</li>
-              <li>GRE</li>
-              <li>PTE</li>
-              <li>Duolingo English Test</li>
-              <li>SAT</li>
-              <li>TOEFL - IBT</li>
+              <li><Link to="/coaching/ielts">IELTS Academic / General</Link></li>
+              <li><Link to="/coaching/gre">GRE</Link></li>
+              <li><Link to="/coaching/pte">PTE</Link></li>
+              <li><Link to="/coaching/duolingo">Duolingo English Test</Link></li>
+              <li><Link to="/coaching/sat">SAT</Link></li>
+              <li><Link to="/coaching/toefl-ibt">TOEFL - IBT</Link></li>
             </ul>
           </div>
 
           <div className="footer-column-gray">
             <h3>Countries</h3>
             <ul>
-              <li>USA</li>
-              <li>CANADA</li>
-              <li>UK</li>
-              <li>Australia</li>
-              <li>New Zealand</li>
-              <li>Germany</li>
+              <li><Link to="/study-in/usa">USA</Link></li>
+              <li><Link to="/study-in/canada">Canada</Link></li>
+              <li><Link to="/study-in/uk">UK</Link></li>
+              <li><Link to="/study-in/australia">Australia</Link></li>
+              <li><Link to="/study-in/new-zealand">New Zealand</Link></li>
+              <li><Link to="/study-in/germany">Germany</Link></li>
             </ul>
           </div>
         </div>
@@ -105,7 +107,7 @@ const Footer = () => {
         <div className="footer-bottom-gray">
           <p>© 2025 Wow Global Studies. All Rights Reserved.</p>
           <button className="scroll-to-top-gray" onClick={scrollToTop}>
-            <i className="fas fa-arrow-up"></i>
+            <ArrowUp size={20} />
           </button>
         </div>
       </div>

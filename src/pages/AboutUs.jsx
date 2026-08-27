@@ -1,8 +1,11 @@
 import React from 'react';
+import SEO from '@/components/common/SEO';
 import './AboutUs.css';
 
 const About = () => {
   return (
+        <>
+            <SEO title="About - Wow Global Studies" />
     <section className="about-section">
       <div className="about-container">
 
@@ -56,7 +59,8 @@ const About = () => {
 
       </div>
     </section>
-  );
+  
+        </>);
 };
 
 export default About;

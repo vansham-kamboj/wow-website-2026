@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 @import "./variables.css";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -91,7 +91,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #58335e;
+  color: #9333ea;
 }
 
 body {
@@ -121,14 +121,14 @@ h1 {
     background-color: #ffffff;
   }
   a:hover {
-    color: #58335e;
+    color: #9333ea;
   }
 }
 
 /* --- CUSTOM SNIPPET UTILITIES --- */
 
 /* Quicksand font utility */
-.font-quicksand {
+.{
   font-family: 'Quicksand', Arial, sans-serif;
 }
 
@@ -141,7 +141,7 @@ h1 {
   width: 10px;
   height: 10px;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #58335e;
+  background: #9333ea;
   clip-path: polygon(50% 0%, 63% 37%, 100% 50%, 63% 63%, 50% 100%, 37% 63%, 0% 50%, 37% 37%);
 }
 @media (max-width: 820px) {
@@ -198,7 +198,8 @@ h1 {
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
+  --color-primary: #9333ea;
+  --color-primary-hover: #7e22ce;
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);

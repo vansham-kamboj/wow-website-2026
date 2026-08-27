@@ -28,14 +28,14 @@ const StudentReviews = () => {
     };
 
     return (
-        <section className="py-[80px] min-[820px]:py-[120px] px-[20px] min-[820px]:px-[60px] bg-white overflow-hidden">
+        <section className="py-[80px] min-[820px]:py-[120px] px-[20px] min-[820px]:px-[60px] bg-white">
             <div className="max-w-[1200px] mx-auto flex flex-col min-[820px]:flex-row gap-[50px] min-[820px]:gap-[80px] items-start">
                 
                 {/* Left Side — Heading (40%) */}
                 <div className="w-full min-[820px]:w-[40%] min-[820px]:sticky min-[820px]:top-[120px]">
                     <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
                         What Our Students Say<br />
-                        <span className="text-[#9333ea] font-medium">real stories from our community!</span>
+                        <span className="text-primary font-medium">real stories from our community!</span>
                     </h2>
                     
                     {/* Navigation dots */}
@@ -48,8 +48,8 @@ const StudentReviews = () => {
                                     onClick={() => setActiveIndex(i)}
                                     className={`rounded-full transition-all duration-300 ${
                                         i === activeIndex
-                                            ? 'w-[32px] h-[8px] bg-[#9333ea]'
-                                            : 'w-[8px] h-[8px] bg-[#e8dced] hover:bg-[#9333ea]/40'
+                                            ? 'w-[32px] h-[8px] bg-primary'
+                                            : 'w-[8px] h-[8px] bg-[#e8dced] hover:bg-primary/40'
                                     }`}
                                 />
                             ))}
@@ -64,8 +64,9 @@ const StudentReviews = () => {
                         if (diff < 0) diff += testimonials.length;
 
                         const isVisible = diff < 3;
-                        const translateY = diff * 16; // Kept consistent with desktop for visible stack
-                        const scale = 1 - diff * 0.05; // Slightly more scale down for clear stack
+                        const isMobile = window.innerWidth < 820;
+                        const translateY = isMobile ? diff * 24 : diff * 16;
+                        const scale = 1 - diff * 0.05;
                         const opacity = diff === 0 ? 1 : diff === 1 ? 0.7 : diff === 2 ? 0.4 : 0;
                         const zIndex = 10 - diff;
 
@@ -84,7 +85,7 @@ const StudentReviews = () => {
                                 <div className="bg-white rounded-[20px] p-[30px] min-[820px]:p-[48px] shadow-[0_8px_40px_rgba(147,51,234,0.08)] border border-[#f0eaf2]">
                                     
                                     {/* Quote mark */}
-                                    <div className="font-serif text-[48px] min-[820px]:text-[64px] leading-[1] text-[#9333ea]/15 mb-[5px] min-[820px]:mb-[10px]">
+                                    <div className="font-serif text-[48px] min-[820px]:text-[64px] leading-[1] text-primary/15 mb-[5px] min-[820px]:mb-[10px]">
                                         &ldquo;
                                     </div>
 
@@ -94,10 +95,10 @@ const StudentReviews = () => {
 
                                     <div className="flex flex-col min-[820px]:flex-row items-start min-[820px]:items-center justify-between gap-[10px] min-[820px]:gap-0">
                                         <div>
-                                            <div className="font-quicksand font-bold text-[15px] min-[820px]:text-[16px] text-[#161616]">{t.name}</div>
+                                            <div className="font-bold text-[15px] min-[820px]:text-[16px] text-[#161616]">{t.name}</div>
                                             <div className="text-[12px] min-[820px]:text-[13px] text-[#767676] mt-[2px]">{t.since}</div>
                                         </div>
-                                        <div className="text-[12px] min-[820px]:text-[14px] font-medium text-[#9333ea] bg-[#f8f5fa] px-[12px] min-[820px]:px-[16px] py-[4px] min-[820px]:py-[6px] rounded-[6px]">
+                                        <div className="text-[12px] min-[820px]:text-[14px] font-medium text-primary bg-[#f8f5fa] px-[12px] min-[820px]:px-[16px] py-[4px] min-[820px]:py-[6px] rounded-[6px]">
                                             {t.country}
                                         </div>
                                     </div>
@@ -107,18 +108,18 @@ const StudentReviews = () => {
                     })}
 
                     {/* Navigation Buttons for Mobile and Desktop */}
-                    <div className="absolute -bottom-[10px] min-[820px]:top-1/2 left-0 right-0 min-[820px]:-translate-y-1/2 z-20 flex justify-between px-[10px] min-[820px]:px-0 min-[820px]:w-[calc(100%+40px)] min-[820px]:left-[-20px] pointer-events-none">
+                    <div className="absolute -bottom-[40px] min-[820px]:top-1/2 left-0 right-0 min-[820px]:-translate-y-1/2 z-20 flex justify-between px-[10px] min-[820px]:px-0 min-[820px]:w-[calc(100%+40px)] min-[820px]:left-[-20px] pointer-events-none">
                         
                         <button 
                             onClick={handlePrev}
-                            className="pointer-events-auto flex items-center justify-center w-[40px] h-[40px] min-[820px]:w-[48px] min-[820px]:h-[48px] rounded-[8px] border border-[#e8dced] bg-white text-[#9333ea] hover:bg-[#9333ea] hover:text-white hover:border-[#9333ea] transition-all duration-300 shadow-md"
+                            className="pointer-events-auto flex items-center justify-center w-[40px] h-[40px] min-[820px]:w-[48px] min-[820px]:h-[48px] rounded-[8px] border border-[#e8dced] bg-white text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-md"
                         >
                             <svg viewBox="0 0 24 24" className="w-[20px] h-[20px] min-[820px]:w-[24px] min-[820px]:h-[24px] fill-none stroke-current stroke-[2]"><path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </button>
 
                         <button 
                             onClick={handleNext}
-                            className="pointer-events-auto flex items-center justify-center w-[40px] h-[40px] min-[820px]:w-[48px] min-[820px]:h-[48px] rounded-[8px] border border-[#e8dced] bg-white text-[#9333ea] hover:bg-[#9333ea] hover:text-white hover:border-[#9333ea] transition-all duration-300 shadow-md"
+                            className="pointer-events-auto flex items-center justify-center w-[40px] h-[40px] min-[820px]:w-[48px] min-[820px]:h-[48px] rounded-[8px] border border-[#e8dced] bg-white text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-md"
                         >
                             <svg viewBox="0 0 24 24" className="w-[20px] h-[20px] min-[820px]:w-[24px] min-[820px]:h-[24px] fill-none stroke-current stroke-[2]"><path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </button>

@@ -1,7 +1,7 @@
 :root {
   /* Colors */
-  --color-primary: #58335e;
-  --color-primary-hover: #4a2a4f;
+  --color-primary: #9333ea;
+  --color-primary-hover: #7e22ce;
   
   --color-text-main: #333333;
   --color-text-muted: #555555;
@@ -16,7 +16,7 @@
 
   /* Typography */
   --font-family-heading: 'Inter', sans-serif;
-  --font-weight-heading: 400;
+  --font-weight-heading: 700;
   --font-size-h2: 2.5rem;
   --font-size-h3: 1.2rem;
   --font-size-body: 0.95rem;

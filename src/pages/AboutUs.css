@@ -1,5 +1,5 @@
 .about-section {
-  padding: 4rem 2rem;
+  padding: 8rem 2rem 4rem 2rem;
   background-color: #f5f5f5;
   color: #333;
 }
@@ -18,7 +18,7 @@
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(88, 51, 94, 0.08);
   transition: transform 0.3s ease;
-  border-left: 5px solid #58335e;
+  border-left: 5px solid #9333ea;
 }
 
 .about-card:hover {
@@ -27,7 +27,7 @@
 
 .about-card h1,
 .about-card h2 {
-  color: #58335e;
+  color: #9333ea;
   margin-bottom: 1rem;
 }
 
@@ -72,6 +72,6 @@
 }
 
 .contact-info a {
-  color: #58335e;
+  color: #9333ea;
   text-decoration: underline;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '@/components/common/SEO';
 import './Contact.css';
 
 const Contact = () => {
@@ -38,6 +39,8 @@ const Contact = () => {
   };
 
   return (
+        <>
+            <SEO title="Contact - Wow Global Studies" />
     <section className="contact-section">
       <div className="contact-container">
         <h1>Contact Us</h1>
@@ -105,7 +108,8 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  );
+  
+        </>);
 };
 
 export default Contact;

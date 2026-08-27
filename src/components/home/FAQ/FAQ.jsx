@@ -6,30 +6,32 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqs = [
+const defaultFaqs = [
     {
-        question: "What services does WOW Global Studies offer?",
-        answer: "We offer a comprehensive range of visa and immigration consultancy services. This includes university shortlisting, student visas, PR applications, interview preparation, financial aid guidance, and post-arrival assistance."
+        question: "How do you help me start my journey?",
+        answer: "We don't just hand you a checklist. From the moment you walk through our doors, we help you shape your entire story—from choosing the perfect university and crafting a flawless visa application, all the way to landing safely abroad."
     },
     {
-        question: "Which countries do you help students apply to?",
-        answer: "We partner with institutions across 20+ countries worldwide. Our primary expertise covers major educational destinations including the USA, Canada, UK, Australia, New Zealand, and Germany."
+        question: "Which chapters of the world can I explore with you?",
+        answer: "We've built pathways to over 20+ countries. Whether you're dreaming of the bustling campuses in the USA and UK, or the welcoming communities of Canada, Australia, and Germany, we'll help you write your next chapter there."
     },
     {
-        question: "How long does the visa application process take?",
-        answer: "Processing times vary significantly depending on the destination country and visa type, typically ranging from a few weeks to several months. Our experts ensure your application is flawless to prevent unnecessary delays."
+        question: "How long does the visa process take?",
+        answer: "Every journey has its own timeline. While it depends on your chosen destination, it generally takes a few weeks to several months. But don't worry—our certified experts ensure your documentation is flawless to avoid any unnecessary detours."
     },
     {
-        question: "Do you provide coaching for tests like IELTS or GRE?",
-        answer: "Yes, we provide dedicated coaching for a wide range of proficiency and standardized tests. Our experienced tutors offer training for IELTS, GRE, PTE, Duolingo, SAT, and TOEFL-IBT."
+        question: "Will you help me clear my English proficiency tests?",
+        answer: "Absolutely! We know standardized tests can feel like a tough hurdle. That's why our dedicated coaches provide comprehensive training for IELTS, GRE, PTE, Duolingo, SAT, and TOEFL to make sure you cross the finish line with confidence."
     },
     {
-        question: "Are there any hidden charges in your consultancy fees?",
-        answer: "Absolutely not. We believe in 100% transparency. Our service packages and consultation fees are discussed completely upfront before we begin the process, with no hidden costs."
+        question: "Are there any hidden plot twists in your pricing?",
+        answer: "None at all. We believe in 100% transparency. Every cost and consultation fee is discussed upfront, so there are no surprises—just clear steps toward your success."
     }
 ];
 
-const FAQ = () => {
+const FAQ = ({ data }) => {
+    const faqList = data || defaultFaqs;
+    
     return (
         <section className="py-[80px] min-[820px]:py-[120px] px-[20px] min-[820px]:px-[60px] bg-white">
             <div className="max-w-[1200px] mx-auto flex flex-col min-[820px]:flex-row gap-[60px] min-[820px]:gap-[100px] items-start">
@@ -38,20 +40,20 @@ const FAQ = () => {
                 <div className="w-full min-[820px]:w-[35%] min-[820px]:sticky min-[820px]:top-[120px]">
                     <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
                         Frequently Asked Questions<br />
-                        <span className="text-[#9333ea] font-medium">find your answers here!</span>
+                        <span className="text-primary font-medium">find your answers here!</span>
                     </h2>
                 </div>
 
                 {/* Right Side: Accordion (approx 65%) */}
                 <div className="w-full min-[820px]:w-[65%]">
                     <Accordion type="single" collapsible defaultValue="item-0">
-                        {faqs.map((faq, index) => (
+                        {faqList.map((faq, index) => (
                             <AccordionItem 
                                 key={index} 
                                 value={`item-${index}`}
                                 className="border-b border-[#f0eaf2] last:border-b-0"
                             >
-                                <AccordionTrigger className="w-full flex justify-between items-center py-[24px] text-left group/accordion-trigger font-quicksand font-bold text-[17px] min-[820px]:text-[19px] pr-[30px] transition-colors duration-300 text-[#161616] group-hover/accordion-trigger:text-[#9333ea] group-aria-expanded/accordion-trigger:text-[#9333ea] hover:no-underline">
+                                <AccordionTrigger className="w-full flex justify-between items-center py-[24px] text-left group/accordion-trigger font-bold text-[17px] min-[820px]:text-[19px] pr-[30px] transition-colors duration-300 text-[#161616] group-hover/accordion-trigger:text-primary group-aria-expanded/accordion-trigger:text-primary hover:no-underline">
                                     {faq.question}
                                 </AccordionTrigger>
                                 

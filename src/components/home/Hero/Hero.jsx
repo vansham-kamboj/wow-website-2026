@@ -26,7 +26,7 @@ const Hero = () => {
                 <div className="flex flex-col gap-[14px] flex-1">
                     <h1 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
                         Your Visa Journey Starts With One Decision —<br />
-                        <span className="text-[#9333ea] font-medium">Choosing the Right Guide</span>
+                        <span className="text-primary font-medium">Choosing the Right Guide</span>
                     </h1>
                     <p className="text-[15px] leading-[1.65] text-[#767676] max-w-[600px] m-0 mt-[4px]">
                         Every year, thousands of Indian students and professionals dream of studying, working, or settling abroad — but visa rejections crush that dream more often than visa officers do. We've walked 5000+ people through that exact journey, turning confusion into approval letters.
@@ -37,7 +37,7 @@ const Hero = () => {
                 <div className="flex-none w-full min-[820px]:w-auto mt-[10px] min-[820px]:mt-0">
                     <button className={buttonVariants({
                         variant: "custom",
-                        className: "bg-transparent border-2 !border-[#9333ea] text-[#9333ea] hover:bg-[#9333ea] hover:text-white px-[20px] py-[14px] min-[820px]:px-[32px] min-[820px]:py-[18px] rounded-[8px] font-quicksand font-bold text-[14px] min-[820px]:text-[16px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-auto w-full min-[820px]:w-auto text-center justify-center"
+                        className: "bg-transparent border-2 !border-primary text-primary hover:bg-primary hover:text-white px-[20px] py-[14px] min-[820px]:px-[32px] min-[820px]:py-[18px] rounded-[8px] font-bold text-[14px] min-[820px]:text-[16px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-auto w-full min-[820px]:w-auto text-center justify-center"
                     })}>
                         Start Your Visa Story — Free Consultation
                     </button>
@@ -69,23 +69,23 @@ const Hero = () => {
                     <div className="absolute bottom-0 left-0 w-full px-[10px] py-[20px] min-[820px]:px-[60px] min-[820px]:py-[40px] flex flex-row justify-between items-center z-20">
                         
                         <div className="flex flex-col items-center flex-1 text-center border-r border-white/20">
-                            <span className="block font-sans font-light text-[22px] min-[820px]:text-[56px] text-white leading-none mb-[4px] min-[820px]:mb-[8px] tracking-[-1px]">5000+</span>
-                            <span className="block text-[9px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-[0.5px]">Success Stories</span>
+                            <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">5000+</span>
+                            <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Success<br className="block min-[820px]:hidden" />Stories</span>
                         </div>
                         
                         <div className="flex flex-col items-center flex-1 text-center border-r border-white/20">
-                            <span className="block font-sans font-light text-[22px] min-[820px]:text-[56px] text-white leading-none mb-[4px] min-[820px]:mb-[8px] tracking-[-1px]">95%</span>
-                            <span className="block text-[9px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-[0.5px]">Approval Rate</span>
+                            <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">95%</span>
+                            <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Approval<br className="block min-[820px]:hidden" />Rate</span>
                         </div>
                         
                         <div className="flex flex-col items-center flex-1 text-center border-r border-white/20">
-                            <span className="block font-sans font-light text-[22px] min-[820px]:text-[56px] text-white leading-none mb-[4px] min-[820px]:mb-[8px] tracking-[-1px]">20+</span>
-                            <span className="block text-[9px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-[0.5px]">Countries</span>
+                            <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">20+</span>
+                            <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Countries</span>
                         </div>
                         
                         <div className="flex flex-col items-center flex-1 text-center">
-                            <span className="block font-sans font-light text-[22px] min-[820px]:text-[56px] text-white leading-none mb-[4px] min-[820px]:mb-[8px] tracking-[-1px]">15+</span>
-                            <span className="block text-[9px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-[0.5px]">Years Experience</span>
+                            <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">15+</span>
+                            <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Years<br className="block min-[820px]:hidden" />Exp</span>
                         </div>
 
                     </div>
