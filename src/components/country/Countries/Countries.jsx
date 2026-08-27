@@ -33,7 +33,7 @@ const Countries = () => {
             <div className="flex justify-between items-end mb-[40px] px-[20px] min-[820px]:px-[60px] max-w-[1200px] mx-auto w-full relative z-10">
                 <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                     Top Destinations <br/>
-                    <span className="text-[#c026d3] font-medium">for Studies</span>
+                    <span className="text-[#9333ea] font-medium">for Studies</span>
                 </h2>
                 
                 <Button variant="custom" className="flex items-center gap-2 bg-[#f4d160] hover:bg-[#eac44e] text-[#161616] px-[24px] py-[12px] rounded-[8px] font-quicksand font-bold text-[14px] transition-colors shadow-sm h-auto">
@@ -48,7 +48,7 @@ const Countries = () => {
             <div className="relative w-full max-w-[800px] mx-auto h-[320px] min-[820px]:h-[460px] flex items-center justify-center z-10">
                 
                 {/* Thin dashed circular orbit */}
-                <div className="absolute w-[300px] h-[300px] min-[820px]:w-[420px] min-[820px]:h-[420px] rounded-full border-[1.5px] border-[#c026d3]/15"></div>
+                <div className="absolute w-[300px] h-[300px] min-[820px]:w-[420px] min-[820px]:h-[420px] rounded-full border-[1.5px] border-[#9333ea]/15"></div>
 
                 {/* Revolving Container */}
                 <style dangerouslySetInnerHTML={{__html: `
@@ -57,7 +57,7 @@ const Countries = () => {
                     }
                     @media (min-width: 820px) {
                         :root {
-                            --orbit-radius: 210px; /* Reduced for smaller circle */
+                            --orbit-radius: 210px;
                         }
                     }
                     @keyframes orbit {
@@ -76,7 +76,7 @@ const Countries = () => {
                     }
                 `}} />
 
-                <div className="absolute w-[300px] h-[300px] min-[820px]:w-[420px] min-[820px]:h-[420px] rounded-full orbit-container pointer-events-none">
+                <div className="absolute w-[300px] h-[300px] min-[820px]:w-[420px] min-[820px]:h-[420px] rounded-full orbit-container pointer-events-none z-30">
                     {countriesList.map((country, idx) => {
                         const angle = (idx * (360 / countriesList.length));
                         return (
@@ -93,7 +93,7 @@ const Countries = () => {
                                     <div className="w-[40px] h-[40px] min-[820px]:w-[54px] min-[820px]:h-[54px] rounded-full overflow-hidden shadow-md border-[2px] border-white bg-white">
                                         <img src={country.flag} alt={country.name} className="w-full h-full object-cover" />
                                     </div>
-                                    <span className="font-sans font-bold text-[12px] min-[820px]:text-[13px] text-[#c026d3] bg-[#f8f5fa]/80 px-[8px] py-[2px] rounded-[6px]">
+                                    <span className="font-sans font-bold text-[11px] min-[820px]:text-[13px] text-[#9333ea] bg-[#f8f5fa]/95 px-[8px] py-[2px] rounded-[6px] whitespace-nowrap text-center shadow-sm relative z-40">
                                         {country.name}
                                     </span>
                                 </div>
@@ -103,7 +103,7 @@ const Countries = () => {
                 </div>
 
                 {/* Central Fading Images */}
-                <div className="relative w-[200px] h-[200px] min-[820px]:w-[280px] min-[820px]:h-[280px] rounded-full overflow-hidden shadow-[0_8px_30px_rgba(88,51,94,0.2)] border-[6px] border-white z-10">
+                <div className="relative w-[190px] h-[190px] min-[820px]:w-[280px] min-[820px]:h-[280px] rounded-full overflow-hidden shadow-[0_8px_30px_rgba(88,51,94,0.2)] border-[6px] border-white z-10">
                     {countriesList.map((country, idx) => (
                         <img 
                             key={country.id}

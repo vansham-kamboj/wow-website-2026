@@ -43,8 +43,8 @@ function AccordionTrigger({
         {...props}>
         {children}
         <div className="flex-none w-[24px] h-[24px] relative">
-            <div className="absolute inset-0 bg-[#161616] transition-transform duration-300 ease-in-out origin-center group-hover/accordion-trigger:bg-[#c026d3] group-aria-expanded/accordion-trigger:bg-[#c026d3] group-aria-expanded/accordion-trigger:rotate-45" style={{ height: '2px', top: '11px' }}></div>
-            <div className="absolute inset-0 bg-[#161616] transition-transform duration-300 ease-in-out origin-center rotate-90 group-hover/accordion-trigger:bg-[#c026d3] group-aria-expanded/accordion-trigger:bg-[#c026d3] group-aria-expanded/accordion-trigger:rotate-45" style={{ height: '2px', top: '11px' }}></div>
+            <div className="absolute inset-0 bg-[#161616] transition-transform duration-300 ease-in-out origin-center group-hover/accordion-trigger:bg-[#9333ea] group-aria-expanded/accordion-trigger:bg-[#9333ea] group-aria-expanded/accordion-trigger:rotate-45" style={{ height: '2px', top: '11px' }}></div>
+            <div className="absolute inset-0 bg-[#161616] transition-transform duration-300 ease-in-out origin-center rotate-90 group-hover/accordion-trigger:bg-[#9333ea] group-aria-expanded/accordion-trigger:bg-[#9333ea] group-aria-expanded/accordion-trigger:rotate-45" style={{ height: '2px', top: '11px' }}></div>
         </div>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>

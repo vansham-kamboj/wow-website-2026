@@ -38,7 +38,7 @@ const FAQ = () => {
                 <div className="w-full min-[820px]:w-[35%] min-[820px]:sticky min-[820px]:top-[120px]">
                     <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
                         Frequently Asked Questions<br />
-                        <span className="text-[#c026d3] font-medium">find your answers here!</span>
+                        <span className="text-[#9333ea] font-medium">find your answers here!</span>
                     </h2>
                 </div>
 
@@ -51,7 +51,7 @@ const FAQ = () => {
                                 value={`item-${index}`}
                                 className="border-b border-[#f0eaf2] last:border-b-0"
                             >
-                                <AccordionTrigger className="w-full flex justify-between items-center py-[24px] text-left group/accordion-trigger font-quicksand font-bold text-[17px] min-[820px]:text-[19px] pr-[30px] transition-colors duration-300 text-[#161616] group-hover/accordion-trigger:text-[#c026d3] group-aria-expanded/accordion-trigger:text-[#c026d3] hover:no-underline">
+                                <AccordionTrigger className="w-full flex justify-between items-center py-[24px] text-left group/accordion-trigger font-quicksand font-bold text-[17px] min-[820px]:text-[19px] pr-[30px] transition-colors duration-300 text-[#161616] group-hover/accordion-trigger:text-[#9333ea] group-aria-expanded/accordion-trigger:text-[#9333ea] hover:no-underline">
                                     {faq.question}
                                 </AccordionTrigger>
                                 

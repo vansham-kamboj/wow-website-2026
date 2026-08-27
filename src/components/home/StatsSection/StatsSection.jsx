@@ -10,22 +10,22 @@ const StatsSection = () => {
                 
                 <div className="py-[18px] px-0 min-[820px]:px-[28px] min-[820px]:border-l min-[820px]:border-[#e8dced]">
                     <span className="block text-[12px] text-[#8f8f8f] mb-[38px]">Sessions completed</span>
-                    <span className="block font-sans font-semibold text-[36px] min-[820px]:text-[46px] text-[#c026d3] tracking-[-1px]">12K+</span>
+                    <span className="block font-sans font-semibold text-[36px] min-[820px]:text-[46px] text-[#9333ea] tracking-[-1px]">12K+</span>
                 </div>
                 
                 <div className="py-[18px] px-[28px] border-l border-[#e8dced]">
                     <span className="block text-[12px] text-[#8f8f8f] mb-[38px]">Average member rating</span>
-                    <span className="block font-sans font-semibold text-[36px] min-[820px]:text-[46px] text-[#c026d3] tracking-[-1px]">4.9</span>
+                    <span className="block font-sans font-semibold text-[36px] min-[820px]:text-[46px] text-[#9333ea] tracking-[-1px]">4.9</span>
                 </div>
                 
                 <div className="py-[18px] px-0 min-[820px]:px-[28px] border-l-0 min-[820px]:border-l border-[#e8dced]">
                     <span className="block text-[12px] text-[#8f8f8f] mb-[38px] uppercase tracking-[0.6px]">Client Retention Rate</span>
-                    <span className="block font-sans font-semibold text-[36px] min-[820px]:text-[46px] text-[#c026d3] tracking-[-1px]">85%</span>
+                    <span className="block font-sans font-semibold text-[36px] min-[820px]:text-[46px] text-[#9333ea] tracking-[-1px]">85%</span>
                 </div>
                 
                 <div className="py-[18px] px-[28px] border-l border-[#e8dced]">
                     <span className="block text-[12px] text-[#8f8f8f] mb-[38px] uppercase tracking-[0.6px]">Years Running</span>
-                    <span className="block font-sans font-semibold text-[36px] min-[820px]:text-[46px] text-[#c026d3] tracking-[-1px]">6 years</span>
+                    <span className="block font-sans font-semibold text-[36px] min-[820px]:text-[46px] text-[#9333ea] tracking-[-1px]">6 years</span>
                 </div>
 
             </div>

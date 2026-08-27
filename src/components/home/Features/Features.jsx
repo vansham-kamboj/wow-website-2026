@@ -91,12 +91,12 @@ const Features = () => {
         };
     }, []);
 
-    const radius = isMobile ? 140 : 280;
-    const centerX = isMobile ? 240 : 380;
-    const centerY = isMobile ? 140 : 280;
+    const radius = isMobile ? 100 : 280;
+    const centerX = isMobile ? 150 : 380;
+    const centerY = isMobile ? 110 : 280;
     
-    const containerW = isMobile ? 480 : 760;
-    const containerH = isMobile ? 280 : 560;
+    const containerW = isMobile ? 300 : 760;
+    const containerH = isMobile ? 220 : 560;
 
     return (
         <section ref={sectionRef} className="relative w-full overflow-hidden">
@@ -189,7 +189,7 @@ const Features = () => {
                                             willChange: 'transform'
                                         }}
                                     >
-                                        <div className={`bg-[#c026d3] flex items-center justify-center flex-none transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 ${
+                                        <div className={`bg-[#9333ea] flex items-center justify-center flex-none transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 ${
                                             isMobile ? "w-[28px] h-[28px] rounded-[6px]" : "w-[40px] h-[40px] rounded-[10px]"
                                         }`}>
                                             {React.cloneElement(f.icon, { className: isMobile ? 'w-[14px] h-[14px] fill-none stroke-white stroke-[1.8]' : 'w-[20px] h-[20px] fill-none stroke-white stroke-[1.8]' })}

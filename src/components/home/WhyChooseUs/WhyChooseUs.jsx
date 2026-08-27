@@ -3,16 +3,16 @@ import footerBg from '@/assets/images/footer img.png';
 import { FiCheckCircle, FiAward, FiGlobe, FiUsers, FiTrendingUp, FiShield } from 'react-icons/fi';
 import { Button } from '@/components/ui/button';
 
-const features = [
-    // Outer Arch (4 cards)
-    { icon: <FiTrendingUp className="w-[18px] h-[18px] text-white" />, title: "We've Seen Every Rejection Reason — So Yours Won't Happen", angle: 145, radius: 260 },
-    { icon: <FiAward className="w-[18px] h-[18px] text-white" />, title: "Certified Experts Who've Walked This Path 1000s of Times", angle: 215, radius: 260 },
-    { icon: <FiGlobe className="w-[18px] h-[18px] text-white" />, title: "Every Document Told Right, So Your Story Gets Approved", angle: 325, radius: 260 },
-    { icon: <FiCheckCircle className="w-[18px] h-[18px] text-white" />, title: "No Hidden Chapters — Just Honest, Transparent Pricing", angle: 35, radius: 260 },
+const featuresData = [
+    // Outer Arch (4 cards) - ring: 'outer'
+    { icon: <FiTrendingUp />, title: "Zero Rejection Risk", angle: 145, ring: 'outer' },
+    { icon: <FiAward />, title: "Certified Visa Experts", angle: 215, ring: 'outer' },
+    { icon: <FiGlobe />, title: "Flawless Documentation", angle: 325, ring: 'outer' },
+    { icon: <FiCheckCircle />, title: "100% Transparent Pricing", angle: 35, ring: 'outer' },
     
-    // Inner Arch (2 cards)
-    { icon: <FiUsers className="w-[18px] h-[18px] text-white" />, title: "From First Call to Boarding Pass — Faster Than You Think", angle: 200, radius: 155 },
-    { icon: <FiShield className="w-[18px] h-[18px] text-white" />, title: "Not Sure If You Qualify? Let's Find Out, Free", angle: 340, radius: 155 }
+    // Inner Arch (2 cards) - ring: 'inner'
+    { icon: <FiUsers />, title: "Faster Processing Time", angle: 200, ring: 'inner' },
+    { icon: <FiShield />, title: "Free Qualification Check", angle: 340, ring: 'inner' }
 ];
 
 const WhyChooseUs = () => {
@@ -20,8 +20,12 @@ const WhyChooseUs = () => {
     const imgRef = useRef(null);
     const cardsRef = useRef([]);
     const [scrollProgress, setScrollProgress] = useState(0);
+    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 820 : false);
 
     useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 820);
+        window.addEventListener('resize', handleResize, { passive: true });
+        
         const handleScroll = () => {
             if (!sectionRef.current) return;
             const rect = sectionRef.current.getBoundingClientRect();
@@ -41,7 +45,7 @@ const WhyChooseUs = () => {
                 cardsRef.current.forEach((card, i) => {
                     if (!card) return;
                     // Left cards move opposite to right cards
-                    const direction = features[i].angle > 90 && features[i].angle < 270 ? 1 : -1;
+                    const direction = featuresData[i].angle > 90 && featuresData[i].angle < 270 ? 1 : -1;
                     const speed = 20 + (i % 3) * 15; 
                     const cardShift = (progress - 0.5) * speed * direction;
                     const rotate = (progress - 0.5) * (i % 2 === 0 ? 3 : -3) * direction;
@@ -52,11 +56,20 @@ const WhyChooseUs = () => {
 
         window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
-    const centerX = 380;
-    const centerY = 310;
+    const outerRadius = isMobile ? 150 : 260;
+    const innerRadius = isMobile ? 85 : 155;
+    
+    const containerW = isMobile ? 320 : 760;
+    const containerH = isMobile ? 360 : 620;
+    
+    const centerX = containerW / 2;
+    const centerY = containerH / 2;
 
     return (
         <section ref={sectionRef} className="relative w-full overflow-hidden">
@@ -77,7 +90,7 @@ const WhyChooseUs = () => {
                 <div className="w-full min-[1100px]:w-[35%] text-left z-20">
                     <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                         Why Choose Us<br />
-                        <span className="text-[#c026d3] font-medium">your trusted education partner!</span>
+                        <span className="text-[#9333ea] font-medium">your trusted education partner!</span>
                     </h2>
                     <p className="text-[16px] text-[#555] mt-[24px] leading-[1.6]">
                         We don't just process applications; we craft success stories. Our team of certified experts ensures your journey is smooth, transparent, and built for approval.
@@ -89,48 +102,48 @@ const WhyChooseUs = () => {
                     
                     <style>
                         {`
-                        .arch-height-wrapper {
-                            height: calc(620px * min(1, calc((100vw - 40px) / 760)));
+                        .why-arch-height {
+                            height: calc(${containerH}px * min(1, calc((100vw - 40px) / ${containerW})));
                         }
-                        .arch-scaler {
-                            transform: scale(min(1, calc((100vw - 40px) / 760)));
+                        .why-arch-scaler {
+                            transform: scale(min(1, calc((100vw - 40px) / ${containerW})));
                             transform-origin: top center;
                         }
                         
                         @media (min-width: 1100px) {
-                            .arch-height-wrapper {
-                                height: calc(620px * min(1, calc((100vw * 0.65 - 80px) / 760)));
+                            .why-arch-height {
+                                height: calc(${containerH}px * min(1, calc((100vw * 0.65 - 80px) / ${containerW})));
                             }
-                            .arch-scaler {
-                                transform: scale(min(1, calc((100vw * 0.65 - 80px) / 760)));
+                            .why-arch-scaler {
+                                transform: scale(min(1, calc((100vw * 0.65 - 80px) / ${containerW})));
                                 transform-origin: top right;
                             }
                         }
                         @media (min-width: 1350px) {
-                            .arch-height-wrapper {
-                                height: 620px;
+                            .why-arch-height {
+                                height: ${containerH}px;
                             }
-                            .arch-scaler {
+                            .why-arch-scaler {
                                 transform: scale(1);
                             }
                         }
                         `}
                     </style>
 
-                    <div className="relative w-full arch-height-wrapper flex justify-center min-[1100px]:justify-end">
+                    <div className="relative w-full why-arch-height flex justify-center min-[1100px]:justify-end mt-[20px] min-[1100px]:mt-0">
                         <div 
-                            className="relative arch-scaler flex-none"
+                            className="relative why-arch-scaler flex-none"
                             style={{ 
-                                width: '760px', 
-                                height: '620px'
+                                width: `${containerW}px`, 
+                                height: `${containerH}px`
                             }}
                         >
                             {/* Outer circle border */}
                             <div 
-                                className="absolute rounded-full border-[1.5px] border-[#c026d3]/20"
+                                className="absolute rounded-full border-[1.5px] border-[#9333ea]/20"
                                 style={{
-                                    width: `520px`,
-                                    height: `520px`,
+                                    width: `${outerRadius * 2}px`,
+                                    height: `${outerRadius * 2}px`,
                                     top: `${centerY}px`,
                                     left: `${centerX}px`,
                                     transform: 'translate(-50%, -50%)'
@@ -139,10 +152,10 @@ const WhyChooseUs = () => {
 
                             {/* Inner circle border */}
                             <div 
-                                className="absolute rounded-full border-[1.5px] border-[#c026d3]/30"
+                                className="absolute rounded-full border-[1.5px] border-[#9333ea]/30"
                                 style={{
-                                    width: `310px`,
-                                    height: `310px`,
+                                    width: `${innerRadius * 2}px`,
+                                    height: `${innerRadius * 2}px`,
                                     top: `${centerY}px`,
                                     left: `${centerX}px`,
                                     transform: 'translate(-50%, -50%)'
@@ -150,26 +163,35 @@ const WhyChooseUs = () => {
                             ></div>
 
                             {/* Cards */}
-                            {features.map((f, i) => {
+                            {featuresData.map((f, i) => {
+                                const radius = f.ring === 'outer' ? outerRadius : innerRadius;
                                 const angleRad = (f.angle * Math.PI) / 180;
-                                const x = centerX + f.radius * Math.cos(angleRad);
-                                const y = centerY + f.radius * Math.sin(angleRad);
+                                const x = centerX + radius * Math.cos(angleRad);
+                                const y = centerY + radius * Math.sin(angleRad);
 
                                 return (
                                     <div
                                         key={i}
                                         ref={el => cardsRef.current[i] = el}
-                                        className="absolute bg-white rounded-[14px] p-[14px] flex items-center gap-[12px] shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-[#f0eaf2] w-[260px] will-change-transform transition-transform duration-300 hover:scale-[1.03] cursor-pointer z-10 group"
+                                        className={`absolute bg-white flex items-center shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-[#f0eaf2] will-change-transform transition-all duration-300 hover:scale-[1.03] cursor-pointer z-10 group ${
+                                            isMobile 
+                                                ? "rounded-[10px] p-[8px] pr-[12px] gap-[8px] w-[150px]" 
+                                                : "rounded-[14px] p-[14px] gap-[12px] w-[260px]"
+                                        }`}
                                         style={{
                                             left: `${x}px`,
                                             top: `${y}px`,
                                             transform: 'translate(-50%, -50%)'
                                         }}
                                     >
-                                        <div className="w-[36px] h-[36px] rounded-[8px] bg-[#c026d3] flex items-center justify-center flex-none transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-                                            {f.icon}
+                                        <div className={`bg-[#9333ea] flex items-center justify-center flex-none transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 ${
+                                            isMobile ? "w-[26px] h-[26px] rounded-[6px]" : "w-[36px] h-[36px] rounded-[8px]"
+                                        }`}>
+                                            {React.cloneElement(f.icon, { className: isMobile ? 'w-[14px] h-[14px] text-white' : 'w-[18px] h-[18px] text-white' })}
                                         </div>
-                                        <span className="font-quicksand font-bold text-[13px] leading-[1.35] text-[#161616]">{f.title}</span>
+                                        <span className={`font-quicksand font-bold text-[#161616] ${
+                                            isMobile ? "text-[10px] leading-[1.2]" : "text-[13px] leading-[1.35]"
+                                        }`}>{f.title}</span>
                                     </div>
                                 );
                             })}
@@ -178,12 +200,14 @@ const WhyChooseUs = () => {
                             <div 
                                 className="absolute flex justify-center items-center"
                                 style={{
-                                    top: `${centerY + 20}px`,
+                                    top: `${centerY + (isMobile ? 15 : 20)}px`,
                                     left: `${centerX}px`,
                                     transform: 'translate(-50%, -50%)'
                                 }}
                             >
-                                <Button variant="custom" className="bg-[#c026d3] hover:bg-[#a21caf] text-white px-[32px] py-[14px] rounded-[8px] font-quicksand font-bold text-[15px] transition-all duration-300 shadow-md hover:shadow-lg h-auto">
+                                <Button variant="custom" className={`bg-[#9333ea] hover:bg-[#7e22ce] text-white transition-all duration-300 shadow-md hover:shadow-lg h-auto font-quicksand font-bold ${
+                                    isMobile ? "px-[16px] py-[10px] rounded-[6px] text-[12px]" : "px-[32px] py-[14px] rounded-[8px] text-[15px]"
+                                }`}>
                                     Get Free Consulting
                                 </Button>
                             </div>

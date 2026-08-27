@@ -26,7 +26,7 @@
 }
 
 .footer-contact-item-gray i {
-  color: #c026d3;
+  color: #9333ea;
 }
 
 .footer-contact-item-gray a {
@@ -36,7 +36,7 @@
 }
 
 .footer-contact-item-gray a:hover {
-  color: #c026d3;
+  color: #9333ea;
 }
 
 .social-icons-gray {
@@ -52,7 +52,7 @@
 }
 
 .social-icons-gray a:hover {
-  color: #c026d3;
+  color: #9333ea;
 }
 
 /* Main Grid */
@@ -91,7 +91,7 @@
 }
 
 .footer-column-gray li:hover {
-  color: #c026d3;
+  color: #9333ea;
 }
 
 /* Logo */
@@ -139,7 +139,7 @@
   right: 30px;
   width: 45px;
   height: 45px;
-  background-color: #c026d3;
+  background-color: #9333ea;
   border: none;
   color: #fff;
   font-size: 20px;
@@ -154,7 +154,7 @@
 }
 
 .scroll-to-top-gray:hover {
-  background-color: #a21caf;
+  background-color: #7e22ce;
   transform: translateY(-2px);
 }
 
