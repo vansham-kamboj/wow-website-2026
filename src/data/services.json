@@ -1,0 +1,44 @@
+[
+    {
+        "id": "counselling",
+        "title": "Free Counselling",
+        "description": "Expert advice to help you choose the right path for your future.",
+        "iconName": "FiMessageCircle"
+    },
+    {
+        "id": "application-process",
+        "title": "Application Process",
+        "description": "Streamlined application guidance for top universities.",
+        "iconName": "FiFileText"
+    },
+    {
+        "id": "financial-aid",
+        "title": "Financial Aid",
+        "description": "Explore scholarships and financial aid opportunities.",
+        "iconName": "FiDollarSign"
+    },
+    {
+        "id": "visa-assessment",
+        "title": "Visa Assessment",
+        "description": "Comprehensive visa assessment and documentation support.",
+        "iconName": "FiSearch"
+    },
+    {
+        "id": "interview-preparation",
+        "title": "Interview Preparation",
+        "description": "Expert coaching to ace your university and visa interviews.",
+        "iconName": "FiMessageCircle"
+    },
+    {
+        "id": "air-ticket",
+        "title": "Air Ticket",
+        "description": "Hassle-free flight bookings with student discounts.",
+        "iconName": "FiSend"
+    },
+    {
+        "id": "post-visa-services",
+        "title": "Post Visa Services",
+        "description": "Accommodation, forex, and pre-departure assistance.",
+        "iconName": "FiHome"
+    }
+]
