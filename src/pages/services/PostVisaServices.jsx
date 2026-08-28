@@ -34,12 +34,12 @@ const PostVisaServices = () => {
             />
 
             {/* 1. Hero Section (Full-width illustrated) */}
-            <div className="relative overflow-hidden bg-gradient-to-b from-white via-[#faf8fb] to-white pt-[130px] pb-12 min-[820px]:pt-[170px] min-[820px]:pb-24">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] relative z-10">
+            <div className="relative overflow-hidden bg-gradient-to-b from-white via-[#faf8fb] to-white pt-[130px] pb-12 lg:pt-[170px] lg:pb-24">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] relative z-10">
                     <div className="flex flex-col items-center text-center">
                         <div className="z-20 w-full max-w-[900px] mx-auto mb-12">
                             
-                            <h1 className="font-sans font-bold text-[40px] md:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Your Story Doesn't <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">End at the Airport.</span>
                             </h1>
@@ -77,15 +77,28 @@ const PostVisaServices = () => {
                                 </div>
                             </div>
 
-                            {/* Floating Pills */}
-                            <div className="absolute top-[15%] left-[0%] md:left-[5%] bg-white px-5 py-3 rounded-full shadow-lg border border-[#f0eaf2] animate-bounce z-20" style={{ animationDuration: '3.5s' }}>
-                                <span className="text-primary font-bold text-[13px] md:text-[15px]">Verified Accommodation</span>
+                            {/* Floating Pills (Desktop) */}
+                            <div className="hidden md:block absolute top-[15%] left-[5%] bg-white px-5 py-3 rounded-full shadow-lg border border-[#f0eaf2] animate-bounce z-20" style={{ animationDuration: '3.5s' }}>
+                                <span className="text-primary font-bold text-[15px]">Verified Accommodation</span>
                             </div>
-                            <div className="absolute bottom-[20%] left-[10%] md:left-[15%] bg-white px-5 py-3 rounded-full shadow-lg border border-[#f0eaf2] animate-bounce z-20" style={{ animationDuration: '4s', animationDelay: '1s' }}>
-                                <span className="text-primary font-bold text-[13px] md:text-[15px]">Pre-Departure Briefing</span>
+                            <div className="hidden md:block absolute bottom-[20%] left-[15%] bg-white px-5 py-3 rounded-full shadow-lg border border-[#f0eaf2] animate-bounce z-20" style={{ animationDuration: '4s', animationDelay: '1s' }}>
+                                <span className="text-primary font-bold text-[15px]">Pre-Departure Briefing</span>
                             </div>
-                            <div className="absolute top-[25%] right-[0%] md:right-[5%] bg-white px-5 py-3 rounded-full shadow-lg border border-[#f0eaf2] animate-bounce z-20" style={{ animationDuration: '3.2s', animationDelay: '0.5s' }}>
-                                <span className="text-primary font-bold text-[13px] md:text-[15px]">Best Forex Rates</span>
+                            <div className="hidden md:block absolute top-[25%] right-[5%] bg-white px-5 py-3 rounded-full shadow-lg border border-[#f0eaf2] animate-bounce z-20" style={{ animationDuration: '3.2s', animationDelay: '0.5s' }}>
+                                <span className="text-primary font-bold text-[15px]">Best Forex Rates</span>
+                            </div>
+                        </div>
+
+                        {/* Stacked Pills (Mobile) */}
+                        <div className="md:hidden flex flex-wrap justify-center gap-[10px] mt-[20px] z-20 relative">
+                            <div className="bg-white px-[14px] py-[8px] rounded-full shadow-sm border border-[#f0eaf2]">
+                                <span className="text-primary font-bold text-[12px]">Verified Accommodation</span>
+                            </div>
+                            <div className="bg-white px-[14px] py-[8px] rounded-full shadow-sm border border-[#f0eaf2]">
+                                <span className="text-primary font-bold text-[12px]">Pre-Departure Briefing</span>
+                            </div>
+                            <div className="bg-white px-[14px] py-[8px] rounded-full shadow-sm border border-[#f0eaf2]">
+                                <span className="text-primary font-bold text-[12px]">Best Forex Rates</span>
                             </div>
                         </div>
                     </div>
@@ -94,14 +107,14 @@ const PostVisaServices = () => {
 
             {/* 2. Details + Differentiators */}
             <div className="bg-white flex-grow">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-16 min-[820px]:pb-24 pt-4 md:pt-12">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24 pt-4 md:pt-12">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[17px] md:text-[20px] leading-[1.7] text-[#444]">
                             We handle your seamless transition to a new country. From accommodation shortlisting near your campus or workplace, to providing forex card and currency guidance, to delivering a highly structured pre-departure checklist session so you know exactly what to expect.
                         </p>
                     </section>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         <Card className="p-8 border border-[#f0eaf2] text-center flex flex-col items-center transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(147,51,234,0.12)]">
                             <div className="w-16 h-16 rounded-2xl bg-[#faf8fb] text-primary flex items-center justify-center mb-6">
                                 <Home size={32} strokeWidth={1.5} />

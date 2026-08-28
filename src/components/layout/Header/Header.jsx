@@ -63,9 +63,9 @@ const Header = () => {
     <header className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       
       {/* Top Announcement Bar */}
-      <div className="w-full bg-primary py-[8px] px-[15px] min-[820px]:px-[20px] text-center shadow-sm">
-        <p className="text-white text-[10px] min-[820px]:text-[13px] font-bold m-0 tracking-[0.2px] min-[820px]:tracking-[0.5px] leading-[1.2] min-[820px]:leading-normal">
-          ✨ Great News! We are now providing up to <span className="text-[10px] min-[820px]:text-[14px] font-black text-[#f4d160]">100% Scholarships</span> for eligible students!
+      <div className="w-full bg-primary py-[8px] px-[15px] lg:px-[20px] text-center shadow-sm">
+        <p className="text-white text-[10px] lg:text-[13px] font-bold m-0 tracking-[0.2px] lg:tracking-[0.5px] leading-[1.2] lg:leading-normal">
+          ✨ Great News! We are now providing up to <span className="text-[10px] lg:text-[14px] font-black text-[#f4d160]">100% Scholarships</span> for eligible students!
         </p>
       </div>
 
@@ -84,7 +84,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center flex-1">
           <ul className="flex items-center gap-[32px] list-none m-0 p-0">
             <li><Link to="/" className="text-[14px] text-[#161616] font-bold no-underline hover:text-primary transition-colors duration-200">Home</Link></li>
-            <li><Link to="/about" className="text-[14px] text-[#5a5a5a] font-medium no-underline hover:text-primary transition-colors duration-200">About us</Link></li>
+            <li><Link to="/about-us" className="text-[14px] text-[#5a5a5a] font-medium no-underline hover:text-primary transition-colors duration-200">About us</Link></li>
             
             {/* Services Dropdown */}
             <li className="relative group py-[20px] -my-[20px]">
@@ -174,11 +174,11 @@ const Header = () => {
       <div className={`md:hidden bg-white w-full transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] border-b border-gray-100 shadow-lg transform origin-top ${isMobileMenuOpen ? 'max-h-[85vh] opacity-100 overflow-y-auto scale-y-100' : 'max-h-0 opacity-0 overflow-hidden scale-y-95'}`}>
         <nav className="flex flex-col px-[20px] py-[15px]">
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="py-[12px] text-[15px] text-[#161616] font-bold border-b border-gray-50">Home</Link>
-          <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="py-[12px] text-[15px] text-[#161616] font-bold border-b border-gray-50">About us</Link>
+          <Link to="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="py-[12px] text-[15px] text-[#161616] font-bold border-b border-gray-50">About us</Link>
           
           {/* Services Mobile */}
-          <div className="py-[12px] border-b border-gray-50 flex flex-col">
-            <button onClick={() => setMobileExpandedSection(mobileExpandedSection === 'services' ? null : 'services')} className="flex justify-between items-center text-[14px] min-[820px]:text-[15px] text-[#161616] font-bold w-full text-left">
+          <div className="border-b border-gray-50 flex flex-col">
+            <button onClick={() => setMobileExpandedSection(mobileExpandedSection === 'services' ? null : 'services')} className="flex justify-between items-center text-[14px] lg:text-[15px] text-[#161616] font-bold w-full text-left py-[16px]">
               Services
               <ChevronDown className={`transition-transform duration-300 ${mobileExpandedSection === 'services' ? 'rotate-180' : ''}`} />
             </button>
@@ -192,8 +192,8 @@ const Header = () => {
           </div>
 
           {/* Coaching Mobile */}
-          <div className="py-[12px] border-b border-gray-50 flex flex-col">
-            <button onClick={() => setMobileExpandedSection(mobileExpandedSection === 'coaching' ? null : 'coaching')} className="flex justify-between items-center text-[14px] min-[820px]:text-[15px] text-[#161616] font-bold w-full text-left">
+          <div className="border-b border-gray-50 flex flex-col">
+            <button onClick={() => setMobileExpandedSection(mobileExpandedSection === 'coaching' ? null : 'coaching')} className="flex justify-between items-center text-[14px] lg:text-[15px] text-[#161616] font-bold w-full text-left py-[16px]">
               Coaching
               <ChevronDown className={`transition-transform duration-300 ${mobileExpandedSection === 'coaching' ? 'rotate-180' : ''}`} />
             </button>
@@ -207,8 +207,8 @@ const Header = () => {
           </div>
 
           {/* Countries Mobile */}
-          <div className="py-[12px] border-b border-gray-50 flex flex-col">
-            <button onClick={() => setMobileExpandedSection(mobileExpandedSection === 'countries' ? null : 'countries')} className="flex justify-between items-center text-[14px] min-[820px]:text-[15px] text-[#161616] font-bold w-full text-left">
+          <div className="border-b border-gray-50 flex flex-col">
+            <button onClick={() => setMobileExpandedSection(mobileExpandedSection === 'countries' ? null : 'countries')} className="flex justify-between items-center text-[14px] lg:text-[15px] text-[#161616] font-bold w-full text-left py-[16px]">
               Countries
               <ChevronDown className={`transition-transform duration-300 ${mobileExpandedSection === 'countries' ? 'rotate-180' : ''}`} />
             </button>

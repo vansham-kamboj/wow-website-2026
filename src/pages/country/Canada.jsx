@@ -35,7 +35,7 @@ const Canada = () => {
 
             {/* 1. Hero Section */}
             <div 
-                className="relative pt-[150px] pb-[80px] min-[820px]:pt-[210px] min-[820px]:pb-[140px] flex flex-col overflow-hidden"
+                className="relative pt-[150px] pb-[80px] lg:pt-[210px] lg:pb-[140px] flex flex-col overflow-hidden"
                 style={{ 
                     backgroundImage: `url("https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1600&auto=format&fit=crop")`, 
                     backgroundSize: 'cover', 
@@ -45,7 +45,7 @@ const Canada = () => {
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-white z-0"></div>
 
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] w-full relative z-10 flex flex-col items-center text-center">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] w-full relative z-10 flex flex-col items-center text-center">
                     
                     <h1 className="font-sans font-bold text-[40px] md:text-[60px] leading-[1.1] text-white tracking-[-1.5px] mb-6 max-w-[900px]">
                         Study, Work, and Settle — <br className="hidden md:block"/>
@@ -97,7 +97,7 @@ const Canada = () => {
 
             {/* 3. Details + Differentiators */}
             <div className="bg-white flex-grow">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-16 min-[820px]:pb-24">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24">
                     
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[16px] md:text-[18px] leading-[1.7] text-[#444]">
@@ -105,7 +105,7 @@ const Canada = () => {
                         </p>
                     </section>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         <Card className="p-8 border border-[#f0eaf2] text-center flex flex-col items-center">
                             <div className="w-14 h-14 rounded-2xl bg-[#faf8fb] text-primary flex items-center justify-center mb-5">
                                 <CheckCircle2 size={28} strokeWidth={1.5} />

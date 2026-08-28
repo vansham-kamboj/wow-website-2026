@@ -114,11 +114,11 @@ const Features = () => {
             <div className="absolute inset-0 bg-white/20 z-0 pointer-events-none"></div>
 
             {/* Content Layer */}
-            <div className="relative z-10 pt-[50px] pb-[60px] min-[820px]:pt-[60px] min-[820px]:pb-[80px]">
+            <div className="relative z-10 pt-[50px] pb-[60px] lg:pt-[60px] lg:pb-[80px]">
                 
                 {/* Header — at the very top, bold and big */}
-                <div className="relative z-10 px-[20px] min-[820px]:px-[60px] max-w-[1200px] mx-auto mb-[20px] min-[820px]:mb-[10px]">
-                    <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
+                <div className="relative z-10 px-[20px] lg:px-[60px] max-w-[1200px] mx-auto mb-[20px] lg:mb-[10px]">
+                    <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                         Headstart Programs<br />
                         <span className="text-primary font-medium">unlock your potential!</span>
                     </h2>
@@ -126,7 +126,7 @@ const Features = () => {
 
                 {/* Responsive Circular Arch layout */}
                 <div 
-                    className="relative w-full mx-auto mt-[40px] min-[820px]:mt-0 flex justify-center"
+                    className="relative w-full mx-auto mt-[40px] lg:mt-0 flex justify-center"
                 >
                     <style>
                         {`
@@ -149,7 +149,7 @@ const Features = () => {
                         `}
                     </style>
 
-                    <div className="relative w-full features-arch-height flex justify-center mt-[20px] min-[820px]:mt-0">
+                    <div className="relative w-full features-arch-height flex justify-center mt-[20px] lg:mt-0">
                         <div 
                             className="relative features-arch-scaler flex-none"
                             style={{ 

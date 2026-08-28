@@ -53,7 +53,7 @@ const CountryLanding = () => {
 
             {/* 1. Hero Section (Reused orbiting layout) */}
             <div 
-                className="relative w-full pt-[150px] pb-[80px] min-[820px]:pt-[190px] min-[820px]:pb-[120px] flex flex-col overflow-hidden"
+                className="relative w-full pt-[150px] pb-[80px] lg:pt-[190px] lg:pb-[120px] flex flex-col overflow-hidden"
                 style={{ 
                     backgroundImage: `url("${countriesBg}")`, 
                     backgroundSize: 'cover', 
@@ -64,12 +64,12 @@ const CountryLanding = () => {
                 {/* Gradient overlay to fade smoothly into the white section below */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#f8f5fa]/90 via-[#f8f5fa]/90 to-white z-0"></div>
 
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] w-full relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] w-full relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
                     
                     {/* Text Content */}
                     <div className="flex-1 text-center lg:text-left z-10">
                         
-                        <h1 className="font-sans font-bold text-[40px] md:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                        <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                             Six Countries. <br className="hidden md:block"/>
                             <span className="text-primary font-medium">One Decision That Changes Everything.</span>
                         </h1>
@@ -89,7 +89,7 @@ const CountryLanding = () => {
                     <div className="flex-1 w-full max-w-[500px] relative z-10 flex items-center justify-center h-[340px] md:h-[460px]">
                         
                         {/* Thin dashed circular orbit */}
-                        <div className="absolute w-[300px] h-[300px] min-[820px]:w-[420px] min-[820px]:h-[420px] rounded-full border-[1.5px] border-primary/20"></div>
+                        <div className="absolute w-[300px] h-[300px] lg:w-[420px] lg:h-[420px] rounded-full border-[1.5px] border-primary/20"></div>
 
                         <style dangerouslySetInnerHTML={{__html: `
                             :root {
@@ -116,7 +116,7 @@ const CountryLanding = () => {
                             }
                         `}} />
 
-                        <div className="absolute w-[300px] h-[300px] min-[820px]:w-[420px] min-[820px]:h-[420px] rounded-full orbit-container pointer-events-none z-30">
+                        <div className="absolute w-[300px] h-[300px] lg:w-[420px] lg:h-[420px] rounded-full orbit-container pointer-events-none z-30">
                             {countriesList.map((country, idx) => {
                                 const angle = (idx * (360 / countriesList.length));
                                 return (
@@ -132,7 +132,7 @@ const CountryLanding = () => {
                                         <div className="orbit-item flex flex-col items-center gap-2">
                                             <Card 
                                                 hoverEffect={false}
-                                                className="w-[40px] h-[40px] min-[820px]:w-[54px] min-[820px]:h-[54px] !rounded-full !p-0 border-[2px] border-white overflow-hidden shadow-md"
+                                                className="w-[40px] h-[40px] lg:w-[54px] lg:h-[54px] !rounded-full !p-0 border-[2px] border-white overflow-hidden shadow-md"
                                             >
                                                 <img src={country.flag} alt={country.name} className="w-full h-full object-cover" />
                                             </Card>
@@ -143,7 +143,7 @@ const CountryLanding = () => {
                         </div>
 
                         {/* Central Fading Images */}
-                        <div className="relative w-[180px] h-[180px] min-[820px]:w-[280px] min-[820px]:h-[280px] rounded-full overflow-hidden shadow-[0_8px_30px_rgba(147,51,234,0.15)] border-[6px] border-white z-10 bg-[#faf8fb]">
+                        <div className="relative w-[180px] h-[180px] lg:w-[280px] lg:h-[280px] rounded-full overflow-hidden shadow-[0_8px_30px_rgba(147,51,234,0.15)] border-[6px] border-white z-10 bg-[#faf8fb]">
                             {countriesList.map((country, idx) => (
                                 <img 
                                     key={country.id}
@@ -160,7 +160,7 @@ const CountryLanding = () => {
 
             {/* 2. Countries Grid */}
             <div className="bg-white flex-grow relative z-20">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-16 min-[820px]:pb-24 pt-8">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24 pt-8">
                     
                     <div className="text-center mb-16">
                         <h2 className="font-sans font-bold text-[32px] md:text-[42px] leading-[1.2] text-[#161616] tracking-[-1px]">

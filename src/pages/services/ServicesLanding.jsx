@@ -37,12 +37,12 @@ const ServicesLanding = () => {
             />
 
             {/* 1. Hero Section (with gradient fade out) */}
-            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pb-16 min-[820px]:pb-24">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px]">
+            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pb-16 lg:pb-24">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <section className="flex flex-col lg:flex-row gap-12 items-center">
                         <div className="flex-1 text-center lg:text-left z-10">
                             
-                            <h1 className="font-sans font-bold text-[40px] md:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Every Visa Has a Journey — <br />
                                 <span className="text-primary font-medium">Here's How We Guide Yours</span>
                             </h1>

@@ -34,12 +34,12 @@ const ApplicationProcess = () => {
             />
 
             {/* 1. Hero Section */}
-            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 min-[820px]:pb-20">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px]">
+            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pb-20">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <section className="flex flex-col gap-10 items-center text-center">
                         <div className="z-10 w-full max-w-[800px] mx-auto">
                             
-                            <h1 className="font-sans font-bold text-[40px] md:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 One Small Mistake Here <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">Ends the Story Early.</span>
                             </h1>
@@ -104,7 +104,7 @@ const ApplicationProcess = () => {
 
             {/* 2. Details + Differentiators */}
             <div className="bg-white flex-grow">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-16 min-[820px]:pb-24">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[17px] md:text-[20px] leading-[1.7] text-[#444]">
                             We treat your application like a legal document. From form-filling accuracy to strict document cross-verification, our rigorous pre-submission audits ensure that not a single detail is left to chance. Because perfection is the only standard we accept.

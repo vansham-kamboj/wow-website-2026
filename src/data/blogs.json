@@ -1,0 +1,68 @@
+[
+    {
+        "id": "1",
+        "slug": "usa-f1-visa-interview-guide",
+        "title": "5 Most Common F-1 Visa Interview Questions and How to Answer Them",
+        "excerpt": "Don't let the visa interview catch you off guard. Here is exactly what the consular officer is looking for when they ask 'Why this university?'",
+        "category": "Visa Updates",
+        "author": "Arjun Mehta",
+        "readTime": "6 min read",
+        "imageUrl": "/src/assets/images/countries/usa-bg.webp",
+        "date": "2026-08-20"
+    },
+    {
+        "id": "2",
+        "slug": "germany-blocked-account-2026",
+        "title": "Germany Blocked Account Changes for 2026",
+        "excerpt": "The German government has updated the required blocked account amount for international students. Here is what you need to know before applying.",
+        "category": "Country Guides",
+        "author": "Rahul Patel",
+        "readTime": "4 min read",
+        "imageUrl": "/src/assets/images/countries/germany-bg.webp",
+        "date": "2026-08-15"
+    },
+    {
+        "id": "3",
+        "slug": "ielts-vs-duolingo-which-is-better",
+        "title": "IELTS vs. Duolingo: Which Test Should You Take?",
+        "excerpt": "With more universities accepting the Duolingo English Test, is the IELTS still necessary? We break down the pros and cons of both tests.",
+        "category": "Test Prep",
+        "author": "Priya Sharma",
+        "readTime": "5 min read",
+        "imageUrl": "/src/assets/images/coaching/ielts.webp",
+        "date": "2026-08-10"
+    },
+    {
+        "id": "4",
+        "slug": "canada-sds-stream-update",
+        "title": "Is the Canada SDS Stream Still the Fastest Pathway?",
+        "excerpt": "An in-depth look at recent processing time changes for the Student Direct Stream (SDS) and what it means for Indian applicants.",
+        "category": "Visa Updates",
+        "author": "Arjun Mehta",
+        "readTime": "7 min read",
+        "imageUrl": "/src/assets/images/countries/canada-bg.webp",
+        "date": "2026-08-05"
+    },
+    {
+        "id": "5",
+        "slug": "how-neha-secured-full-scholarship-nyu",
+        "title": "How Neha Secured a Full Scholarship to NYU",
+        "excerpt": "Discover the exact profile-building strategies and essay techniques Neha used to win a 100% tuition waiver in the US.",
+        "category": "Success Stories",
+        "author": "Sneha Desai",
+        "readTime": "8 min read",
+        "imageUrl": "/src/assets/images/countries/usa-bg.webp",
+        "date": "2026-07-28"
+    },
+    {
+        "id": "6",
+        "slug": "education-loan-without-collateral",
+        "title": "How to Get an Education Loan Without Collateral",
+        "excerpt": "A complete guide to navigating non-collateral education loans for your master's degree abroad. Tips on co-applicants and interest rates.",
+        "category": "Financial Aid",
+        "author": "Sneha Desai",
+        "readTime": "5 min read",
+        "imageUrl": "/src/assets/images/services/services.webp",
+        "date": "2026-07-20"
+    }
+]

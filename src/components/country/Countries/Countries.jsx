@@ -32,8 +32,8 @@ const Countries = () => {
             <div className="absolute inset-0 bg-[#f8f5fa]/90 z-0"></div>
 
             {/* Top Bar: Heading and Button */}
-            <div className="flex justify-between items-end mb-[40px] px-[20px] min-[820px]:px-[60px] max-w-[1200px] mx-auto w-full relative z-10">
-                <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
+            <div className="flex justify-between items-end mb-[40px] px-[20px] lg:px-[60px] max-w-[1200px] mx-auto w-full relative z-10">
+                <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                     Top Destinations <br/>
                     <span className="text-primary font-medium">for Studies</span>
                 </h2>
@@ -47,10 +47,10 @@ const Countries = () => {
             </div>
 
             {/* Revolving Circle Area */}
-            <div className="relative w-full max-w-[800px] mx-auto h-[320px] min-[820px]:h-[460px] flex items-center justify-center z-10">
+            <div className="relative w-full max-w-[800px] mx-auto h-[320px] lg:h-[460px] flex items-center justify-center z-10">
                 
                 {/* Thin dashed circular orbit */}
-                <div className="absolute w-[300px] h-[300px] min-[820px]:w-[420px] min-[820px]:h-[420px] rounded-full border-[1.5px] border-primary/15"></div>
+                <div className="absolute w-[300px] h-[300px] lg:w-[420px] lg:h-[420px] rounded-full border-[1.5px] border-primary/15"></div>
 
                 {/* Revolving Container */}
                 <style dangerouslySetInnerHTML={{__html: `
@@ -78,7 +78,7 @@ const Countries = () => {
                     }
                 `}} />
 
-                <div className="absolute w-[300px] h-[300px] min-[820px]:w-[420px] min-[820px]:h-[420px] rounded-full orbit-container pointer-events-none z-30">
+                <div className="absolute w-[300px] h-[300px] lg:w-[420px] lg:h-[420px] rounded-full orbit-container pointer-events-none z-30">
                     {countriesList.map((country, idx) => {
                         const angle = (idx * (360 / countriesList.length));
                         return (
@@ -94,11 +94,11 @@ const Countries = () => {
                                 <Link to={`/study-in/${country.name.toLowerCase().replace(/\s+/g, '-')}`} className="orbit-item flex flex-col items-center gap-2 pointer-events-auto hover:scale-110 transition-transform">
                                     <Card 
                                         hoverEffect={false}
-                                        className="w-[40px] h-[40px] min-[820px]:w-[54px] min-[820px]:h-[54px] !rounded-full !p-0 border-[2px] border-white overflow-hidden shadow-md"
+                                        className="w-[40px] h-[40px] lg:w-[54px] lg:h-[54px] !rounded-full !p-0 border-[2px] border-white overflow-hidden shadow-md"
                                     >
                                         <img src={country.flag} alt={country.name} className="w-full h-full object-cover" />
                                     </Card>
-                                    <span className="font-sans font-bold text-[11px] min-[820px]:text-[13px] text-primary bg-[#f8f5fa]/95 px-[8px] py-[2px] rounded-[6px] whitespace-nowrap text-center shadow-sm relative z-40 group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span className="font-sans font-bold text-[11px] lg:text-[13px] text-primary bg-[#f8f5fa]/95 px-[8px] py-[2px] rounded-[6px] whitespace-nowrap text-center shadow-sm relative z-40 group-hover:bg-primary group-hover:text-white transition-colors">
                                         {country.name}
                                     </span>
                                 </Link>
@@ -108,7 +108,7 @@ const Countries = () => {
                 </div>
 
                 {/* Central Fading Images */}
-                <div className="relative w-[160px] h-[160px] min-[820px]:w-[280px] min-[820px]:h-[280px] rounded-full overflow-hidden shadow-[0_8px_30px_rgba(147,51,234,0.2)] border-[6px] border-white z-10">
+                <div className="relative w-[160px] h-[160px] lg:w-[280px] lg:h-[280px] rounded-full overflow-hidden shadow-[0_8px_30px_rgba(147,51,234,0.2)] border-[6px] border-white z-10">
                     {countriesList.map((country, idx) => (
                         <img 
                             key={country.id}

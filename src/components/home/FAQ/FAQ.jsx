@@ -33,19 +33,19 @@ const FAQ = ({ data }) => {
     const faqList = data || defaultFaqs;
     
     return (
-        <section className="py-[80px] min-[820px]:py-[120px] px-[20px] min-[820px]:px-[60px] bg-white">
-            <div className="max-w-[1200px] mx-auto flex flex-col min-[820px]:flex-row gap-[60px] min-[820px]:gap-[100px] items-start">
+        <section className="py-[80px] lg:py-[120px] px-[20px] lg:px-[60px] bg-white">
+            <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-[60px] lg:gap-[100px] items-start">
                 
                 {/* Left Side: Heading (approx 40%) */}
-                <div className="w-full min-[820px]:w-[35%] min-[820px]:sticky min-[820px]:top-[120px]">
-                    <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
+                <div className="w-full lg:w-[35%] lg:sticky lg:top-[120px]">
+                    <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
                         Frequently Asked Questions<br />
                         <span className="text-primary font-medium">find your answers here!</span>
                     </h2>
                 </div>
 
                 {/* Right Side: Accordion (approx 65%) */}
-                <div className="w-full min-[820px]:w-[65%]">
+                <div className="w-full lg:w-[65%]">
                     <Accordion type="single" collapsible defaultValue="item-0">
                         {faqList.map((faq, index) => (
                             <AccordionItem 
@@ -53,12 +53,12 @@ const FAQ = ({ data }) => {
                                 value={`item-${index}`}
                                 className="border-b border-[#f0eaf2] last:border-b-0"
                             >
-                                <AccordionTrigger className="w-full flex justify-between items-center py-[24px] text-left group/accordion-trigger font-bold text-[17px] min-[820px]:text-[19px] pr-[30px] transition-colors duration-300 text-[#161616] group-hover/accordion-trigger:text-primary group-aria-expanded/accordion-trigger:text-primary hover:no-underline">
+                                <AccordionTrigger className="w-full flex justify-between items-center py-[24px] text-left group/accordion-trigger font-bold text-[17px] lg:text-[19px] pr-[30px] transition-colors duration-300 text-[#161616] group-hover/accordion-trigger:text-primary group-aria-expanded/accordion-trigger:text-primary hover:no-underline">
                                     {faq.question}
                                 </AccordionTrigger>
                                 
                                 <AccordionContent className="pb-[24px]">
-                                    <p className="text-[15px] min-[820px]:text-[16px] leading-[1.7] text-[#767676] pr-[20px] min-[820px]:pr-[60px]">
+                                    <p className="text-[15px] lg:text-[16px] leading-[1.7] text-[#767676] pr-[20px] lg:pr-[60px]">
                                         {faq.answer}
                                     </p>
                                 </AccordionContent>

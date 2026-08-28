@@ -34,13 +34,13 @@ const AirTicket = () => {
             />
 
             {/* 1. Hero Section */}
-            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 min-[820px]:pt-[170px] min-[820px]:pb-24 overflow-hidden">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px]">
+            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pt-[170px] lg:pb-24 overflow-hidden">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
                         {/* Text Content */}
                         <div className="flex-1 text-center md:text-left z-10">
                             
-                            <h1 className="font-sans font-bold text-[40px] md:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Visa Approved. <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">Now Let's Get You There.</span>
                             </h1>
@@ -110,14 +110,14 @@ const AirTicket = () => {
 
             {/* 2. Details + Differentiators */}
             <div className="bg-white flex-grow">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-16 min-[820px]:pb-24">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[16px] md:text-[18px] leading-[1.7] text-[#444]">
                             We secure flexible-date bookings for unpredictable visa timelines, provide strict baggage allowance guidance for first-time international flyers, and negotiate group discounts if your family is traveling with you.
                         </p>
                     </section>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         <Card className="p-8 border border-[#f0eaf2] text-center flex flex-col items-center">
                             <div className="w-14 h-14 rounded-2xl bg-[#faf8fb] text-primary flex items-center justify-center mb-5">
                                 <Ticket size={28} strokeWidth={1.5} />

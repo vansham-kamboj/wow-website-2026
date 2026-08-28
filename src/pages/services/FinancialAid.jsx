@@ -34,12 +34,12 @@ const FinancialAid = () => {
             />
 
             {/* 1. Hero Section */}
-            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 min-[820px]:pb-16">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px]">
+            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pb-16">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <section className="flex flex-col items-center text-center">
                         <div className="z-10 w-full max-w-[900px] mx-auto">
                             
-                            <h1 className="font-sans font-bold text-[40px] md:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Money Worries Stop More Dreams <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">Than Rejections Do.</span>
                             </h1>
@@ -56,7 +56,7 @@ const FinancialAid = () => {
                         </div>
                         
                         {/* Stats Strip (like Home) */}
-                        <div className="w-full max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 bg-white border border-[#f0eaf2] rounded-2xl shadow-[0_20px_60px_rgba(147,51,234,0.04)] p-6 z-10 transform md:-translate-y-4">
+                        <div className="w-full max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 bg-white border border-[#f0eaf2] rounded-2xl shadow-[0_20px_60px_rgba(147,51,234,0.04)] p-6 z-10 transform md:-translate-y-4">
                             <div className="flex flex-col items-center justify-center p-4">
                                 <span className="text-[32px] md:text-[40px] font-black text-primary leading-none tracking-tight mb-2">₹1Cr+</span>
                                 <span className="text-[14px] font-bold text-[#666]">Max Loan Approval</span>
@@ -76,14 +76,14 @@ const FinancialAid = () => {
 
             {/* 2. Details + Differentiators */}
             <div className="bg-white">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-8 min-[820px]:pb-16 pt-12">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-8 lg:pb-16 pt-12">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[17px] md:text-[20px] leading-[1.7] text-[#444]">
                             Studying abroad is an investment, but securing the funds shouldn't be a nightmare. We simplify the entire process through direct bank and NBFC loan tie-ups, precision scholarship matching based on your unique profile, and meticulous fund-proof documentation formatted strictly to your destination country's visa requirements.
                         </p>
                     </section>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         <Card className="p-8 border border-[#f0eaf2] text-center flex flex-col items-center transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(147,51,234,0.12)]">
                             <div className="w-16 h-16 rounded-2xl bg-[#faf8fb] text-primary flex items-center justify-center mb-6">
                                 <Landmark size={32} strokeWidth={1.5} />
@@ -124,8 +124,8 @@ const FinancialAid = () => {
             </div>
 
             {/* 3. Illustrated Section */}
-            <div className="relative overflow-hidden bg-gradient-to-b from-white via-[#faf8fb] to-white py-[60px] min-[820px]:py-[100px]">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] relative z-10">
+            <div className="relative overflow-hidden bg-gradient-to-b from-white via-[#faf8fb] to-white py-[60px] lg:py-[100px]">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] relative z-10">
                     <div className="flex flex-col items-center">
                         <div className="relative w-full max-w-[700px] aspect-[16/9] md:aspect-[21/9] flex items-center justify-center">
                             

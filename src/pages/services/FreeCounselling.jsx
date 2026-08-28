@@ -35,12 +35,12 @@ const FreeCounselling = () => {
             />
 
             {/* 1. Hero Section */}
-            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 min-[820px]:pb-20">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px]">
+            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pb-20">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <section className="flex flex-col lg:flex-row gap-10 items-center">
                         <div className="flex-1 text-center lg:text-left z-10">
                             
-                            <h1 className="font-sans font-bold text-[40px] md:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Before Any Paperwork, <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">We Just Talk.</span>
                             </h1>
@@ -57,21 +57,49 @@ const FreeCounselling = () => {
                         </div>
                         
                         <div className="flex-1 flex justify-center lg:justify-end relative w-full mt-6 lg:mt-0 z-10">
-                            {/* Chat bubble visual collage */}
-                            <div className="relative w-full max-w-[400px] aspect-square rounded-[32px] flex items-center justify-center p-8">
-                                <div className="absolute inset-0 bg-primary/5 rounded-[40px] transform -rotate-6"></div>
-                                <div className="absolute inset-0 bg-white rounded-[40px] shadow-[0_20px_60px_rgba(147,51,234,0.06)] border border-[#f0eaf2] transform rotate-3 transition-transform duration-500 hover:rotate-0"></div>
+                            {/* Realistic Chat Window */}
+                            <div className="relative w-full max-w-[380px] bg-white rounded-[24px] shadow-[0_20px_60px_rgba(147,51,234,0.12)] border border-[#f0eaf2] overflow-hidden transform hover:-translate-y-2 transition-transform duration-500">
                                 
-                                <div className="relative z-10 flex flex-col gap-6 w-full px-4">
-                                    <div className="flex items-end gap-3 self-start max-w-[85%]">
-                                        <div className="bg-[#faf8fb] text-[#161616] p-5 rounded-2xl rounded-bl-none shadow-sm border border-gray-50 text-[14px] min-[820px]:text-[15px] font-medium leading-[1.5]">
+                                {/* Chat Header */}
+                                <div className="bg-[#faf8fb] px-5 py-4 border-b border-[#f0eaf2] flex items-center gap-4">
+                                    <div className="relative">
+                                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-[18px]">
+                                            W
+                                        </div>
+                                        <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-[#161616] text-[15px] leading-none mb-1">Wow Expert</h4>
+                                        <p className="text-[12px] text-[#767676] leading-none">Online</p>
+                                    </div>
+                                </div>
+                                
+                                {/* Chat Body */}
+                                <div className="p-5 flex flex-col gap-5 bg-white">
+                                    {/* Student Message */}
+                                    <div className="flex flex-col gap-1 self-start max-w-[85%]">
+                                        <div className="bg-[#f2eff4] text-[#161616] p-4 rounded-2xl rounded-bl-none text-[14px] leading-[1.5]">
                                             Hi! I want to study in the UK, but I'm not sure if my budget is enough.
                                         </div>
+                                        <span className="text-[11px] text-[#888] ml-1">10:42 AM</span>
                                     </div>
-                                    <div className="flex items-end gap-3 self-end max-w-[90%] flex-row-reverse">
-                                        <div className="bg-primary text-white p-5 rounded-2xl rounded-br-none shadow-[0_8px_20px_rgba(147,51,234,0.2)] text-[14px] min-[820px]:text-[15px] font-medium leading-[1.5]">
-                                            That's exactly what we're here for. Let's look at your options together—no strings attached.
+                                    
+                                    {/* Expert Message */}
+                                    <div className="flex flex-col gap-1 self-end max-w-[90%] items-end">
+                                        <div className="bg-primary text-white p-4 rounded-2xl rounded-br-none shadow-[0_4px_12px_rgba(147,51,234,0.2)] text-[14px] leading-[1.5]">
+                                            That's exactly what we're here for. Let's look at your options together—no strings attached. 😊
                                         </div>
+                                        <span className="text-[11px] text-[#888] mr-1">10:44 AM</span>
+                                    </div>
+                                </div>
+                                
+                                {/* Chat Input Area (Decorative) */}
+                                <div className="px-5 py-4 border-t border-[#f0eaf2] flex items-center gap-3 bg-[#faf8fb]">
+                                    <div className="flex-1 bg-white border border-[#e8dced] rounded-full h-10 px-4 flex items-center">
+                                        <span className="text-[#a0a0a0] text-[13px]">Type a message...</span>
+                                    </div>
+                                    <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                                     </div>
                                 </div>
                             </div>
@@ -82,14 +110,14 @@ const FreeCounselling = () => {
 
             {/* 2. Details + Differentiators */}
             <div className="bg-white flex-grow">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-16 min-[820px]:pb-24">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[17px] md:text-[20px] leading-[1.7] text-[#444]">
                             Our first session is completely unscripted. <strong>No sales pitch, no commitment.</strong> We take the time to sit down with you and cover your academic and professional background, discuss your budget honestly, and evaluate your target country live with a certified counsellor.
                         </p>
                     </section>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         <Card className="p-8 border border-[#f0eaf2] text-center flex flex-col items-center">
                             <div className="w-16 h-16 rounded-full bg-[#faf8fb] text-primary flex items-center justify-center mb-6">
                                 <HeartHandshake size={32} strokeWidth={1.5} />

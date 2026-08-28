@@ -35,15 +35,15 @@ const IELTS = () => {
             />
 
             {/* 1. Hero + Video Section */}
-            <div className="pt-[130px] min-[820px]:pt-[150px] bg-gradient-to-b from-[#faf8fb] to-white relative overflow-hidden">
+            <div className="pt-[130px] lg:pt-[150px] bg-gradient-to-b from-[#faf8fb] to-white relative overflow-hidden">
                 
                 {/* Top Area: Heading on left, Button on right */}
-                <section className="relative z-10 flex flex-col min-[820px]:flex-row justify-between items-start min-[820px]:items-center px-[20px] min-[820px]:px-[60px] pb-[40px] gap-[30px] max-w-[1400px] mx-auto">
+                <section className="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center px-[20px] lg:px-[60px] pb-[40px] gap-[30px] max-w-[1400px] mx-auto">
                     
                     {/* Left Side: Heading & Text */}
                     <div className="flex flex-col gap-[14px] flex-1">
                         
-                        <h1 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
+                        <h1 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
                             One Test, Two Paths —<br />
                             <span className="text-primary font-medium">We Prep You for Either.</span>
                         </h1>
@@ -53,11 +53,11 @@ const IELTS = () => {
                     </div>
                     
                     {/* Right Side: Button */}
-                    <div className="flex-none w-full min-[820px]:w-auto mt-[10px] min-[820px]:mt-0">
+                    <div className="flex-none w-full lg:w-auto mt-[10px] lg:mt-0">
                         <Link to="/contact">
                             <button className={buttonVariants({
                                 variant: "custom",
-                                className: "bg-transparent border-2 !border-primary text-primary hover:bg-primary hover:text-white px-[20px] py-[14px] min-[820px]:px-[32px] min-[820px]:py-[18px] rounded-[8px] font-bold text-[14px] min-[820px]:text-[16px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-auto w-full min-[820px]:w-auto text-center justify-center"
+                                className: "bg-transparent border-2 !border-primary text-primary hover:bg-primary hover:text-white px-[20px] py-[14px] lg:px-[32px] lg:py-[18px] rounded-[8px] font-bold text-[14px] lg:text-[16px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-auto w-full lg:w-auto text-center justify-center"
                             })}>
                                 Book a Free IELTS Demo
                             </button>
@@ -76,7 +76,7 @@ const IELTS = () => {
                         <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none"></div>
 
                         <video 
-                            className="w-full block aspect-[16/9] min-[820px]:aspect-[4/1] object-cover opacity-90 relative z-0" 
+                            className="w-full block aspect-[16/9] lg:aspect-[4/1] object-cover opacity-90 relative z-0" 
                             autoPlay 
                             muted 
                             loop 
@@ -87,21 +87,21 @@ const IELTS = () => {
                         </video>
 
                         {/* Stats Overlay directly on video */}
-                        <div className="absolute bottom-0 left-0 w-full px-[10px] py-[20px] min-[820px]:px-[60px] min-[820px]:py-[40px] flex flex-row justify-between items-center z-20">
+                        <div className="absolute bottom-0 left-0 w-full px-[10px] py-[20px] lg:px-[60px] lg:py-[40px] flex flex-row justify-between items-center z-20">
                             
                             <div className="flex flex-col items-center flex-1 text-center border-r border-white/20">
-                                <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">7.5+</span>
-                                <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Avg Band<br className="block min-[820px]:hidden" />Score</span>
+                                <span className="block font-sans font-light text-[14px] lg:text-[56px] text-white leading-none mb-[2px] lg:mb-[8px] tracking-tight">7.5+</span>
+                                <span className="block text-[7px] lg:text-[13px] text-white/90 font-medium uppercase tracking-widest lg:tracking-[0.5px]">Avg Band<br className="block lg:hidden" />Score</span>
                             </div>
                             
                             <div className="flex flex-col items-center flex-1 text-center border-r border-white/20">
-                                <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">4</span>
-                                <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Modules<br className="block min-[820px]:hidden" />Covered</span>
+                                <span className="block font-sans font-light text-[14px] lg:text-[56px] text-white leading-none mb-[2px] lg:mb-[8px] tracking-tight">4</span>
+                                <span className="block text-[7px] lg:text-[13px] text-white/90 font-medium uppercase tracking-widest lg:tracking-[0.5px]">Modules<br className="block lg:hidden" />Covered</span>
                             </div>
                             
                             <div className="flex flex-col items-center flex-1 text-center">
-                                <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">Weekly</span>
-                                <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Mock<br className="block min-[820px]:hidden" />Tests</span>
+                                <span className="block font-sans font-light text-[14px] lg:text-[56px] text-white leading-none mb-[2px] lg:mb-[8px] tracking-tight">Weekly</span>
+                                <span className="block text-[7px] lg:text-[13px] text-white/90 font-medium uppercase tracking-widest lg:tracking-[0.5px]">Mock<br className="block lg:hidden" />Tests</span>
                             </div>
 
                         </div>
@@ -112,7 +112,7 @@ const IELTS = () => {
 
             {/* 2. Details + Differentiators */}
             <div className="bg-white flex-grow">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-16 min-[820px]:pb-24 pt-16">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24 pt-16">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[17px] md:text-[20px] leading-[1.7] text-[#444]">
                             The IELTS exam tests you across four strict modules: <strong>Listening, Reading, Writing, and Speaking</strong>. Our coaching is systematically split across these modules. We teach you how to skim long Reading passages, structure high-scoring Writing tasks, catch accents in Listening, and speak with confidence in front of a live examiner.

@@ -21,10 +21,10 @@ const WhyChooseUs = () => {
     const imgRef = useRef(null);
     const cardsRef = useRef([]);
     const [scrollProgress, setScrollProgress] = useState(0);
-    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 820 : false);
+    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 1024 : false);
 
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 820);
+        const handleResize = () => setIsMobile(window.innerWidth < 1024);
         window.addEventListener('resize', handleResize, { passive: true });
         
         const handleScroll = () => {
@@ -88,21 +88,38 @@ const WhyChooseUs = () => {
             <div className="absolute inset-0 bg-white/20 z-0 pointer-events-none"></div>
 
             {/* Content Layer */}
-            <div className="relative z-10 py-[40px] min-[1100px]:py-[40px] px-[20px] min-[820px]:px-[60px] max-w-[1400px] mx-auto flex flex-col min-[1100px]:flex-row items-center justify-between gap-[40px] min-[1100px]:gap-[20px]">
+            <div className="relative z-10 py-[40px] lg:py-[60px] px-[20px] lg:px-[60px] max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-[40px] lg:gap-[20px]">
                 
                 {/* Header (Left on Desktop) */}
-                <div className="w-full min-[1100px]:w-[35%] text-left z-20">
-                    <h2 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
+                <div className="w-full lg:w-[40%] text-left z-20">
+                    <h2 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                         Why Choose Us<br />
                         <span className="text-primary font-medium">your trusted education partner!</span>
                     </h2>
-                    <p className="text-[16px] text-[#555] mt-[24px] leading-[1.6]">
+                    <p className="text-[15px] md:text-[16px] text-[#555] mt-[16px] md:mt-[24px] leading-[1.6]">
                         We don't just process applications; we craft success stories. Our team of certified experts ensures your journey is smooth, transparent, and built for approval.
                     </p>
+                    <div className="mt-[24px] lg:hidden">
+                        <Button variant="custom" className="bg-primary hover:bg-primary-hover text-white transition-all duration-300 shadow-md hover:shadow-lg h-auto font-bold px-[24px] py-[12px] rounded-[8px] text-[14px]">
+                            Get Free Consulting
+                        </Button>
+                    </div>
+                </div>
+
+                {/* Mobile / Tablet Grid Layout */}
+                <div className="w-full lg:hidden grid grid-cols-1 md:grid-cols-2 gap-[16px] mt-[10px]">
+                    {featuresData.map((f, i) => (
+                        <Card key={i} className="flex items-center gap-[12px] p-[16px] rounded-[12px]">
+                            <div className="bg-primary flex items-center justify-center flex-none w-[36px] h-[36px] rounded-[8px]">
+                                {React.cloneElement(f.icon, { className: 'w-[18px] h-[18px] text-white' })}
+                            </div>
+                            <span className="font-bold text-[#161616] text-[14px] leading-[1.3]">{f.title}</span>
+                        </Card>
+                    ))}
                 </div>
 
                 {/* Arch Layout (Right on Desktop) */}
-                <div className="w-full min-[1100px]:w-[65%] relative flex justify-center min-[1100px]:justify-end">
+                <div className="hidden lg:flex w-[60%] relative justify-end">
                     
                     <style>
                         {`
@@ -114,12 +131,12 @@ const WhyChooseUs = () => {
                             transform-origin: top center;
                         }
                         
-                        @media (min-width: 1100px) {
+                        @media (min-width: 1024px) {
                             .why-arch-height {
-                                height: calc(${containerH}px * min(1, calc((100vw * 0.65 - 80px) / ${containerW})));
+                                height: calc(${containerH}px * min(1, calc((100vw * 0.60 - 80px) / ${containerW})));
                             }
                             .why-arch-scaler {
-                                transform: scale(min(1, calc((100vw * 0.65 - 80px) / ${containerW})));
+                                transform: scale(min(1, calc((100vw * 0.60 - 80px) / ${containerW})));
                                 transform-origin: top right;
                             }
                         }
@@ -134,7 +151,7 @@ const WhyChooseUs = () => {
                         `}
                     </style>
 
-                    <div className="relative w-full why-arch-height flex justify-center min-[1100px]:justify-end mt-[20px] min-[1100px]:mt-0">
+                    <div className="relative w-full why-arch-height flex justify-end">
                         <div 
                             className="relative why-arch-scaler flex-none"
                             style={{ 

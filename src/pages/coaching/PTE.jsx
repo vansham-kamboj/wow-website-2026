@@ -35,15 +35,15 @@ const PTE = () => {
             />
 
             {/* 1. Hero + Video Section */}
-            <div className="pt-[130px] min-[820px]:pt-[150px] bg-gradient-to-b from-[#faf8fb] to-white relative overflow-hidden">
+            <div className="pt-[130px] lg:pt-[150px] bg-gradient-to-b from-[#faf8fb] to-white relative overflow-hidden">
                 
                 {/* Top Area: Heading on left, Button on right */}
-                <section className="relative z-10 flex flex-col min-[820px]:flex-row justify-between items-start min-[820px]:items-center px-[20px] min-[820px]:px-[60px] pb-[40px] gap-[30px] max-w-[1400px] mx-auto">
+                <section className="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center px-[20px] lg:px-[60px] pb-[40px] gap-[30px] max-w-[1400px] mx-auto">
                     
                     {/* Left Side: Heading & Text */}
                     <div className="flex flex-col gap-[14px] flex-1">
                         
-                        <h1 className="font-sans font-bold text-[36px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
+                        <h1 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
                             Fast, AI-Scored, and <br className="hidden md:block"/>
                             <span className="text-primary font-medium">Entirely Coachable.</span>
                         </h1>
@@ -53,11 +53,11 @@ const PTE = () => {
                     </div>
                     
                     {/* Right Side: Button */}
-                    <div className="flex-none w-full min-[820px]:w-auto mt-[10px] min-[820px]:mt-0">
+                    <div className="flex-none w-full lg:w-auto mt-[10px] lg:mt-0">
                         <Link to="/contact">
                             <button className={buttonVariants({
                                 variant: "custom",
-                                className: "bg-transparent border-2 !border-primary text-primary hover:bg-primary hover:text-white px-[20px] py-[14px] min-[820px]:px-[32px] min-[820px]:py-[18px] rounded-[8px] font-bold text-[14px] min-[820px]:text-[16px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-auto w-full min-[820px]:w-auto text-center justify-center"
+                                className: "bg-transparent border-2 !border-primary text-primary hover:bg-primary hover:text-white px-[20px] py-[14px] lg:px-[32px] lg:py-[18px] rounded-[8px] font-bold text-[14px] lg:text-[16px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-auto w-full lg:w-auto text-center justify-center"
                             })}>
                                 Book a Free PTE Demo
                             </button>
@@ -76,7 +76,7 @@ const PTE = () => {
                         <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none"></div>
 
                         <video 
-                            className="w-full block aspect-[16/9] min-[820px]:aspect-[4/1] object-cover opacity-90 relative z-0" 
+                            className="w-full block aspect-[16/9] lg:aspect-[4/1] object-cover opacity-90 relative z-0" 
                             autoPlay 
                             muted 
                             loop 
@@ -87,21 +87,21 @@ const PTE = () => {
                         </video>
 
                         {/* Stats Overlay directly on video (3 stats instead of 4) */}
-                        <div className="absolute bottom-0 left-0 w-full px-[10px] py-[20px] min-[820px]:px-[60px] min-[820px]:py-[40px] flex flex-row justify-between items-center z-20">
+                        <div className="absolute bottom-0 left-0 w-full px-[10px] py-[20px] lg:px-[60px] lg:py-[40px] flex flex-row justify-between items-center z-20">
                             
                             <div className="flex flex-col items-center flex-1 text-center border-r border-white/20">
-                                <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">48 Hrs</span>
-                                <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Avg Results<br className="block min-[820px]:hidden" />Time</span>
+                                <span className="block font-sans font-light text-[14px] lg:text-[56px] text-white leading-none mb-[2px] lg:mb-[8px] tracking-tight">48 Hrs</span>
+                                <span className="block text-[7px] lg:text-[13px] text-white/90 font-medium uppercase tracking-widest lg:tracking-[0.5px]">Avg Results<br className="block lg:hidden" />Time</span>
                             </div>
                             
                             <div className="flex flex-col items-center flex-1 text-center border-r border-white/20">
-                                <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">15+</span>
-                                <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Avg Score<br className="block min-[820px]:hidden" />Jump</span>
+                                <span className="block font-sans font-light text-[14px] lg:text-[56px] text-white leading-none mb-[2px] lg:mb-[8px] tracking-tight">15+</span>
+                                <span className="block text-[7px] lg:text-[13px] text-white/90 font-medium uppercase tracking-widest lg:tracking-[0.5px]">Avg Score<br className="block lg:hidden" />Jump</span>
                             </div>
                             
                             <div className="flex flex-col items-center flex-1 text-center">
-                                <span className="block font-sans font-light text-[14px] min-[820px]:text-[56px] text-white leading-none mb-[2px] min-[820px]:mb-[8px] tracking-tight">AI</span>
-                                <span className="block text-[7px] min-[820px]:text-[13px] text-white/90 font-medium uppercase tracking-widest min-[820px]:tracking-[0.5px]">Pattern-Based<br className="block min-[820px]:hidden" />Training</span>
+                                <span className="block font-sans font-light text-[14px] lg:text-[56px] text-white leading-none mb-[2px] lg:mb-[8px] tracking-tight">AI</span>
+                                <span className="block text-[7px] lg:text-[13px] text-white/90 font-medium uppercase tracking-widest lg:tracking-[0.5px]">Pattern-Based<br className="block lg:hidden" />Training</span>
                             </div>
 
                         </div>
@@ -112,14 +112,14 @@ const PTE = () => {
 
             {/* 2. Details + Differentiators */}
             <div className="bg-white flex-grow">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-16 min-[820px]:pb-24 pt-16">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24 pt-16">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[17px] md:text-[20px] leading-[1.7] text-[#444]">
                             Unlike traditional exams evaluated by humans, the Pearson Test of English (PTE) is scored by a highly advanced AI. This means human nuance matters less than hitting the exact structural, phonetic, and pacing triggers the algorithm looks for. We teach you template-based answering strategies that practically guarantee high marks when executed correctly.
                         </p>
                     </section>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         <Card className="p-8 border border-[#f0eaf2] text-center flex flex-col items-center bg-white shadow-sm transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(147,51,234,0.12)]">
                             <div className="w-16 h-16 rounded-2xl bg-[#faf8fb] text-primary flex items-center justify-center mb-6">
                                 <Bot size={32} strokeWidth={1.5} />

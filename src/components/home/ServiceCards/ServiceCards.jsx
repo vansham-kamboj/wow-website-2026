@@ -26,7 +26,7 @@ const ServiceCards = () => {
     }, [totalCards]);
 
     const cardWidth = isMobile ? 300 : 380;
-    const cardHeight = isMobile ? 320 : 380;
+    const cardHeight = isMobile ? 290 : 320;
     const spacing = isMobile ? 315 : 360;
 
     const getCardStyle = (index) => {
@@ -76,15 +76,15 @@ const ServiceCards = () => {
     };
 
     return (
-        <section className="pt-[40px] pb-[40px] min-[820px]:pt-[60px] min-[820px]:pb-[60px] bg-[#faf8fb] overflow-hidden relative">
+        <section className="pt-[40px] pb-[40px] lg:pt-[60px] lg:pb-[60px] bg-[#faf8fb] overflow-hidden relative">
             
             {/* Header Area — aligned left matching reference */}
-            <div className="relative z-10 px-[20px] min-[820px]:px-[60px] max-w-[1200px] mx-auto mb-[30px] min-[820px]:mb-[40px]">
-                <h2 className="font-sans font-bold text-[32px] min-[820px]:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
+            <div className="relative z-10 px-[20px] lg:px-[60px] max-w-[1200px] mx-auto mb-[30px] lg:mb-[40px]">
+                <h2 className="font-sans font-bold text-[32px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                     Every Visa Story Has These Chapters —<br />
                     <span className="text-primary font-medium">We Guide You Through All of Them</span>
                 </h2>
-                <p className="text-[14px] min-[820px]:text-[15px] leading-[1.65] text-[#767676] max-w-[600px] m-0 mt-[14px]">
+                <p className="text-[14px] lg:text-[15px] leading-[1.65] text-[#767676] max-w-[600px] m-0 mt-[14px]">
                     From the first "will I get approved?" doubt to landing in a new country — here's how we walk with you at every step.
                 </p>
             </div>
@@ -109,17 +109,15 @@ const ServiceCards = () => {
                             >
                                 <Card
                                     hoverEffect={false}
-                                    className={`rounded-[20px] min-[820px]:rounded-[24px] p-[24px] min-[820px]:p-[40px] flex flex-col transition-all duration-500 border border-[#f0eaf2] overflow-hidden ${
+                                    className={`rounded-[20px] lg:rounded-[24px] p-[24px] lg:p-[40px] flex flex-col transition-all duration-500 border border-[#f0eaf2] overflow-hidden ${
                                         index === activeIndex
                                             ? 'bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)]'
                                             : 'bg-white/70 shadow-[0_8px_30px_rgba(0,0,0,0.02)]'
                                     }`}
                                     style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}
                                 >
-                                    {/* Giant background faded icon for depth */}
-                                    <div className="absolute right-[-20px] bottom-[-20px] text-primary opacity-[0.03] pointer-events-none transition-transform duration-500 group-hover:scale-110">
-                                        <IconComp size={200} strokeWidth={1} />
-                                    </div>
+                                    {/* Subtle dot pattern background in bottom right (replaces oversized ghost icon) */}
+                                    <div className="absolute right-4 bottom-4 w-[60px] h-[60px] opacity-[0.06] pointer-events-none transition-transform duration-500 group-hover:scale-110" style={{ backgroundImage: 'radial-gradient(currentColor 2px, transparent 2px)', backgroundSize: '12px 12px', color: 'var(--color-primary)' }}></div>
                                     
                                     {/* Top Row: Number & Icon */}
                                     <div className="flex justify-between items-start mb-[24px] relative z-10">
@@ -143,7 +141,7 @@ const ServiceCards = () => {
                                     
                                     <span className="block text-[13px] font-bold text-primary mb-[12px] relative z-10">{service.subtitle}</span>
                                     
-                                    <p className="text-[14.5px] leading-[1.55] text-[#767676] mb-[16px] flex-grow pr-[10px] relative z-10">
+                                    <p className="text-[14.5px] leading-[1.55] text-[#767676] mb-[16px] pr-[10px] relative z-10">
                                         {service.description}
                                     </p>
                                     
@@ -176,20 +174,40 @@ const ServiceCards = () => {
                 </div>
             </div>
 
-            {/* Navigation (Dots only) */}
-            <div className="relative z-10 flex items-center justify-center mt-[20px]">
-                {/* Dots */}
-                <div className="flex gap-[10px]">
+            {/* Navigation Progress Bar */}
+            <div className="relative z-10 max-w-[800px] mx-auto mt-[40px] px-[30px] pb-[30px]">
+                {/* The thin connecting line */}
+                <div className="absolute left-[30px] right-[30px] top-[11px] h-[2px] bg-[#e8dced] z-0">
+                    {/* Active progress fill */}
+                    <div 
+                        className="h-full bg-primary transition-all duration-500"
+                        style={{ width: `${(activeIndex / (totalCards - 1)) * 100}%` }}
+                    ></div>
+                </div>
+                
+                {/* Steps container */}
+                <div className="relative z-10 flex justify-between items-center w-full">
                     {services.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => handleClick(index)}
-                            className={`rounded-full transition-all duration-300 ${
-                                index === activeIndex
-                                    ? 'w-[32px] h-[8px] bg-primary'
-                                    : 'w-[8px] h-[8px] bg-[#e8dced] hover:bg-primary/40'
-                            }`}
-                        />
+                            className="relative group flex flex-col items-center justify-center outline-none"
+                        >
+                            {/* Circle Node */}
+                            <div className={`w-[24px] h-[24px] rounded-full flex items-center justify-center transition-all duration-300 relative z-10 ${
+                                index === activeIndex ? 'bg-primary border-[4px] border-primary/20 scale-125' : 
+                                index < activeIndex ? 'bg-primary border-2 border-primary' : 'bg-[#faf8fb] border-[2px] border-[#e8dced] group-hover:border-primary/50'
+                            }`}>
+                                <div className={`w-[6px] h-[6px] rounded-full ${index === activeIndex || index < activeIndex ? 'bg-white' : 'bg-transparent'}`}></div>
+                            </div>
+                            
+                            {/* Number label below */}
+                            <span className={`absolute top-[32px] font-bold text-[13px] transition-colors duration-300 ${
+                                index === activeIndex ? 'text-primary scale-110' : 'text-[#888]'
+                            }`}>
+                                {String(index + 1).padStart(2, '0')}
+                            </span>
+                        </button>
                     ))}
                 </div>
             </div>

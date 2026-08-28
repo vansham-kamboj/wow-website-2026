@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { UserCheck, LineChart, FileText } from 'lucide-react';
+import { UserCheck, LineChart, FileText, GraduationCap, Wallet, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SEO from '@/components/common/SEO';
 import Card from '@/components/common/Card';
@@ -34,13 +34,13 @@ const VisaAssessment = () => {
             />
 
             {/* 1. Hero Section */}
-            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 min-[820px]:pt-[170px] min-[820px]:pb-24">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px]">
+            <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pt-[170px] lg:pb-24">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
                         {/* Text Content */}
                         <div className="flex-1 text-center md:text-left z-10">
                             
-                            <h1 className="font-sans font-bold text-[40px] md:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Know If This Is <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">Your Story to Tell.</span>
                             </h1>
@@ -62,58 +62,93 @@ const VisaAssessment = () => {
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary/10 rounded-full blur-[40px]"></div>
                             
                             {/* The Card Mockup */}
-                            <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(147,51,234,0.08)] border border-[#f0eaf2] p-8 relative z-10 transform transition-transform hover:-translate-y-2 duration-500">
-                                <h3 className="font-bold text-[18px] text-[#161616] mb-6 text-center">Your Eligibility Report</h3>
+                            <div className="bg-white rounded-[24px] shadow-[0_30px_80px_rgba(147,51,234,0.12)] border border-[#f0eaf2] p-[24px] lg:p-[32px] relative z-10 transform transition-transform hover:-translate-y-2 duration-500 overflow-hidden text-left">
                                 
-                                <div className="flex justify-center mb-6 relative">
+                                {/* Background accent */}
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full pointer-events-none"></div>
+
+                                {/* Report Header */}
+                                <div className="flex items-center justify-between mb-[24px] relative z-10 border-b border-[#f0eaf2] pb-[16px]">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-10 h-10 rounded-full bg-[#f8f5fa] flex items-center justify-center text-primary font-bold text-[14px]">
+                                            AR
+                                        </div>
+                                        <div>
+                                            <div className="text-[12px] text-[#888] font-medium uppercase tracking-wider">Candidate ID</div>
+                                            <div className="font-bold text-[#161616] text-[15px]">#WGS-8291</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-1.5 bg-[#eefaf2] text-[#22c55e] px-3 py-1.5 rounded-full font-bold text-[12px]">
+                                        <CheckCircle2 size={14} />
+                                        <span>Verified</span>
+                                    </div>
+                                </div>
+                                
+                                {/* Main Score */}
+                                <div className="flex flex-col items-center justify-center mb-[24px] relative z-10">
                                     {/* Circular Progress Ring */}
-                                    <div className="relative w-32 h-32 flex items-center justify-center">
-                                        <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                    <div className="relative w-[120px] h-[120px] flex items-center justify-center mb-4">
+                                        {/* Glow effect */}
+                                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-[16px] animate-pulse"></div>
+                                        
+                                        <svg className="w-full h-full transform -rotate-90 relative z-10 drop-shadow-md" viewBox="0 0 100 100">
                                             {/* Background circle */}
-                                            <circle cx="50" cy="50" r="40" stroke="#f0eaf2" strokeWidth="8" fill="none" />
+                                            <circle cx="50" cy="50" r="42" stroke="#f8f5fa" strokeWidth="8" fill="none" />
                                             {/* Progress circle */}
-                                            <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="8" fill="none" className="text-primary" strokeDasharray="251" strokeDashoffset="45" strokeLinecap="round" />
+                                            <circle cx="50" cy="50" r="42" stroke="currentColor" strokeWidth="8" fill="none" className="text-primary transition-all duration-1000 ease-out" strokeDasharray="264" strokeDashoffset="37" strokeLinecap="round" />
                                         </svg>
-                                        <div className="absolute flex flex-col items-center">
-                                            <span className="text-3xl font-black text-[#161616]">86<span className="text-lg text-[#888]">%</span></span>
+                                        <div className="absolute flex flex-col items-center z-20">
+                                            <span className="text-[36px] font-black text-[#161616] leading-none tracking-tight mt-[4px]">86<span className="text-[18px] text-[#888] font-bold">%</span></span>
+                                            <span className="text-[10px] font-bold text-primary tracking-widest uppercase mt-[2px]">Approval Odds</span>
                                         </div>
                                     </div>
+                                    
+                                    <p className="text-[13px] text-[#666] font-medium text-center">
+                                        Profile match is <span className="text-[#161616] font-bold">Strong</span> based on current embassy trends.
+                                    </p>
                                 </div>
                                 
-                                <div className="text-center mb-6">
-                                    <div className="inline-block bg-[#eefaf2] text-[#22c55e] px-4 py-1.5 rounded-full font-bold text-[14px] mb-2">
-                                        Your Match: Strong
-                                    </div>
-                                    <p className="text-[13px] text-[#888] font-medium">Based on 4 key indicators</p>
-                                </div>
-                                
-                                {/* Dummy metrics */}
-                                <div className="space-y-4">
+                                {/* Detailed Metrics */}
+                                <div className="space-y-[16px] relative z-10 w-full">
+                                    {/* Metric 1 */}
                                     <div>
-                                        <div className="flex justify-between text-[12px] font-bold mb-1">
-                                            <span className="text-[#555]">Academic Record</span>
-                                            <span className="text-primary">High</span>
+                                        <div className="flex justify-between items-center text-[13px] font-bold mb-2">
+                                            <div className="flex items-center gap-2 text-[#444]">
+                                                <GraduationCap size={16} className="text-[#888]" />
+                                                <span>Academic Record</span>
+                                            </div>
+                                            <span className="text-primary font-bold">High</span>
                                         </div>
-                                        <div className="w-full h-1.5 bg-[#f0eaf2] rounded-full overflow-hidden">
-                                            <div className="w-[90%] h-full bg-primary rounded-full"></div>
+                                        <div className="w-full h-[6px] bg-[#f8f5fa] rounded-full overflow-hidden shadow-inner">
+                                            <div className="w-[90%] h-full bg-gradient-to-r from-primary/80 to-primary rounded-full"></div>
                                         </div>
                                     </div>
+                                    
+                                    {/* Metric 2 */}
                                     <div>
-                                        <div className="flex justify-between text-[12px] font-bold mb-1">
-                                            <span className="text-[#555]">Financial Standing</span>
-                                            <span className="text-primary">Medium</span>
+                                        <div className="flex justify-between items-center text-[13px] font-bold mb-2">
+                                            <div className="flex items-center gap-2 text-[#444]">
+                                                <Wallet size={16} className="text-[#888]" />
+                                                <span>Financial Standing</span>
+                                            </div>
+                                            <span className="text-primary font-bold">Medium</span>
                                         </div>
-                                        <div className="w-full h-1.5 bg-[#f0eaf2] rounded-full overflow-hidden">
-                                            <div className="w-[75%] h-full bg-primary rounded-full"></div>
+                                        <div className="w-full h-[6px] bg-[#f8f5fa] rounded-full overflow-hidden shadow-inner">
+                                            <div className="w-[75%] h-full bg-gradient-to-r from-primary/80 to-primary rounded-full"></div>
                                         </div>
                                     </div>
+                                    
+                                    {/* Metric 3 */}
                                     <div>
-                                        <div className="flex justify-between text-[12px] font-bold mb-1">
-                                            <span className="text-[#555]">Country Approval Trend</span>
-                                            <span className="text-primary">Very High</span>
+                                        <div className="flex justify-between items-center text-[13px] font-bold mb-2">
+                                            <div className="flex items-center gap-2 text-[#444]">
+                                                <ShieldCheck size={16} className="text-[#888]" />
+                                                <span>Country Approval Trend</span>
+                                            </div>
+                                            <span className="text-primary font-bold">Very High</span>
                                         </div>
-                                        <div className="w-full h-1.5 bg-[#f0eaf2] rounded-full overflow-hidden">
-                                            <div className="w-[95%] h-full bg-primary rounded-full"></div>
+                                        <div className="w-full h-[6px] bg-[#f8f5fa] rounded-full overflow-hidden shadow-inner">
+                                            <div className="w-[95%] h-full bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -125,14 +160,14 @@ const VisaAssessment = () => {
 
             {/* 2. Details + Differentiators */}
             <div className="bg-white flex-grow">
-                <div className="max-w-[1200px] mx-auto px-[20px] min-[820px]:px-[60px] pb-16 min-[820px]:pb-24">
+                <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[17px] md:text-[20px] leading-[1.7] text-[#444]">
                             We evaluate the four pillars of a successful visa application: your academic score, financial standing, your target country's current visa approval trends, and any past refusal history. This comprehensive check gives you a clear picture of exactly where you stand.
                         </p>
                     </section>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         <Card className="p-8 border border-[#f0eaf2] text-center flex flex-col items-center">
                             <div className="w-14 h-14 rounded-2xl bg-[#faf8fb] text-primary flex items-center justify-center mb-5">
                                 <UserCheck size={28} strokeWidth={1.5} />
