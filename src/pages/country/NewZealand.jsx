@@ -28,10 +28,7 @@ const NewZealand = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Study in New Zealand - Wow Global Studies" 
-                description="Smaller Class Sizes, an Easier PR Pathway, and a Lower Cost of Living. Discover the benefits of studying and settling in New Zealand."
-            />
+            <SEO title="Study in New Zealand - Wow Global Studies" description="Smaller Class Sizes, an Easier PR Pathway, and a Lower Cost of Living. Discover the benefits of studying and settling in New Zealand." url="/study-in/new-zealand" />
 
             {/* 1. Hero Section */}
             <div 

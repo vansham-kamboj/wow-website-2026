@@ -29,10 +29,7 @@ const PTE = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="PTE Coaching - Wow Global Studies" 
-                description="Fast, AI-Scored, and Entirely Coachable. Get your PTE results in 48 hours with our pattern-based training."
-            />
+            <SEO title="PTE Coaching - Wow Global Studies" description="Fast, AI-Scored, and Entirely Coachable. Get your PTE results in 48 hours with our pattern-based training." url="/coaching/pte" />
 
             {/* 1. Hero + Video Section */}
             <div className="pt-[130px] lg:pt-[150px] bg-gradient-to-b from-[#faf8fb] to-white relative overflow-hidden">
@@ -48,7 +45,7 @@ const PTE = () => {
                             <span className="text-primary font-medium">Entirely Coachable.</span>
                         </h1>
                         <p className="text-[15px] leading-[1.65] text-[#767676] max-w-[650px] m-0 mt-[4px]">
-                            With results in 48 hours and a purely pattern-based scoring algorithm, PTE isn't just an English test—it's a system. The right coaching can move your score significantly by teaching you exactly what the AI wants to hear.
+                            With results in 48 hours and a purely pattern-based scoring algorithm, PTE functions as a strict system rather than a standard English test. The right coaching can move your score significantly by teaching you exactly what the AI wants to hear.
                         </p>
                     </div>
                     

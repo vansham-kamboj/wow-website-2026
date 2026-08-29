@@ -31,7 +31,7 @@ const CoachingLanding = () => {
         <div className="bg-white min-h-screen flex flex-col">
             <SEO 
                 title="Test Prep Coaching - Wow Global Studies" 
-                description="The Score That Opens the Door — We Help You Hit It. All 6 major test types covered under one roof."
+                description="The Score That Opens the Door. We Help You Hit It. All 6 major test types covered under one roof."
             />
 
             {/* 1. Hero + Video Section */}
@@ -44,7 +44,7 @@ const CoachingLanding = () => {
                     <div className="flex flex-col gap-[14px] flex-1">
                         
                         <h1 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
-                            The Score That Opens the Door —<br />
+                            The Score That Opens the Door<br />
                             <span className="text-primary font-medium">We Help You Hit It.</span>
                         </h1>
                         <p className="text-[15px] leading-[1.65] text-[#767676] max-w-[600px] m-0 mt-[4px]">
@@ -136,7 +136,7 @@ const CoachingLanding = () => {
                                     IELTS Academic/General
                                 </h3>
                                 <p className="text-[15px] leading-[1.6] text-[#666] mb-6 flex-grow">
-                                    The most recognized English test worldwide — we prep you for either version.
+                                    The most recognized English test worldwide. We prep you for either version.
                                 </p>
                                 <div className="text-primary font-semibold text-[14px] flex items-center gap-1 group-hover:gap-2 transition-all">
                                     Learn More <span className="text-[16px]">→</span>
@@ -170,7 +170,7 @@ const CoachingLanding = () => {
                                     PTE
                                 </h3>
                                 <p className="text-[15px] leading-[1.6] text-[#666] mb-6 flex-grow">
-                                    Fast, AI-scored, and entirely coachable — if you know the pattern.
+                                    Fast, AI-scored, and entirely coachable if you know the pattern.
                                 </p>
                                 <div className="text-primary font-semibold text-[14px] flex items-center gap-1 group-hover:gap-2 transition-all">
                                     Learn More <span className="text-[16px]">→</span>
@@ -187,7 +187,7 @@ const CoachingLanding = () => {
                                     Duolingo English Test
                                 </h3>
                                 <p className="text-[15px] leading-[1.6] text-[#666] mb-6 flex-grow">
-                                    The test you can take from your room — and still need to prepare for.
+                                    The test you can take from your room that you still need to prepare for.
                                 </p>
                                 <div className="text-primary font-semibold text-[14px] flex items-center gap-1 group-hover:gap-2 transition-all">
                                     Learn More <span className="text-[16px]">→</span>
@@ -221,7 +221,7 @@ const CoachingLanding = () => {
                                     TOEFL-iBT
                                 </h3>
                                 <p className="text-[15px] leading-[1.6] text-[#666] mb-6 flex-grow">
-                                    The other major English test — accepted almost everywhere IELTS is.
+                                    The other major English test accepted almost everywhere IELTS is.
                                 </p>
                                 <div className="text-primary font-semibold text-[14px] flex items-center gap-1 group-hover:gap-2 transition-all">
                                     Learn More <span className="text-[16px]">→</span>
@@ -248,7 +248,7 @@ const CoachingLanding = () => {
                                 <Award size={24} strokeWidth={2} />
                             </div>
                             <h3 className="font-sans font-bold text-[17px] text-[#161616] mb-2 leading-[1.3]">
-                                Certified Trainers, Not Just Tutors
+                                Certified Trainers, And Mentors, Not Merely Tutors
                             </h3>
                         </Card>
                         

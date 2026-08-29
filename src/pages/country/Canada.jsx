@@ -28,10 +28,7 @@ const Canada = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Study in Canada - Wow Global Studies" 
-                description="Study, Work, and Settle. Discover the clearest PR pathways through Canada's PGWP and Express Entry programs with our expert guidance."
-            />
+            <SEO title="Study in Canada - Wow Global Studies" description="Study, Work, and Settle. Discover the clearest PR pathways through Canada's PGWP and Express Entry programs with our expert guidance." url="/study-in/canada" />
 
             {/* 1. Hero Section */}
             <div 
@@ -48,7 +45,7 @@ const Canada = () => {
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] w-full relative z-10 flex flex-col items-center text-center">
                     
                     <h1 className="font-sans font-bold text-[40px] md:text-[60px] leading-[1.1] text-white tracking-[-1.5px] mb-6 max-w-[900px]">
-                        Study, Work, and Settle — <br className="hidden md:block"/>
+                        Study, Work, and Settle<br className="hidden md:block"/>
                         <span className="text-primary-light text-primary">One of the Clearest PR Pathways.</span>
                     </h1>
                     

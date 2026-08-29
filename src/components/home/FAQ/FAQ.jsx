@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   Accordion,
   AccordionContent,
@@ -9,7 +10,7 @@ import {
 const defaultFaqs = [
     {
         question: "How do you help me start my journey?",
-        answer: "We don't just hand you a checklist. From the moment you walk through our doors, we help you shape your entire story—from choosing the perfect university and crafting a flawless visa application, all the way to landing safely abroad."
+        answer: "We don't just hand you a checklist. From the moment you walk through our doors, we help you shape your entire story, from choosing the perfect university and crafting a flawless visa application, all the way to landing safely abroad."
     },
     {
         question: "Which chapters of the world can I explore with you?",
@@ -17,7 +18,7 @@ const defaultFaqs = [
     },
     {
         question: "How long does the visa process take?",
-        answer: "Every journey has its own timeline. While it depends on your chosen destination, it generally takes a few weeks to several months. But don't worry—our certified experts ensure your documentation is flawless to avoid any unnecessary detours."
+        answer: "Every journey has its own timeline. While it depends on your chosen destination, it generally takes a few weeks to several months. But don't worry, our certified experts ensure your documentation is flawless to avoid any unnecessary detours."
     },
     {
         question: "Will you help me clear my English proficiency tests?",
@@ -25,15 +26,31 @@ const defaultFaqs = [
     },
     {
         question: "Are there any hidden plot twists in your pricing?",
-        answer: "None at all. We believe in 100% transparency. Every cost and consultation fee is discussed upfront, so there are no surprises—just clear steps toward your success."
+        answer: "None at all. We believe in 100% transparency. Every cost and consultation fee is discussed upfront, so there are no surprises, just clear steps toward your success."
     }
 ];
 
 const FAQ = ({ data }) => {
     const faqList = data || defaultFaqs;
     
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqList.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    };
+    
     return (
         <section className="py-[80px] lg:py-[120px] px-[20px] lg:px-[60px] bg-white">
+            <Helmet>
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            </Helmet>
             <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-[60px] lg:gap-[100px] items-start">
                 
                 {/* Left Side: Heading (approx 40%) */}

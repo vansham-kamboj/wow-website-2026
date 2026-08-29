@@ -78,14 +78,14 @@ const ServiceCards = () => {
     return (
         <section className="pt-[40px] pb-[40px] lg:pt-[60px] lg:pb-[60px] bg-[#faf8fb] overflow-hidden relative">
             
-            {/* Header Area — aligned left matching reference */}
+            {/* Header Area, aligned left matching reference */}
             <div className="relative z-10 px-[20px] lg:px-[60px] max-w-[1200px] mx-auto mb-[30px] lg:mb-[40px]">
                 <h2 className="font-sans font-bold text-[32px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
-                    Every Visa Story Has These Chapters —<br />
+                    Every Visa Story Has These Chapters , <br />
                     <span className="text-primary font-medium">We Guide You Through All of Them</span>
                 </h2>
                 <p className="text-[14px] lg:text-[15px] leading-[1.65] text-[#767676] max-w-[600px] m-0 mt-[14px]">
-                    From the first "will I get approved?" doubt to landing in a new country — here's how we walk with you at every step.
+                    From the first "will I get approved?" doubt to landing in a new country, here's how we walk with you at every step.
                 </p>
             </div>
 

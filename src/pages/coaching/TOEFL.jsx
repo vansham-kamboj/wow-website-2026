@@ -28,10 +28,7 @@ const TOEFL = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="TOEFL-iBT Coaching - Wow Global Studies" 
-                description="The Other Major English Test — Accepted Almost Everywhere IELTS Is. Master the computer-based format and integrated tasks."
-            />
+            <SEO title="TOEFL-iBT Coaching - Wow Global Studies" description="The Other Major English Test That Is Accepted Almost Everywhere IELTS Is. Master the computer-based format and integrated tasks." url="/coaching/toefl-ibt" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pt-[170px] lg:pb-24 overflow-hidden">
@@ -41,7 +38,7 @@ const TOEFL = () => {
                         <div className="flex-1 text-center md:text-left z-10">
                             
                             <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
-                                The Other Major English Test — <br className="hidden md:block"/>
+                                The Other Major English Test, <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">Accepted Almost Everywhere IELTS Is.</span>
                             </h1>
                             
@@ -118,7 +115,7 @@ const TOEFL = () => {
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[16px] md:text-[18px] leading-[1.7] text-[#444]">
-                            TOEFL challenges you on Reading, Listening, Speaking, and Writing—all done via a computer interface. What trips most students up is the "Integrated Task" format, where you might have to read a passage, listen to an audio lecture, and then type a response comparing the two. You aren't just learning English; you're learning how to multitask under pressure.
+                            TOEFL challenges you on Reading, Listening, Speaking, and Writing entirely done via a computer interface. What trips most students up is the "Integrated Task" format, where you might have to read a passage, listen to an audio lecture, and then type a response comparing the two. You aren't just learning English; you're learning how to multitask under pressure.
                         </p>
                     </section>
                     

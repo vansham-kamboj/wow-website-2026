@@ -28,10 +28,7 @@ const GRE = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="GRE Coaching - Wow Global Studies" 
-                description="The Score Every Top Grad School Checks First. Master the GRE's adaptive format with our structured, data-driven coaching."
-            />
+            <SEO title="GRE Coaching - Wow Global Studies" description="The Score Every Top Grad School Checks First. Master the GRE's adaptive format with our structured, data-driven coaching." url="/coaching/gre" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pt-[170px] lg:pb-24 overflow-hidden">
@@ -46,7 +43,7 @@ const GRE = () => {
                             </h1>
                             
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[550px] mx-auto md:mx-0">
-                                The GRE is uniquely computer-adaptive—meaning your performance on the first section determines the difficulty of the next. In this environment, raw knowledge isn't enough; pacing and test-taking strategy matter just as much.
+                                The GRE is uniquely computer-adaptive. This means your performance on the first section determines the difficulty of the next. In this environment, raw knowledge isn't enough; pacing and test-taking strategy matter just as much.
                             </p>
                             
                             <Link to="/contact">
@@ -119,7 +116,7 @@ const GRE = () => {
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[16px] md:text-[18px] leading-[1.7] text-[#444]">
-                            The GRE challenges you across three domains: Verbal Reasoning, Quantitative Reasoning, and Analytical Writing. Because the test is section-adaptive, performing well on your first verbal or quant section routes you to a harder second section—which is required to achieve the highest possible scores. Our coaching doesn't just teach the syllabus; we teach the algorithm.
+                            The GRE challenges you across three domains: Verbal Reasoning, Quantitative Reasoning, and Analytical Writing. Because the test is section-adaptive, performing well on your first verbal or quant section routes you to a harder second section, which is required to achieve the highest possible scores. Our coaching covers the syllabus and breaks down the adaptive algorithm.
                         </p>
                     </section>
                     

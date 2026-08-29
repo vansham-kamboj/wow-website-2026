@@ -17,7 +17,7 @@ const appProcessFaqs = [
     },
     {
         question: "What if the embassy requests additional documents later?",
-        answer: "Don't panic—this is common. Our team will guide you on exactly what is needed, format it correctly, and submit it promptly on your behalf."
+        answer: "Don't panic, this is common. Our team will guide you on exactly what is needed, format it correctly, and submit it promptly on your behalf."
     }
 ];
 
@@ -28,10 +28,7 @@ const ApplicationProcess = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Application Process - Wow Global Studies" 
-                description="Application errors cause delays. We handle every field, document, and checkbox with zero copy-paste errors and dual-review submissions."
-            />
+            <SEO title="Application Process - Wow Global Studies" description="Application errors cause delays. We handle every field, document, and checkbox with zero copy-paste errors and dual-review submissions." url="/services/application-process" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pb-20">
@@ -45,7 +42,7 @@ const ApplicationProcess = () => {
                             </h1>
                             
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[640px] mx-auto">
-                                Application errors are the #1 reason for delays — not eligibility. We handle every field, every document, every checkbox.
+                                Application errors are the #1 reason for delays rather than eligibility issues. We handle every field, every document, every checkbox.
                             </p>
                             
                             <Link to="/contact">

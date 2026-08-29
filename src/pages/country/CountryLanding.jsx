@@ -25,11 +25,11 @@ const countryLandingFaqs = [
 
 const countryTeasers = {
     "USA": "The world's largest higher-education system, and the most competitive.",
-    "Canada": "Study, work, and settle — one of the clearest PR pathways for students.",
+    "Canada": "Study, work, and settle, one of the clearest PR pathways for students.",
     "UK": "One-year master's programs and centuries-old academic prestige.",
     "Australia": "Strong post-study work rights and a lifestyle students don't want to leave.",
     "New Zealand": "Smaller class sizes, easier PR pathway, and a lower cost of living.",
-    "Germany": "Low or zero tuition at public universities — even for international students."
+    "Germany": "Low or zero tuition at public universities, even for international students."
 };
 
 const CountryLanding = () => {

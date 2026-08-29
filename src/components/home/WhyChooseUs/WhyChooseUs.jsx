@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
                     imgRef.current.style.transform = `translateY(${translateY}px) scale(1.1)`;
                 }
 
-                // Parallax on cards — each card shifts slightly differently
+                // Parallax on cards, each card shifts slightly differently
                 cardsRef.current.forEach((card, i) => {
                     if (!card) return;
                     // Left cards move opposite to right cards
@@ -75,7 +75,7 @@ const WhyChooseUs = () => {
     return (
         <section ref={sectionRef} className="relative w-full overflow-hidden bg-[#faf8fb]">
             
-            {/* Background Image — parallax with NO fade/overlay */}
+            {/* Background Image, parallax with NO fade/overlay */}
             <img 
                 ref={imgRef}
                 src={footerBg} 

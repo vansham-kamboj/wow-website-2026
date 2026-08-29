@@ -28,10 +28,7 @@ const PostVisaServices = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Post Visa Services - Wow Global Studies" 
-                description="Accommodation, forex, and a proper pre-departure briefing — so you land prepared, not lost."
-            />
+            <SEO title="Post Visa Services - Wow Global Studies" description="Accommodation, forex, and a proper pre-departure briefing. We ensure you land prepared, not lost." url="/services/post-visa-services" />
 
             {/* 1. Hero Section (Full-width illustrated) */}
             <div className="relative overflow-hidden bg-gradient-to-b from-white via-[#faf8fb] to-white pt-[130px] pb-12 lg:pt-[170px] lg:pb-24">
@@ -45,7 +42,7 @@ const PostVisaServices = () => {
                             </h1>
                             
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[640px] mx-auto">
-                                Accommodation, forex, and a proper pre-departure briefing — so you land prepared, not lost.
+                                Accommodation, forex, and a proper pre-departure briefing. We ensure you land prepared, not lost.
                             </p>
                             
                             <Link to="/contact">

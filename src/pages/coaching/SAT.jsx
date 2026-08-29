@@ -28,10 +28,7 @@ const SAT = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="SAT Coaching - Wow Global Studies" 
-                description="Your First Big Step Toward a US Degree. Prepare for the digital SAT with full-length mocks and scholarship-focused score planning."
-            />
+            <SEO title="SAT Coaching - Wow Global Studies" description="Your First Big Step Toward a US Degree. Prepare for the digital SAT with full-length mocks and scholarship-focused score planning." url="/coaching/sat" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pt-[170px] lg:pb-24 overflow-hidden">
@@ -46,7 +43,7 @@ const SAT = () => {
                             </h1>
                             
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[550px] mx-auto md:mx-0">
-                                The SAT isn't just about university admission; it's heavily tied to merit-based scholarships. Early, structured preparation pays off twice—securing your seat and lowering your tuition fees.
+                                The SAT determines your university admission and is heavily tied to merit-based scholarships. Early, structured preparation pays off twice by securing your seat and lowering your tuition fees.
                             </p>
                             
                             <Link to="/contact">

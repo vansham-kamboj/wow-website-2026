@@ -1,13 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, ArrowUp } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import './Footer.css';
 import logoImg from '@/assets/images/logo.png';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <footer className="footer-gray relative overflow-hidden">
@@ -111,9 +108,6 @@ const Footer = () => {
 
         <div className="footer-bottom-gray">
           <p>© 2025 Wow Global Studies. All Rights Reserved.</p>
-          <button className="scroll-to-top-gray" onClick={scrollToTop}>
-            <ArrowUp size={20} />
-          </button>
         </div>
       </div>
     </footer>

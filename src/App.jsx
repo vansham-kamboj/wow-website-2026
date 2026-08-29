@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import './styles/App.css';
 import AppRoutes from './routes/AppRoutes';
+import EnquiryPopup from './components/common/EnquiryPopup';
+import FloatingCTA from './components/common/FloatingCTA';
 
 function App() {
   // Initialize Lenis for smooth scroll (momentum scrolling)
@@ -27,13 +29,37 @@ function App() {
     };
   }, []);
 
-  return (
-    <HelmetProvider>
-      <Router>
-        <AppRoutes />
-      </Router>
-    </HelmetProvider>
-  );
+    return (
+        <HelmetProvider>
+            <Helmet>
+                <script 
+                    type="application/ld+json" 
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Wow Global Studies",
+                        "url": "https://www.wowglobalstudies.com",
+                        "logo": "https://www.wowglobalstudies.com/assets/images/logo.png",
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "telephone": "+91-9925944556",
+                            "contactType": "customer service",
+                            "email": "info@wowglobalstudies.com"
+                        },
+                        "sameAs": [
+                            "https://instagram.com",
+                            "https://linkedin.com"
+                        ]
+                    }) }} 
+                />
+            </Helmet>
+            <EnquiryPopup />
+            <FloatingCTA />
+            <Router>
+                <AppRoutes />
+            </Router>
+        </HelmetProvider>
+    );
 }
 
 export default App;

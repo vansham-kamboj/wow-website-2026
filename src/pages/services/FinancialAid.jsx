@@ -28,10 +28,7 @@ const FinancialAid = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Financial Aid & Education Loans - Wow Global Studies" 
-                description="Loan approvals, scholarship shortlists, and fund proof — sorted before your visa officer even asks."
-            />
+            <SEO title="Financial Aid & Education Loans - Wow Global Studies" description="Loan approvals, scholarship shortlists, and fund proof. We get everything sorted before your visa officer even asks." url="/services/financial-aid" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pb-16">
@@ -45,7 +42,7 @@ const FinancialAid = () => {
                             </h1>
                             
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[640px] mx-auto">
-                                Loan approvals, scholarship shortlists, and fund proof — sorted before your visa officer even asks.
+                                Loan approvals, scholarship shortlists, and fund proof. We get everything sorted before your visa officer even asks.
                             </p>
                             
                             <Link to="/contact">

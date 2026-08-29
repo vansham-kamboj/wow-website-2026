@@ -39,7 +39,7 @@ const BlogDetail = () => {
 
     return (
         <main className="bg-white min-h-screen">
-            <SEO title={`${blog.title} - Wow Global Studies`} description={blog.excerpt} />
+            <SEO title={`${blog.title} - Wow Global Studies`} description={blog.excerpt} url={`/blogs/${blog?.slug || slug}`} image={blog?.imageUrl} />
             
             {/* HEADER SECTION */}
             <section className="pt-[140px] pb-[40px] lg:pt-[180px] lg:pb-[60px] px-[20px] lg:px-[60px] max-w-[1000px] mx-auto text-center">
@@ -109,33 +109,10 @@ const BlogDetail = () => {
                         {blog.excerpt}
                     </p>
                     
-                    <h2 className="font-sans font-bold text-[28px] lg:text-[32px] text-[#161616] tracking-[-0.5px] mt-[40px] mb-[20px]">
-                        Understanding the Core Changes
-                    </h2>
-                    <p className="mb-[24px]">
-                        The recent announcements have left many students wondering about the future of their applications. While the headlines might seem daunting, breaking down the actual policy changes reveals a much more manageable reality. 
-                    </p>
-                    <p className="mb-[24px]">
-                        Most of these adjustments are designed to ensure students are better prepared financially and academically before arriving in the country. Let's look at the specific requirements you need to meet.
-                    </p>
-
-                    <blockquote className="border-l-[4px] border-primary pl-[24px] py-[8px] my-[40px] italic text-[22px] text-[#555] bg-[#faf8fb] rounded-r-[8px]">
-                        "The goal isn't to reject applicants; it's to ensure that when you arrive, you have the foundation needed to actually succeed."
-                    </blockquote>
-
-                    <h3 className="font-sans font-bold text-[22px] lg:text-[26px] text-[#161616] tracking-[-0.5px] mt-[40px] mb-[20px]">
-                        Key Requirements to Prepare For
-                    </h3>
-                    
-                    <ul className="list-disc pl-[24px] mb-[40px] space-y-[12px] text-[#555]">
-                        <li><strong className="text-[#161616] font-sans">Updated Financial Proofs:</strong> Ensure your funds have been held in your account for the mandated 28-day minimum.</li>
-                        <li><strong className="text-[#161616] font-sans">Clear Statement of Purpose:</strong> The 'Why this university?' question needs specific, tailored answers referencing professors or specific labs.</li>
-                        <li><strong className="text-[#161616] font-sans">Ties to Home Country:</strong> You must demonstrate compelling reasons to return home after graduation.</li>
-                    </ul>
-
-                    <p className="mb-[24px]">
-                        Remember, consistency across your documents is critical. The consular officer will cross-reference your interview answers with your written application.
-                    </p>
+                    <div 
+                        className="blog-rich-text [&>p]:mb-[24px] [&>h2]:font-sans [&>h2]:font-bold [&>h2]:text-[28px] lg:[&>h2]:text-[32px] [&>h2]:text-[#161616] [&>h2]:tracking-[-0.5px] [&>h2]:mt-[40px] [&>h2]:mb-[20px] [&>h3]:font-sans [&>h3]:font-bold [&>h3]:text-[22px] lg:[&>h3]:text-[26px] [&>h3]:text-[#161616] [&>h3]:tracking-[-0.5px] [&>h3]:mt-[40px] [&>h3]:mb-[20px] [&>blockquote]:border-l-[4px] [&>blockquote]:border-primary [&>blockquote]:pl-[24px] [&>blockquote]:py-[8px] [&>blockquote]:my-[40px] [&>blockquote]:italic [&>blockquote]:text-[22px] [&>blockquote]:text-[#555] [&>blockquote]:bg-[#faf8fb] [&>blockquote]:rounded-r-[8px] [&>ul]:list-disc [&>ul]:pl-[24px] [&>ul]:mb-[40px] [&>ul]:space-y-[12px] [&>ul]:text-[#555] [&>li>strong]:text-[#161616] [&>li>strong]:font-sans"
+                        dangerouslySetInnerHTML={{ __html: blog.content }}
+                    />
 
                     {/* AUTHOR BIO CARD */}
                     <div className="mt-[60px] pt-[40px] border-t border-[#f0eaf2]">

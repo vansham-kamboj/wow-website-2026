@@ -70,7 +70,7 @@ const Features = () => {
                     imgRef.current.style.transform = `translateY(${translateY}px) scale(1.1)`;
                 }
 
-                // Parallax on cards — each card shifts slightly differently
+                // Parallax on cards, each card shifts slightly differently
                 cardsRef.current.forEach((card, i) => {
                     if (!card) return;
                     // Alternate direction: left cards shift up, right cards shift down (or vice versa)
@@ -101,7 +101,7 @@ const Features = () => {
     return (
         <section ref={sectionRef} className="relative w-full overflow-hidden bg-white">
             
-            {/* Background Image — parallax, no fade */}
+            {/* Background Image, parallax, no fade */}
             <img 
                 ref={imgRef}
                 src={servicesBg} 
@@ -116,7 +116,7 @@ const Features = () => {
             {/* Content Layer */}
             <div className="relative z-10 pt-[50px] pb-[60px] lg:pt-[60px] lg:pb-[80px]">
                 
-                {/* Header — at the very top, bold and big */}
+                {/* Header, at the very top, bold and big */}
                 <div className="relative z-10 px-[20px] lg:px-[60px] max-w-[1200px] mx-auto mb-[20px] lg:mb-[10px]">
                     <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                         Headstart Programs<br />

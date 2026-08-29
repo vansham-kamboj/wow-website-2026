@@ -29,10 +29,7 @@ const FreeCounselling = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Free Counselling - Wow Global Studies" 
-                description="Start your visa journey with an honest conversation. No sales pitch, no commitment. Book your free counselling session today."
-            />
+            <SEO title="Free Counselling - Wow Global Studies" description="Start your visa journey with an honest conversation. No sales pitch, no commitment. Book your free counselling session today." url="/services/free-counselling" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pb-20">
@@ -46,7 +43,7 @@ const FreeCounselling = () => {
                             </h1>
                             
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[560px] mx-auto lg:mx-0">
-                                Your visa journey doesn't start with a form. It starts with an honest conversation about where you want to go — and whether it's realistic.
+                                Your visa journey doesn't start with a form. It starts with an honest conversation about where you want to go and whether it's realistic.
                             </p>
                             
                             <Link to="/contact">
@@ -87,7 +84,7 @@ const FreeCounselling = () => {
                                     {/* Expert Message */}
                                     <div className="flex flex-col gap-1 self-end max-w-[90%] items-end">
                                         <div className="bg-primary text-white p-4 rounded-2xl rounded-br-none shadow-[0_4px_12px_rgba(147,51,234,0.2)] text-[14px] leading-[1.5]">
-                                            That's exactly what we're here for. Let's look at your options together—no strings attached. 😊
+                                            That's exactly what we're here for. Let's look at your options together with no strings attached. 😊
                                         </div>
                                         <span className="text-[11px] text-[#888] mr-1">10:44 AM</span>
                                     </div>

@@ -28,10 +28,7 @@ const UK = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Study in UK - Wow Global Studies" 
-                description="One-Year Master's Programs and Centuries of Academic Prestige. Navigate the Student visa process and the 2-year Graduate Route with expert guidance."
-            />
+            <SEO title="Study in UK - Wow Global Studies" description="One-Year Master's Programs and Centuries of Academic Prestige. Navigate the Student visa process and the 2-year Graduate Route with expert guidance." url="/study-in/uk" />
 
             {/* 1. Hero Section */}
             <div 

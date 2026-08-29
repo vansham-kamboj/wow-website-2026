@@ -2,43 +2,43 @@
     {
         "id": "counselling",
         "title": "Free Counselling",
-        "description": "Expert advice to help you choose the right path for your future.",
+        "description": "Your first step starts with a conversation, not a contract.",
         "iconName": "FiMessageCircle"
     },
     {
         "id": "application-process",
         "title": "Application Process",
-        "description": "Streamlined application guidance for top universities.",
+        "description": "Where your visa story begins and gets done right, from page one.",
         "iconName": "FiFileText"
     },
     {
         "id": "financial-aid",
         "title": "Financial Aid",
-        "description": "Explore scholarships and financial aid opportunities.",
+        "description": "Proving you're ready, on paper through loans, scholarships, fund proof.",
         "iconName": "FiDollarSign"
     },
     {
         "id": "visa-assessment",
         "title": "Visa Assessment",
-        "description": "Comprehensive visa assessment and documentation support.",
+        "description": "Know your chances before you begin with a free eligibility check.",
         "iconName": "FiSearch"
     },
     {
         "id": "interview-preparation",
         "title": "Interview Preparation",
-        "description": "Expert coaching to ace your university and visa interviews.",
+        "description": "The moment you're asked to prove it. We get you ready.",
         "iconName": "FiMessageCircle"
     },
     {
         "id": "air-ticket",
         "title": "Air Ticket",
-        "description": "Hassle-free flight bookings with student discounts.",
+        "description": "Once you're approved, we help you book your way out.",
         "iconName": "FiSend"
     },
     {
         "id": "post-visa-services",
         "title": "Post Visa Services",
-        "description": "Accommodation, forex, and pre-departure assistance.",
+        "description": "Your story doesn't end at the airport. We help you land right.",
         "iconName": "FiHome"
     }
 ]

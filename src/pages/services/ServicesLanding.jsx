@@ -15,7 +15,7 @@ const serviceFaqs = [
     },
     {
         question: "Do you help with all countries?",
-        answer: "We specialize in the top study destinations globally—including the USA, UK, Canada, Australia, New Zealand, and Germany—ensuring you have the best options for your future."
+        answer: "We specialize in the top study destinations globally, including the USA, UK, Canada, Australia, New Zealand, and Germany. This ensures you have the best options for your future."
     },
     {
         question: "How long does the full process take?",
@@ -31,10 +31,7 @@ const ServicesLanding = () => {
 
     return (
         <div className="bg-[#faf8fb] min-h-screen pt-[130px] flex flex-col">
-            <SEO 
-                title="Our Services - Wow Global Studies" 
-                description="Explore our comprehensive services from free counselling and application process to visa assessment and post-visa support."
-            />
+            <SEO title="Our Services - Wow Global Studies" description="Explore our comprehensive services from free counselling and application process to visa assessment and post-visa support." url="/services/services-landing" />
 
             {/* 1. Hero Section (with gradient fade out) */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pb-16 lg:pb-24">
@@ -43,7 +40,7 @@ const ServicesLanding = () => {
                         <div className="flex-1 text-center lg:text-left z-10">
                             
                             <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
-                                Every Visa Has a Journey — <br />
+                                Every Visa Has a Journey<br />
                                 <span className="text-primary font-medium">Here's How We Guide Yours</span>
                             </h1>
                             

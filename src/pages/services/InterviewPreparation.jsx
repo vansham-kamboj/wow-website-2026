@@ -28,10 +28,7 @@ const InterviewPreparation = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Visa Interview Preparation - Wow Global Studies" 
-                description="We don't just prep you with questions — we train you to sound confident under real pressure. Real embassy-style mock sessions."
-            />
+            <SEO title="Visa Interview Preparation - Wow Global Studies" description="We train you to handle more than simple questions. Our sessions prepare you to sound confident under real pressure. Real embassy-style mock sessions." url="/services/interview-preparation" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pb-20">
@@ -45,7 +42,7 @@ const InterviewPreparation = () => {
                             </h1>
                             
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[640px] mx-auto">
-                                We don't just prep you with questions — we train you to sound confident under real pressure.
+                                We train you to handle more than simple questions. Our sessions prepare you to sound confident under real pressure.
                             </p>
                             
                             <Link to="/contact">

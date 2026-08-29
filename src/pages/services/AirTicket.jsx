@@ -28,10 +28,7 @@ const AirTicket = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Air Ticket Assistance - Wow Global Studies" 
-                description="Discounted, student/visa-holder-friendly flight bookings — one less thing to manage after months of paperwork."
-            />
+            <SEO title="Air Ticket Assistance - Wow Global Studies" description="Discounted, student/visa-holder-friendly flight bookings. This gives you one less thing to manage after months of paperwork." url="/services/air-ticket" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pt-[170px] lg:pb-24 overflow-hidden">
@@ -46,7 +43,7 @@ const AirTicket = () => {
                             </h1>
                             
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[500px] mx-auto md:mx-0">
-                                Discounted, student/visa-holder-friendly flight bookings — one less thing to manage after months of paperwork.
+                                Discounted, student/visa-holder-friendly flight bookings. This gives you one less thing to manage after months of paperwork.
                             </p>
                             
                             <Link to="/contact">

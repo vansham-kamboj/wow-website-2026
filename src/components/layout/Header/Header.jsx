@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/images/logo.png';
 import { buttonVariants } from '@/components/ui/button';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -73,14 +73,14 @@ const Header = () => {
       <div className={`transition-all duration-300 ${isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}>
         <div className="flex items-center px-[20px] md:px-[40px] py-[18px]">
         
-        {/* Logo — far left */}
+        {/* Logo, far left */}
         <div className="flex-none mr-[40px]">
           <Link to="/" className="flex items-center">
             <img src={logo} alt="WOW Global Studies Logo" className="h-[22px] w-auto object-contain" />
           </Link>
         </div>
 
-        {/* Navigation — right of logo */}
+        {/* Navigation, right of logo */}
         <nav className="hidden md:flex items-center flex-1">
           <ul className="flex items-center gap-[32px] list-none m-0 p-0">
             <li><Link to="/" className="text-[14px] text-[#161616] font-bold no-underline hover:text-primary transition-colors duration-200">Home</Link></li>
@@ -141,8 +141,14 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* CTA Button — far right with curved borders */}
-        <div className="hidden md:flex flex-none ml-auto">
+        {/* Phone & CTA Button, far right */}
+        <div className="hidden md:flex items-center gap-[24px] flex-none ml-auto">
+          <a href="tel:+919925944556" className="flex items-center gap-[8px] text-[15px] font-bold text-[#161616] hover:text-primary transition-colors duration-200 no-underline">
+            <div className="w-[32px] h-[32px] rounded-full bg-[#f8f5fa] text-primary flex items-center justify-center">
+              <Phone size={16} />
+            </div>
+            +91 9925944556
+          </a>
           <Link 
             to="/contact"  
             className={buttonVariants({ 
@@ -223,13 +229,22 @@ const Header = () => {
 
           <Link to="/blogs" onClick={() => setIsMobileMenuOpen(false)} className="py-[12px] text-[15px] text-[#161616] font-bold border-b border-gray-50">Blogs</Link>
 
-          <Link 
-            to="/contact"  
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-[20px] inline-block text-center text-[15px] font-bold text-white bg-primary px-[24px] py-[12px] rounded-[8px]"
-          >
-            Book Consultation
-          </Link>
+          <div className="mt-[24px] flex flex-col gap-[12px]">
+            <a 
+              href="tel:+919925944556" 
+              className="flex items-center justify-center gap-[8px] text-[16px] font-bold text-[#161616] py-[12px] border border-[#f0eaf2] rounded-[8px] hover:bg-[#faf8fb] transition-colors"
+            >
+              <Phone size={18} className="text-primary" />
+              +91 9925944556
+            </a>
+            <Link 
+              to="/contact"  
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="inline-block text-center text-[15px] font-bold text-white bg-primary px-[24px] py-[12px] rounded-[8px]"
+            >
+              Book Consultation
+            </Link>
+          </div>
         </nav>
       </div>
       </div>

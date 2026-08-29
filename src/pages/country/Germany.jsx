@@ -9,7 +9,7 @@ import FAQ from '@/components/home/FAQ/FAQ';
 const germanyFaqs = [
     {
         question: "Is it true German public universities are almost free?",
-        answer: "Yes! Most public universities in Germany do not charge tuition fees for international students, with the exception of institutions in the state of Baden-Württemberg (which charge around €1,500 per semester). You generally only pay a small semester contribution (approx. €150–€350) which covers administration and a regional public transport ticket."
+        answer: "Yes! Most public universities in Germany do not charge tuition fees for international students, with the exception of institutions in the state of Baden-Württemberg (which charge around €1,500 per semester). You generally only pay a small semester contribution (approx. €150 to €350) which covers administration and a regional public transport ticket."
     },
     {
         question: "Do I need to know German to study there?",
@@ -28,10 +28,7 @@ const Germany = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Study in Germany - Wow Global Studies" 
-                description="Low or Zero Tuition for International Students. Secure a world-class STEM degree and navigate the Blocked Account and 18-Month Job Seeker Visa with us."
-            />
+            <SEO title="Study in Germany - Wow Global Studies" description="Low or Zero Tuition for International Students. Secure a world-class STEM degree and navigate the Blocked Account and 18-Month Job Seeker Visa with us." url="/study-in/germany" />
 
             {/* 1. Hero Section */}
             <div 
@@ -48,12 +45,12 @@ const Germany = () => {
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] w-full relative z-10 flex flex-col items-center text-center">
                     
                     <h1 className="font-sans font-bold text-[40px] md:text-[60px] leading-[1.1] text-white tracking-[-1.5px] mb-6 max-w-[900px]">
-                        Low or Zero Tuition — <br className="hidden md:block"/>
+                        Low or Zero Tuition<br className="hidden md:block"/>
                         <span className="text-primary-light text-primary">Even for International Students.</span>
                     </h1>
                     
                     <p className="text-[16px] md:text-[20px] leading-[1.65] text-white/90 mb-10 max-w-[700px] font-medium">
-                        With most public universities charging little to no tuition, Germany is one of the most affordable serious study-abroad options in the world—especially for STEM fields.
+                        With most public universities charging little to no tuition, Germany is one of the most affordable serious study-abroad options in the world, especially for STEM fields.
                     </p>
                     
                     <Link to="/contact">

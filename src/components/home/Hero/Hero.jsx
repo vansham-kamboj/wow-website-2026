@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <div className="pt-[80px] relative overflow-hidden">
             
-            {/* Very subtle lavender gradient circle — decorative */}
+            {/* Very subtle lavender gradient circle, decorative */}
             <div 
                 className="absolute pointer-events-none z-0"
                 style={{
@@ -25,21 +25,21 @@ const Hero = () => {
                 {/* Left Side: Heading & Text */}
                 <div className="flex flex-col gap-[14px] flex-1">
                     <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
-                        Your Visa Journey Starts With One Decision —<br />
+                        Your Visa Journey Starts With One Decision , <br />
                         <span className="text-primary font-medium">Choosing the Right Guide</span>
                     </h1>
                     <p className="text-[15px] leading-[1.65] text-[#767676] max-w-[600px] m-0 mt-[4px]">
-                        Every year, thousands of Indian students and professionals dream of studying, working, or settling abroad — but visa rejections crush that dream more often than visa officers do. We've walked 5000+ people through that exact journey, turning confusion into approval letters.
+                        Every year, thousands of Indian students and professionals dream of studying, working, or settling abroad, but visa rejections crush that dream more often than visa officers do. We've walked 5000+ people through that exact journey, turning confusion into approval letters.
                     </p>
                 </div>
                 
-                {/* Right Side: Button — transparent style */}
+                {/* Right Side: Button, transparent style */}
                 <div className="flex-none w-full lg:w-auto mt-[10px] lg:mt-0">
                     <button className={buttonVariants({
                         variant: "custom",
                         className: "bg-transparent border-2 !border-primary text-primary hover:bg-primary hover:text-white px-[20px] py-[14px] lg:px-[32px] lg:py-[18px] rounded-[8px] font-bold text-[14px] lg:text-[16px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-auto w-full lg:w-auto text-center justify-center"
                     })}>
-                        Start Your Visa Story — Free Consultation
+                        Start Your Visa Story, Free Consultation
                     </button>
                 </div>
 

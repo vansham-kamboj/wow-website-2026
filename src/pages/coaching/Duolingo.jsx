@@ -28,10 +28,7 @@ const Duolingo = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Duolingo English Test Coaching - Wow Global Studies" 
-                description="The Test You Take From Your Room — And Still Need to Prepare For. Affordable, fast, and fully proctored via webcam."
-            />
+            <SEO title="Duolingo English Test Coaching - Wow Global Studies" description="The Test You Take From Your Room That You Still Need to Prepare For. Affordable, fast, and fully proctored via webcam." url="/coaching/duolingo" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pt-[170px] lg:pb-24 overflow-hidden">
@@ -41,12 +38,12 @@ const Duolingo = () => {
                         <div className="flex-1 text-center md:text-left z-10">
                             
                             <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
-                                The Test You Take From Your Room — <br className="hidden md:block"/>
+                                The Test You Take From Your Room, <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">And Still Need to Prepare For.</span>
                             </h1>
                             
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[550px] mx-auto md:mx-0">
-                                It's fast, affordable, and increasingly accepted by top universities. But don't let the casual vibe fool you — its adaptive, single-sitting format and strict webcam proctoring frequently trip up unprepared students.
+                                It's fast, affordable, and increasingly accepted by top universities. But don't let the casual vibe fool you. The adaptive, single-sitting format and strict webcam proctoring frequently trip up unprepared students.
                             </p>
                             
                             <Link to="/contact">
@@ -103,7 +100,7 @@ const Duolingo = () => {
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] pb-16 lg:pb-24">
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[16px] md:text-[18px] leading-[1.7] text-[#444]">
-                            The Duolingo English Test doesn't isolate reading, writing, listening, and speaking into separate 1-hour chunks. It throws rapid-fire, mixed questions at you in a single, intense 1-hour sitting. The difficulty constantly adapts based on your previous answer. With results delivered in just 48 hours, it's incredibly efficient — provided you've practiced the exact format.
+                            The Duolingo English Test doesn't isolate reading, writing, listening, and speaking into separate 1-hour chunks. It throws rapid-fire, mixed questions at you in a single, intense 1-hour sitting. The difficulty constantly adapts based on your previous answer. With results delivered in just 48 hours, it's incredibly efficient if you've practiced the exact format.
                         </p>
                     </section>
                     

@@ -5,9 +5,10 @@ import Hero from '@/components/home/Hero/Hero';
 import Features from '@/components/home/Features/Features';
 import ServiceCards from '@/components/home/ServiceCards/ServiceCards';
 import Countries from '@/components/country/Countries/Countries';
-import StudentReviews from '@/components/home/StudentReviews/StudentReviews';
 import WhyChooseUs from '@/components/home/WhyChooseUs/WhyChooseUs';
+import StudentReviews from '@/components/home/StudentReviews/StudentReviews';
 import FAQ from '@/components/home/FAQ/FAQ';
+import HomeContactSection from '@/components/home/HomeContactSection/HomeContactSection';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <Countries />
             <WhyChooseUs />
             <StudentReviews />
+            <HomeContactSection />
             <FAQ />
         </>
     );

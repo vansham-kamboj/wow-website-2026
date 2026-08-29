@@ -28,10 +28,7 @@ const Australia = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Study in Australia - Wow Global Studies" 
-                description="Strong Post-Study Work Rights and a Lifestyle Students Don't Want to Leave. Navigate the Subclass 500 and 485 visas with expert guidance."
-            />
+            <SEO title="Study in Australia - Wow Global Studies" description="Strong Post-Study Work Rights and a Lifestyle Students Don't Want to Leave. Navigate the Subclass 500 and 485 visas with expert guidance." url="/study-in/australia" />
 
             {/* 1. Hero Section */}
             <div 

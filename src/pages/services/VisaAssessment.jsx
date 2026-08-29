@@ -28,10 +28,7 @@ const VisaAssessment = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Free Visa Assessment - Wow Global Studies" 
-                description="Get an honest, free assessment of your visa chances before you spend time and money. Real reports by human counsellors, not bot quizzes."
-            />
+            <SEO title="Free Visa Assessment - Wow Global Studies" description="Get an honest, free assessment of your visa chances before you spend time and money. Real reports by human counsellors, not bot quizzes." url="/services/visa-assessment" />
 
             {/* 1. Hero Section */}
             <div className="bg-gradient-to-b from-[#faf8fb] to-white relative pt-[130px] pb-12 lg:pt-[170px] lg:pb-24">

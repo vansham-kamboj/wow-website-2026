@@ -29,10 +29,7 @@ const IELTS = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="IELTS Coaching - Wow Global Studies" 
-                description="One Test, Two Paths — We Prep You for Either. Expert coaching for both IELTS Academic and General Training."
-            />
+            <SEO title="IELTS Coaching - Wow Global Studies" description="One Test, Two Paths. We Prep You for Either. Expert coaching for both IELTS Academic and General Training." url="/coaching/ielts" />
 
             {/* 1. Hero + Video Section */}
             <div className="pt-[130px] lg:pt-[150px] bg-gradient-to-b from-[#faf8fb] to-white relative overflow-hidden">
@@ -44,7 +41,7 @@ const IELTS = () => {
                     <div className="flex flex-col gap-[14px] flex-1">
                         
                         <h1 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
-                            One Test, Two Paths —<br />
+                            One Test, Two Paths<br />
                             <span className="text-primary font-medium">We Prep You for Either.</span>
                         </h1>
                         <p className="text-[15px] leading-[1.65] text-[#767676] max-w-[650px] m-0 mt-[4px]">

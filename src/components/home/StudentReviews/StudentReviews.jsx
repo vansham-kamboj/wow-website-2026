@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const testimonials = [
     { text: "WOW Global changed my entire perspective. They guided me every step of the way. I couldn't have done this without their support.", name: "Amelia R.", since: "Student since 2023", country: "🇬🇧 United Kingdom" },
-    { text: "The counselors actually know your name. It feels like family, not just a consultancy. Their care makes all the difference.", name: "Rohan K.", since: "Student since 2022", country: "🇨🇦 Canada" },
+    { text: "The counselors actually know your name. It feels like a true partnership rather than a typical consultancy. Their care makes all the difference.", name: "Rohan K.", since: "Student since 2022", country: "🇨🇦 Canada" },
     { text: "I came in confused about my options. Six months later, I was studying in Germany. The team made it feel effortless.", name: "Priya M.", since: "Student since 2024", country: "🇩🇪 Germany" },
     { text: "Personalized attention, zero judgment. Exactly the kind of guidance I was looking for. They tailored everything to my goals.", name: "Daniel F.", since: "Student since 2023", country: "🇦🇺 Australia" },
     { text: "This is the best decision I've made for my career. From start to finish, complete professionalism and care.", name: "Sara L.", since: "Student since 2021", country: "🇺🇸 United States" },
@@ -31,7 +31,7 @@ const StudentReviews = () => {
         <section className="py-[80px] lg:py-[120px] px-[20px] lg:px-[60px] bg-white">
             <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-[50px] lg:gap-[80px] items-start">
                 
-                {/* Left Side — Heading (40%) */}
+                {/* Left Side, Heading (40%) */}
                 <div className="w-full lg:w-[40%] lg:sticky lg:top-[120px]">
                     <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
                         What Our Students Say<br />
@@ -57,7 +57,7 @@ const StudentReviews = () => {
                     </div>
                 </div>
 
-                {/* Right Side — Stacked Cards (60%) */}
+                {/* Right Side, Stacked Cards (60%) */}
                 <div className="w-full lg:w-[60%] relative h-[440px] md:h-[400px] lg:h-[360px] mt-[20px] lg:mt-0">
                     {testimonials.map((t, index) => {
                         let diff = index - activeIndex;

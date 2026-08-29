@@ -28,10 +28,7 @@ const USA = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
-            <SEO 
-                title="Study in USA - Wow Global Studies" 
-                description="The World's Largest Higher-Education System. Navigate the F-1 visa, OPT work rights, and top-tier university admissions with our expert guidance."
-            />
+            <SEO title="Study in USA - Wow Global Studies" description="The World's Largest Higher-Education System. Navigate the F-1 visa, OPT work rights, and top-tier university admissions with our expert guidance." url="/study-in/usa" />
 
             {/* 1. Hero Section */}
             <div 
@@ -48,7 +45,7 @@ const USA = () => {
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] w-full relative z-10 flex flex-col items-center text-center">
                     
                     <h1 className="font-sans font-bold text-[40px] md:text-[60px] leading-[1.1] text-white tracking-[-1.5px] mb-6 max-w-[900px]">
-                        The World's Largest Higher-Education System — <br className="hidden md:block"/>
+                        The World's Largest Higher-Education System<br className="hidden md:block"/>
                         <span className="text-primary-light text-primary">And the Most Competitive.</span>
                     </h1>
                     
@@ -101,7 +98,7 @@ const USA = () => {
                     
                     <section className="max-w-[800px] mx-auto mb-16 text-center">
                         <p className="text-[16px] md:text-[18px] leading-[1.7] text-[#444]">
-                            Studying in the USA requires strategic planning. Choosing a STEM (Science, Technology, Engineering, Math) designated program unlocks up to 3 years of OPT (Optional Practical Training), allowing you to work and recoup costs. Business and Humanities fields are equally robust but require careful navigation of CPT during your studies to secure strong networking outcomes. Ultimately, success relies on surviving the F-1 visa interview—a process unique to the US that requires you to verbally prove your intent and financial capability to a visa officer.
+                            Studying in the USA requires strategic planning. Choosing a STEM (Science, Technology, Engineering, Math) designated program unlocks up to 3 years of OPT (Optional Practical Training), allowing you to work and recoup costs. Business and Humanities fields are equally robust but require careful navigation of CPT during your studies to secure strong networking outcomes. Ultimately, success relies on surviving the F-1 visa interview. This process is unique to the US that requires you to verbally prove your intent and financial capability to a visa officer.
                         </p>
                     </section>
                     
