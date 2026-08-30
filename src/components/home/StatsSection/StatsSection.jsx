@@ -3,7 +3,7 @@ import React from 'react';
 const StatsSection = () => {
     return (
         <section className="bg-[#f8f5fa] pt-[56px] px-[20px] lg:px-[40px] pb-[64px]">
-            <h2 className="font-sans font-bold text-[26px] lg:text-[32px] leading-[1.28] text-[#161616] mb-[32px] lg:mb-[52px]">
+            <h2 className="font-sans font-bold text-[26px] lg:text-[26px] leading-[1.28] text-[#161616] mb-[32px] lg:mb-[52px]">
                 Trusted by a<br />Growing Community
             </h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-[32px] lg:gap-y-0">

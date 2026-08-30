@@ -37,7 +37,7 @@ const FreeCounselling = () => {
                     <section className="flex flex-col lg:flex-row gap-10 items-center">
                         <div className="flex-1 text-center lg:text-left z-10">
                             
-                            <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[26px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Before Any Paperwork, <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">We Just Talk.</span>
                             </h1>

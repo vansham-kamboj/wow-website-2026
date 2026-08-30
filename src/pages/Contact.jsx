@@ -39,7 +39,7 @@ const Contact = () => {
             {/* 1. Hero Section */}
             <div className="bg-[#faf8fb] relative pt-[130px] pb-12 lg:pt-[170px] lg:pb-16 overflow-hidden">
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] relative z-10 text-center">
-                    <h1 className="font-sans font-bold text-[36px] md:text-[46px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                    <h1 className="font-sans font-bold text-[28px] md:text-[46px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                         Let's Talk About <span className="text-primary">Your Future.</span>
                     </h1>
                     <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] max-w-[600px] mx-auto">
@@ -55,7 +55,7 @@ const Contact = () => {
                         
                         {/* Contact Form */}
                         <div>
-                            <h2 className="font-sans font-bold text-[28px] md:text-[36px] leading-[1.15] text-[#161616] tracking-[-1px] mb-8">
+                            <h2 className="font-sans font-bold text-[28px] md:text-[28px] leading-[1.15] text-[#161616] tracking-[-1px] mb-8">
                                 Send Us a Message
                             </h2>
                             <form onSubmit={handleSubmit} className="space-y-5">

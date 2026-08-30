@@ -2,21 +2,50 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { User, Phone, Globe, ChevronDown, CheckCircle, ShieldCheck, Clock, ArrowRight } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
+import talkingImage from '@/assets/images/talking image.png';
 
 const HomeContactSection = () => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        country: 'USA'
+        country: 'USA',
+        honeypot: ''
     });
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState('');
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // In a real app, this submits to the backend/API
-        console.log('Home Section Enquiry Submitted:', formData);
-        alert('Thank you! We will call you back shortly.');
-        setFormData({ name: '', phone: '', country: 'USA' });
+        setIsLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('http://localhost:5000/api/leads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    country_interested: formData.country,
+                    source: 'services_callback'
+                })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Failed to submit enquiry');
+            }
+
+            setIsSuccess(true);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -27,10 +56,10 @@ const HomeContactSection = () => {
                     {/* Left Side: Image */}
                     <div 
                         className={`w-full lg:w-1/2 h-[450px] lg:h-[550px] bg-cover bg-center rounded-[2rem] shadow-2xl relative transition-all duration-1000 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
-                        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop")' }}
+                        style={{ backgroundImage: `url(${talkingImage})` }}
                     >
-                        {/* Gradient Overlay */}
-                        <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+                        {/* Gradient Overlay - made lower */}
+                        <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-t from-primary/90 via-primary/20 to-transparent to-60%"></div>
                         
                         {/* Floating Stat Badge */}
                         <div className="absolute -bottom-6 -right-6 lg:-bottom-8 lg:-right-8 bg-white px-5 py-3 rounded-full shadow-xl flex items-center gap-2.5 border border-gray-100 z-10 animate-[bounce_3s_infinite]">
@@ -40,7 +69,7 @@ const HomeContactSection = () => {
 
                         {/* Heading & Description */}
                         <div className="absolute inset-0 p-10 flex flex-col justify-end text-white">
-                            <h2 className="font-sans font-bold text-[32px] md:text-[40px] leading-[1.1] mb-4">
+                            <h2 className="font-sans font-bold text-[26px] md:text-[40px] leading-[1.1] mb-4">
                                 Ready to Take the Next Step?
                             </h2>
                             <p className="text-[16px] md:text-[18px] text-white/90 leading-relaxed max-w-[400px]">
@@ -51,30 +80,53 @@ const HomeContactSection = () => {
 
                     {/* Right Side: Form */}
                     <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                        <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px] transition-all duration-700 delay-100">
-                            Request a Callback<br />
-                            <span className="text-primary font-medium">we are here to help</span>
+                        <h2 className="font-sans font-bold text-[28px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px] transition-all duration-700 delay-100">
+                            {isSuccess ? 'Thank You!' : 'Request a Callback'}<br />
+                            <span className="text-primary font-medium">
+                                {isSuccess ? 'we will call you shortly' : 'we are here to help'}
+                            </span>
                         </h2>
                         
-                        {/* Trust Strip */}
-                        <div className={`flex flex-wrap items-center gap-4 mb-[50px] transition-all duration-700 delay-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                            <div className="flex items-center gap-2 text-[15px] font-medium text-[#767676]">
-                                <CheckCircle size={16} className="text-primary" />
-                                <span>100% Free</span>
+                        {!isSuccess && (
+                        <>
+                            {/* Trust Strip */}
+                            <div className={`flex flex-wrap items-center gap-4 mb-[50px] transition-all duration-700 delay-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                                <div className="flex items-center gap-2 text-[15px] font-medium text-[#767676]">
+                                    <CheckCircle size={16} className="text-primary" />
+                                    <span>100% Free</span>
+                                </div>
+                                <div className="w-[1px] h-4 bg-[#e5e0e8]"></div>
+                                <div className="flex items-center gap-2 text-[15px] font-medium text-[#767676]">
+                                    <ShieldCheck size={16} className="text-primary" />
+                                    <span>No Spam</span>
+                                </div>
+                                <div className="w-[1px] h-4 bg-[#e5e0e8]"></div>
+                                <div className="flex items-center gap-2 text-[15px] font-medium text-[#767676]">
+                                    <Clock size={16} className="text-primary" />
+                                    <span>Reply Within 24 Hrs</span>
+                                </div>
                             </div>
-                            <div className="w-[1px] h-4 bg-[#e5e0e8]"></div>
-                            <div className="flex items-center gap-2 text-[15px] font-medium text-[#767676]">
-                                <ShieldCheck size={16} className="text-primary" />
-                                <span>No Spam</span>
-                            </div>
-                            <div className="w-[1px] h-4 bg-[#e5e0e8]"></div>
-                            <div className="flex items-center gap-2 text-[15px] font-medium text-[#767676]">
-                                <Clock size={16} className="text-primary" />
-                                <span>Reply Within 24 Hrs</span>
-                            </div>
-                        </div>
-                        
-                        <form onSubmit={handleSubmit} className="space-y-[40px]">
+                            
+                            <form onSubmit={handleSubmit} className="space-y-[40px]">
+                                {error && (
+                                    <div className="p-3 text-[14px] text-red-600 bg-red-50 border border-red-100 rounded-lg">
+                                        {error}
+                                    </div>
+                                )}
+
+                                {/* Honeypot field (hidden) */}
+                                <div style={{ display: 'none' }} aria-hidden="true">
+                                    <label htmlFor="callback-honeypot">Leave this field empty</label>
+                                    <input 
+                                        id="callback-honeypot"
+                                        type="text"
+                                        name="honeypot"
+                                        tabIndex="-1"
+                                        autoComplete="off"
+                                        value={formData.honeypot}
+                                        onChange={(e) => setFormData({...formData, honeypot: e.target.value})}
+                                    />
+                                </div>
                             <div className={`transition-all duration-700 delay-300 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                                 <label htmlFor="home-enquiry-name" className="text-[13px] font-bold text-[#767676] uppercase tracking-wider block mb-3">
                                     Full Name
@@ -141,16 +193,28 @@ const HomeContactSection = () => {
                                 <Button 
                                     type="submit" 
                                     variant="custom" 
-                                    className="w-full bg-primary hover:bg-primary-hover hover:-translate-y-1 text-white py-[18px] h-auto rounded-xl font-bold text-[16px] shadow-[0_8px_20px_rgb(147,51,234,0.3)] transition-all flex items-center justify-center gap-2.5 group"
+                                    disabled={isLoading}
+                                    className="w-full bg-primary hover:bg-primary-hover hover:-translate-y-1 text-white py-[18px] h-auto rounded-xl font-bold text-[16px] shadow-[0_8px_20px_rgb(147,51,234,0.3)] transition-all flex items-center justify-center gap-2.5 group disabled:opacity-70 disabled:hover:translate-y-0"
                                 >
-                                    <span>Submit Details</span>
-                                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                    {isLoading ? (
+                                        <>
+                                            <span className="animate-spin w-5 h-5 border-2 border-white/30 border-t-white rounded-full inline-block"></span>
+                                            <span>Submitting...</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <span>Submit Details</span>
+                                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                        </>
+                                    )}
                                 </Button>
                                 <p className="text-center text-[12px] text-gray-400 mt-4 font-medium">
                                     We will only use these details to help plan your visa journey.
                                 </p>
                             </div>
                         </form>
+                        </>
+                        )}
                     </div>
                 </div>
             </div>

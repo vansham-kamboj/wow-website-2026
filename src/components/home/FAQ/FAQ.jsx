@@ -55,7 +55,7 @@ const FAQ = ({ data }) => {
                 
                 {/* Left Side: Heading (approx 40%) */}
                 <div className="w-full lg:w-[35%] lg:sticky lg:top-[120px]">
-                    <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
+                    <h2 className="font-sans font-bold text-[28px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
                         Frequently Asked Questions<br />
                         <span className="text-primary font-medium">find your answers here!</span>
                     </h2>

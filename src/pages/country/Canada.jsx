@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import SEO from '@/components/common/SEO';
 import Card from '@/components/common/Card';
 import FAQ from '@/components/home/FAQ/FAQ';
+import CanadaImage from '@/assets/countries/Canada.png';
 
 const canadaFaqs = [
     {
@@ -34,7 +35,7 @@ const Canada = () => {
             <div 
                 className="relative pt-[150px] pb-[80px] lg:pt-[210px] lg:pb-[140px] flex flex-col overflow-hidden"
                 style={{ 
-                    backgroundImage: `url("https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1600&auto=format&fit=crop")`, 
+                    backgroundImage: `url(${CanadaImage})`, 
                     backgroundSize: 'cover', 
                     backgroundPosition: 'center',
                 }}

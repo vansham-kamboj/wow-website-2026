@@ -36,7 +36,7 @@ const ApplicationProcess = () => {
                     <section className="flex flex-col gap-10 items-center text-center">
                         <div className="z-10 w-full max-w-[800px] mx-auto">
                             
-                            <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[26px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 One Small Mistake Here <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">Ends the Story Early.</span>
                             </h1>

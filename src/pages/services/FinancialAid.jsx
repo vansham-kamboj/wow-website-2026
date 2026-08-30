@@ -36,7 +36,7 @@ const FinancialAid = () => {
                     <section className="flex flex-col items-center text-center">
                         <div className="z-10 w-full max-w-[900px] mx-auto">
                             
-                            <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[26px] md:text-[44px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Money Worries Stop More Dreams <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">Than Rejections Do.</span>
                             </h1>

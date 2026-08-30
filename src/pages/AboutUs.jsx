@@ -54,7 +54,7 @@ const AboutUs = () => {
 
                     <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
                         <div className="flex-1 text-left">
-                            <h1 className="font-sans font-bold text-[36px] md:text-[46px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[28px] md:text-[46px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 We've Walked This Road <br className="hidden lg:block"/> <span className="text-primary">Before You.</span>
                             </h1>
                             <p className="text-[16px] md:text-[18px] leading-[1.65] text-[#555] mb-8 max-w-[500px]">
@@ -79,7 +79,7 @@ const AboutUs = () => {
             <div className="py-16 lg:py-24 bg-white relative">
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <div className="max-w-[800px] mx-auto text-center mb-16">
-                        <h2 className="font-sans font-bold text-[32px] md:text-[42px] leading-[1.15] text-[#161616] tracking-[-1px] mb-6">
+                        <h2 className="font-sans font-bold text-[26px] md:text-[42px] leading-[1.15] text-[#161616] tracking-[-1px] mb-6">
                             Why We Started
                         </h2>
                         <div className="space-y-6 text-[16px] md:text-[18px] leading-[1.7] text-[#555] text-left md:text-center">
@@ -121,7 +121,7 @@ const AboutUs = () => {
             <div className="bg-[#faf8fb] py-16 lg:py-24">
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <div className="text-center mb-16">
-                        <h2 className="font-sans font-bold text-[32px] md:text-[42px] leading-[1.15] text-[#161616] tracking-[-1px] mb-4">
+                        <h2 className="font-sans font-bold text-[26px] md:text-[42px] leading-[1.15] text-[#161616] tracking-[-1px] mb-4">
                             The People Behind Your Approval Letter
                         </h2>
                         <p className="text-[17px] text-[#666] max-w-[600px] mx-auto">
@@ -152,7 +152,7 @@ const AboutUs = () => {
             <div className="py-16 lg:py-24 bg-white">
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <div className="text-center mb-16">
-                        <h2 className="font-sans font-bold text-[32px] md:text-[42px] leading-[1.15] text-[#161616] tracking-[-1px] mb-4">
+                        <h2 className="font-sans font-bold text-[26px] md:text-[42px] leading-[1.15] text-[#161616] tracking-[-1px] mb-4">
                             The Wow Global Standard
                         </h2>
                     </div>
@@ -212,7 +212,7 @@ const AboutUs = () => {
             {/* CTA Band */}
             <div className="bg-primary py-16">
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] text-center">
-                    <h2 className="font-sans font-bold text-[32px] md:text-[42px] text-white leading-[1.2] tracking-[-1px] mb-6">
+                    <h2 className="font-sans font-bold text-[26px] md:text-[42px] text-white leading-[1.2] tracking-[-1px] mb-6">
                         Ready to Start Your Journey With a Partner You Can Trust?
                     </h2>
                     <Link to="/contact">

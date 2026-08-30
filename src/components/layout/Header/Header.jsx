@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '@/assets/images/logo.png';
 import { buttonVariants } from '@/components/ui/button';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 
 const Header = () => {
+  const location = useLocation();
+  const isCountryPage = location.pathname.startsWith('/study-in/') && location.pathname !== '/study-in';
+  
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,6 +62,8 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  const useWhiteText = isCountryPage && !isScrolled;
+
   return (
     <header className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       
@@ -83,12 +88,12 @@ const Header = () => {
         {/* Navigation, right of logo */}
         <nav className="hidden md:flex items-center flex-1">
           <ul className="flex items-center gap-[32px] list-none m-0 p-0">
-            <li><Link to="/" className="text-[14px] text-[#161616] font-bold no-underline hover:text-primary transition-colors duration-200">Home</Link></li>
-            <li><Link to="/about-us" className="text-[14px] text-[#5a5a5a] font-medium no-underline hover:text-primary transition-colors duration-200">About us</Link></li>
+            <li><Link to="/" className={`text-[14px] font-medium no-underline hover:text-primary transition-colors duration-200 ${useWhiteText ? 'text-white/90' : 'text-[#5a5a5a]'}`}>Home</Link></li>
+            <li><Link to="/about-us" className={`text-[14px] font-medium no-underline hover:text-primary transition-colors duration-200 ${useWhiteText ? 'text-white/90' : 'text-[#5a5a5a]'}`}>About us</Link></li>
             
             {/* Services Dropdown */}
             <li className="relative group py-[20px] -my-[20px]">
-              <Link to="/services" className="text-[14px] text-[#5a5a5a] font-medium no-underline hover:text-primary transition-colors duration-200 flex items-center gap-[4px]">
+              <Link to="/services" className={`text-[14px] font-medium no-underline hover:text-primary transition-colors duration-200 flex items-center gap-[4px] ${useWhiteText ? 'text-white/90' : 'text-[#5a5a5a]'}`}>
                 Services
                 <svg viewBox="0 0 24 24" className="w-[14px] h-[14px] fill-none stroke-current stroke-[2] transition-transform duration-300 group-hover:rotate-180"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
@@ -105,7 +110,7 @@ const Header = () => {
 
             {/* Coaching Dropdown */}
             <li className="relative group py-[20px] -my-[20px]">
-              <Link to="/coaching" className="text-[14px] text-[#5a5a5a] font-medium no-underline hover:text-primary transition-colors duration-200 flex items-center gap-[4px]">
+              <Link to="/coaching" className={`text-[14px] font-medium no-underline hover:text-primary transition-colors duration-200 flex items-center gap-[4px] ${useWhiteText ? 'text-white/90' : 'text-[#5a5a5a]'}`}>
                 Coaching
                 <svg viewBox="0 0 24 24" className="w-[14px] h-[14px] fill-none stroke-current stroke-[2] transition-transform duration-300 group-hover:rotate-180"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
@@ -122,7 +127,7 @@ const Header = () => {
 
             {/* Countries Dropdown */}
             <li className="relative group py-[20px] -my-[20px]">
-              <Link to="/study-in" className="text-[14px] text-[#5a5a5a] font-medium no-underline hover:text-primary transition-colors duration-200 flex items-center gap-[4px]">
+              <Link to="/study-in" className={`text-[14px] font-medium no-underline hover:text-primary transition-colors duration-200 flex items-center gap-[4px] ${useWhiteText ? 'text-white/90' : 'text-[#5a5a5a]'}`}>
                 Countries
                 <svg viewBox="0 0 24 24" className="w-[14px] h-[14px] fill-none stroke-current stroke-[2] transition-transform duration-300 group-hover:rotate-180"><path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
@@ -137,14 +142,14 @@ const Header = () => {
               </div>
             </li>
 
-            <li><Link to="/blogs" className="text-[14px] text-[#5a5a5a] font-medium no-underline hover:text-primary transition-colors duration-200">Blogs</Link></li>
+            <li><Link to="/blogs" className={`text-[14px] font-medium no-underline hover:text-primary transition-colors duration-200 ${useWhiteText ? 'text-white/90' : 'text-[#5a5a5a]'}`}>Blogs</Link></li>
           </ul>
         </nav>
 
         {/* Phone & CTA Button, far right */}
         <div className="hidden md:flex items-center gap-[24px] flex-none ml-auto">
-          <a href="tel:+919925944556" className="flex items-center gap-[8px] text-[15px] font-bold text-[#161616] hover:text-primary transition-colors duration-200 no-underline">
-            <div className="w-[32px] h-[32px] rounded-full bg-[#f8f5fa] text-primary flex items-center justify-center">
+          <a href="tel:+919925944556" className={`flex items-center gap-[8px] text-[15px] font-bold hover:text-primary transition-colors duration-200 no-underline ${useWhiteText ? 'text-white' : 'text-[#161616]'}`}>
+            <div className={`w-[32px] h-[32px] rounded-full flex items-center justify-center ${useWhiteText ? 'bg-white/20 text-white' : 'bg-[#f8f5fa] text-primary'}`}>
               <Phone size={16} />
             </div>
             +91 9925944556
@@ -164,7 +169,7 @@ const Header = () => {
         <div className="flex-none ml-auto md:hidden">
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
-            className="p-[8px] text-[#161616] hover:text-primary transition-colors bg-white/50 rounded-md"
+            className={`p-[8px] transition-colors rounded-md ${useWhiteText ? 'text-white bg-white/20' : 'text-[#161616] hover:text-primary bg-white/50'}`}
             aria-label="Toggle Menu"
           >
             <div className="relative w-[26px] h-[26px] overflow-hidden">

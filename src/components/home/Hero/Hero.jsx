@@ -1,5 +1,5 @@
 import React from 'react';
-import { buttonVariants } from '@/components/ui/button';
+import EligibilityChecker from '../EligibilityChecker/EligibilityChecker';
 import heroVideo from '@/assets/videos/hero video.mp4';
 
 const Hero = () => {
@@ -24,7 +24,7 @@ const Hero = () => {
                 
                 {/* Left Side: Heading & Text */}
                 <div className="flex flex-col gap-[14px] flex-1">
-                    <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
+                    <h1 className="font-sans font-bold text-[22px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
                         Your Visa Journey Starts With One Decision , <br />
                         <span className="text-primary font-medium">Choosing the Right Guide</span>
                     </h1>
@@ -33,14 +33,9 @@ const Hero = () => {
                     </p>
                 </div>
                 
-                {/* Right Side: Button, transparent style */}
-                <div className="flex-none w-full lg:w-auto mt-[10px] lg:mt-0">
-                    <button className={buttonVariants({
-                        variant: "custom",
-                        className: "bg-transparent border-2 !border-primary text-primary hover:bg-primary hover:text-white px-[20px] py-[14px] lg:px-[32px] lg:py-[18px] rounded-[8px] font-bold text-[14px] lg:text-[16px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-auto w-full lg:w-auto text-center justify-center"
-                    })}>
-                        Start Your Visa Story, Free Consultation
-                    </button>
+                {/* Right Side: Interactive Eligibility Checker Widget */}
+                <div className="flex-none w-full lg:w-auto mt-[20px] lg:mt-0 z-20">
+                    <EligibilityChecker />
                 </div>
 
             </section>

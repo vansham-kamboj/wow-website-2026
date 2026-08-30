@@ -33,7 +33,7 @@ const Countries = () => {
 
             {/* Top Bar: Heading and Button */}
             <div className="flex justify-between items-end mb-[40px] px-[20px] lg:px-[60px] max-w-[1200px] mx-auto w-full relative z-10">
-                <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
+                <h2 className="font-sans font-bold text-[28px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                     Top Destinations <br/>
                     <span className="text-primary font-medium">for Studies</span>
                 </h2>

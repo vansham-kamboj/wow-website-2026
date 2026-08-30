@@ -36,7 +36,7 @@ const BlogList = () => {
                         <span className="text-primary">Blogs</span>
                     </div>
 
-                    <h1 className="font-sans font-bold text-[36px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[16px]">
+                    <h1 className="font-sans font-bold text-[28px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[16px]">
                         Real Answers for Real <span className="text-primary">Visa Questions.</span>
                     </h1>
                     

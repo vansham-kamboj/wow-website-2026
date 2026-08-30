@@ -80,7 +80,7 @@ const ServiceCards = () => {
             
             {/* Header Area, aligned left matching reference */}
             <div className="relative z-10 px-[20px] lg:px-[60px] max-w-[1200px] mx-auto mb-[30px] lg:mb-[40px]">
-                <h2 className="font-sans font-bold text-[32px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
+                <h2 className="font-sans font-bold text-[26px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                     Every Visa Story Has These Chapters , <br />
                     <span className="text-primary font-medium">We Guide You Through All of Them</span>
                 </h2>

@@ -1,31 +1,66 @@
 import React, { useState, useEffect } from 'react';
 
-const testimonials = [
-    { text: "WOW Global changed my entire perspective. They guided me every step of the way. I couldn't have done this without their support.", name: "Amelia R.", since: "Student since 2023", country: "🇬🇧 United Kingdom" },
-    { text: "The counselors actually know your name. It feels like a true partnership rather than a typical consultancy. Their care makes all the difference.", name: "Rohan K.", since: "Student since 2022", country: "🇨🇦 Canada" },
-    { text: "I came in confused about my options. Six months later, I was studying in Germany. The team made it feel effortless.", name: "Priya M.", since: "Student since 2024", country: "🇩🇪 Germany" },
-    { text: "Personalized attention, zero judgment. Exactly the kind of guidance I was looking for. They tailored everything to my goals.", name: "Daniel F.", since: "Student since 2023", country: "🇦🇺 Australia" },
-    { text: "This is the best decision I've made for my career. From start to finish, complete professionalism and care.", name: "Sara L.", since: "Student since 2021", country: "🇺🇸 United States" },
-    { text: "From application to visa, everything was seamless. Highly recommend WOW Global to anyone looking to study abroad.", name: "Marcus T.", since: "Student since 2024", country: "🇳🇿 New Zealand" }
-];
-
 const StudentReviews = () => {
+    const [testimonials, setTestimonials] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
+        const fetchTestimonials = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/api/testimonials');
+                if (!response.ok) throw new Error('Failed to fetch');
+                const data = await response.json();
+                
+                // Map the DB fields to the format the UI expects
+                const mappedData = data.map(t => ({
+                    text: t.testimonial_text,
+                    name: t.student_name,
+                    since: "Student",
+                    country: t.country
+                }));
+                
+                setTestimonials(mappedData);
+            } catch (error) {
+                console.error('Error fetching testimonials:', error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchTestimonials();
+    }, []);
+
+    useEffect(() => {
+        if (testimonials.length === 0) return;
+        
         const timer = setInterval(() => {
             setActiveIndex(prev => (prev + 1) % testimonials.length);
         }, 4000);
         return () => clearInterval(timer);
-    }, []);
+    }, [testimonials.length]);
 
     const handleNext = () => {
+        if (testimonials.length === 0) return;
         setActiveIndex(prev => (prev + 1) % testimonials.length);
     };
 
     const handlePrev = () => {
+        if (testimonials.length === 0) return;
         setActiveIndex(prev => (prev - 1 + testimonials.length) % testimonials.length);
     };
+
+    if (isLoading) {
+        return (
+            <section className="py-[80px] lg:py-[120px] px-[20px] flex justify-center items-center bg-white">
+                <div className="animate-spin w-10 h-10 border-4 border-primary/20 border-t-primary rounded-full"></div>
+            </section>
+        );
+    }
+
+    if (testimonials.length === 0) {
+        return null;
+    }
 
     return (
         <section className="py-[80px] lg:py-[120px] px-[20px] lg:px-[60px] bg-white">
@@ -33,7 +68,7 @@ const StudentReviews = () => {
                 
                 {/* Left Side, Heading (40%) */}
                 <div className="w-full lg:w-[40%] lg:sticky lg:top-[120px]">
-                    <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
+                    <h2 className="font-sans font-bold text-[28px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[30px]">
                         What Our Students Say<br />
                         <span className="text-primary font-medium">real stories from our community!</span>
                     </h2>

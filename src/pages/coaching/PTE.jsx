@@ -40,7 +40,7 @@ const PTE = () => {
                     {/* Left Side: Heading & Text */}
                     <div className="flex flex-col gap-[14px] flex-1">
                         
-                        <h1 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
+                        <h1 className="font-sans font-bold text-[28px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
                             Fast, AI-Scored, and <br className="hidden md:block"/>
                             <span className="text-primary font-medium">Entirely Coachable.</span>
                         </h1>

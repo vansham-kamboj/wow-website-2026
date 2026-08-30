@@ -57,7 +57,7 @@ const BlogDetail = () => {
                     {blog.category}
                 </div>
 
-                <h1 className="font-sans font-bold text-[36px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[32px] max-w-[900px] mx-auto">
+                <h1 className="font-sans font-bold text-[28px] lg:text-[56px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[32px] max-w-[900px] mx-auto">
                     {blog.title}
                 </h1>
                 
@@ -135,7 +135,7 @@ const BlogDetail = () => {
             {/* RELATED POSTS SECTION */}
             <section className="py-[80px] bg-[#faf8fb] border-y border-[#f0eaf2] px-[20px] lg:px-[60px]">
                 <div className="max-w-[1200px] mx-auto">
-                    <h2 className="font-sans font-bold text-[32px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[40px]">
+                    <h2 className="font-sans font-bold text-[26px] leading-[1.1] text-[#161616] tracking-[-1px] mb-[40px]">
                         Keep Reading
                     </h2>
                     
@@ -184,7 +184,7 @@ const BlogDetail = () => {
             {/* CLOSING CTA BAND */}
             <section className="py-[60px] lg:py-[80px] bg-primary text-center px-[20px]">
                 <div className="max-w-[800px] mx-auto">
-                    <h2 className="font-sans font-bold text-[32px] lg:text-[48px] leading-[1.1] text-white tracking-[-1px] mb-[24px]">
+                    <h2 className="font-sans font-bold text-[26px] lg:text-[48px] leading-[1.1] text-white tracking-[-1px] mb-[24px]">
                         Have Questions About Your Own Visa Journey?
                     </h2>
                     <p className="text-white/90 text-[16px] lg:text-[18px] mb-[32px] max-w-[600px] mx-auto">

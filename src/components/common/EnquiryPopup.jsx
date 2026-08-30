@@ -5,10 +5,14 @@ import { X } from 'lucide-react';
 
 const EnquiryPopup = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState('');
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        country: 'USA'
+        country: 'USA',
+        honeypot: ''
     });
 
     useEffect(() => {
@@ -32,13 +36,42 @@ const EnquiryPopup = () => {
     const handleClose = () => {
         setIsVisible(false);
         sessionStorage.setItem('wow_enquiry_shown', 'true');
+        setTimeout(() => {
+            setIsSuccess(false);
+            setError('');
+        }, 300);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Reuse contact form logic concept (in a real app, dispatch to API)
-        console.log('Enquiry Submitted:', formData);
-        handleClose();
+        setIsLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('http://localhost:5000/api/leads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    country_interested: formData.country,
+                    source: 'popup'
+                })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Failed to submit enquiry');
+            }
+
+            setIsSuccess(true);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     if (!isVisible) return null;
@@ -61,14 +94,36 @@ const EnquiryPopup = () => {
 
                 <div className="mb-6">
                     <h3 className="font-sans font-bold text-[24px] text-[#161616] leading-tight mb-2">
-                        Not Sure Where to Start?
+                        {isSuccess ? 'Thank You!' : 'Not Sure Where to Start?'}
                     </h3>
                     <p className="text-[15px] text-[#666] leading-relaxed">
-                        Drop your details below. We will call you back and guide you through the process step by step.
+                        {isSuccess 
+                            ? 'Your details have been received. One of our experts will call you shortly to guide you through your journey.'
+                            : 'Drop your details below. We will call you back and guide you through the process step by step.'}
                     </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                {!isSuccess && (
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        {error && (
+                            <div className="p-3 text-[14px] text-red-600 bg-red-50 border border-red-100 rounded-lg">
+                                {error}
+                            </div>
+                        )}
+                        
+                        {/* Honeypot field (hidden) */}
+                        <div style={{ display: 'none' }} aria-hidden="true">
+                            <label htmlFor="enquiry-honeypot">Leave this field empty</label>
+                            <input 
+                                id="enquiry-honeypot"
+                                type="text"
+                                name="honeypot"
+                                tabIndex="-1"
+                                autoComplete="off"
+                                value={formData.honeypot}
+                                onChange={(e) => setFormData({...formData, honeypot: e.target.value})}
+                            />
+                        </div>
                     <div className="space-y-1.5">
                         <label htmlFor="enquiry-name" className="text-[13px] font-bold text-[#444] uppercase tracking-wide">
                             Name
@@ -122,11 +177,20 @@ const EnquiryPopup = () => {
                     <Button 
                         type="submit" 
                         variant="custom" 
-                        className="w-full bg-primary hover:bg-primary-hover text-white py-4 rounded-xl font-bold text-[16px] shadow-lg hover:-translate-y-0.5 transition-all mt-4"
+                        disabled={isLoading}
+                        className="w-full bg-primary hover:bg-primary-hover text-white py-4 rounded-xl font-bold text-[16px] shadow-lg hover:-translate-y-0.5 transition-all mt-4 flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:translate-y-0"
                     >
-                        Get a Free Callback
+                        {isLoading ? (
+                            <>
+                                <span className="animate-spin w-5 h-5 border-2 border-white/30 border-t-white rounded-full inline-block"></span>
+                                <span>Submitting...</span>
+                            </>
+                        ) : (
+                            'Get a Free Callback'
+                        )}
                     </Button>
                 </form>
+                )}
             </Card>
         </div>
     );

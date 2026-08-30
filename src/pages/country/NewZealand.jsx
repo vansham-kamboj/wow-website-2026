@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import SEO from '@/components/common/SEO';
 import Card from '@/components/common/Card';
 import FAQ from '@/components/home/FAQ/FAQ';
+import NzImage from '@/assets/countries/New zealand.png';
 
 const newZealandFaqs = [
     {
@@ -34,7 +35,7 @@ const NewZealand = () => {
             <div 
                 className="relative pt-[150px] pb-[80px] lg:pt-[210px] lg:pb-[140px] flex flex-col overflow-hidden"
                 style={{ 
-                    backgroundImage: `url("https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=1600&auto=format&fit=crop")`, 
+                    backgroundImage: `url(${NzImage})`, 
                     backgroundSize: 'cover', 
                     backgroundPosition: 'center',
                 }}
@@ -44,7 +45,7 @@ const NewZealand = () => {
 
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px] w-full relative z-10 flex flex-col items-center text-center">
                     
-                    <h1 className="font-sans font-bold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.1] text-white tracking-[-1.5px] mb-6 max-w-[900px]">
+                    <h1 className="font-sans font-bold text-[26px] md:text-[44px] lg:text-[56px] leading-[1.1] text-white tracking-[-1.5px] mb-6 max-w-[900px]">
                         Smaller Class Sizes, an Easier PR Pathway, <br className="hidden md:block"/>
                         <span className="text-primary-light text-primary">And a Lower Cost of Living.</span>
                     </h1>

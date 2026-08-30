@@ -92,7 +92,7 @@ const WhyChooseUs = () => {
                 
                 {/* Header (Left on Desktop) */}
                 <div className="w-full lg:w-[40%] text-left z-20">
-                    <h2 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
+                    <h2 className="font-sans font-bold text-[26px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                         Why Choose Us<br />
                         <span className="text-primary font-medium">your trusted education partner!</span>
                     </h2>

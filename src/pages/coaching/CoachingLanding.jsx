@@ -43,7 +43,7 @@ const CoachingLanding = () => {
                     {/* Left Side: Heading & Text */}
                     <div className="flex flex-col gap-[14px] flex-1">
                         
-                        <h1 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
+                        <h1 className="font-sans font-bold text-[28px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px] m-0 max-w-[800px]">
                             The Score That Opens the Door<br />
                             <span className="text-primary font-medium">We Help You Hit It.</span>
                         </h1>
@@ -119,7 +119,7 @@ const CoachingLanding = () => {
             <div className="bg-white py-16 lg:py-24">
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <div className="text-center mb-16">
-                        <h2 className="font-sans font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#161616] tracking-[-1px] mb-4">
+                        <h2 className="font-sans font-bold text-[26px] md:text-[40px] leading-[1.2] text-[#161616] tracking-[-1px] mb-4">
                             Pick Your Test, We'll Get You Ready.
                         </h2>
                         <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
@@ -236,7 +236,7 @@ const CoachingLanding = () => {
             <div className="bg-[#faf8fb] py-16 lg:py-24 border-t border-[#f0eaf2]">
                 <div className="max-w-[1200px] mx-auto px-[20px] lg:px-[60px]">
                     <div className="text-center mb-16">
-                        <h2 className="font-sans font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#161616] tracking-[-1px] mb-4">
+                        <h2 className="font-sans font-bold text-[26px] md:text-[40px] leading-[1.2] text-[#161616] tracking-[-1px] mb-4">
                             Why Train With Us
                         </h2>
                         <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>

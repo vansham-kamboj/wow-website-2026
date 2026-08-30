@@ -28,6 +28,17 @@ const Duolingo = () => {
 
     return (
         <div className="bg-white min-h-screen flex flex-col">
+            <style>{`
+                @keyframes progress-loop {
+                    0% { width: 0%; }
+                    15% { width: 0%; }
+                    85% { width: 100%; }
+                    100% { width: 100%; }
+                }
+                .animate-progress-loop {
+                    animation: progress-loop 4s ease-in-out infinite;
+                }
+            `}</style>
             <SEO title="Duolingo English Test Coaching - Wow Global Studies" description="The Test You Take From Your Room That You Still Need to Prepare For. Affordable, fast, and fully proctored via webcam." url="/coaching/duolingo" />
 
             {/* 1. Hero Section */}
@@ -37,7 +48,7 @@ const Duolingo = () => {
                         {/* Text Content */}
                         <div className="flex-1 text-center md:text-left z-10">
                             
-                            <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[26px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 The Test You Take From Your Room, <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">And Still Need to Prepare For.</span>
                             </h1>
@@ -54,41 +65,51 @@ const Duolingo = () => {
                         </div>
                         
                         {/* Casual Laptop/Webcam Mockup Visual */}
-                        <div className="flex-1 w-full max-w-[500px] relative z-10">
+                        <div className="flex-1 w-full max-w-[500px] relative z-10 group mt-8 md:mt-0">
                             {/* Glow */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary/10 rounded-full blur-[40px]"></div>
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary/10 rounded-full blur-[40px] transition-all duration-700 group-hover:bg-primary/20 group-hover:scale-110"></div>
                             
-                            {/* Laptop Base */}
-                            <div className="relative mx-auto w-[320px] md:w-[420px] h-[220px] md:h-[280px] bg-[#161616] rounded-t-2xl rounded-b-md shadow-2xl p-2 border-b-[8px] border-[#333] transform hover:scale-105 transition-transform duration-500">
-                                {/* Webcam dot */}
-                                <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
+                            {/* Laptop Container (Scales as one unit) */}
+                            <div className="relative transform group-hover:scale-105 transition-transform duration-500 ease-out flex flex-col items-center">
                                 
-                                {/* Screen */}
-                                <div className="w-full h-full bg-[#faf8fb] rounded-xl overflow-hidden relative flex flex-col items-center justify-center border-4 border-[#161616]">
-                                    <MonitorPlay size={48} className="text-primary mb-4 opacity-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40" />
+                                {/* Laptop Screen Area */}
+                                <div className="relative w-[320px] md:w-[420px] h-[200px] md:h-[260px] bg-[#161616] rounded-t-2xl rounded-b-sm shadow-2xl p-2 md:p-2.5 border-b-[4px] border-[#333]">
                                     
-                                    <div className="relative z-10 text-center px-4 w-full">
-                                        <div className="bg-white rounded-lg p-4 shadow-sm border border-[#f0eaf2] max-w-[80%] mx-auto">
-                                            <div className="flex items-center gap-2 text-primary font-bold text-sm mb-2 justify-center">
-                                                <Video size={16} /> REC
+                                    {/* Webcam dot */}
+                                    <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
+                                    
+                                    {/* Screen Display */}
+                                    <div className="w-full h-full bg-[#faf8fb] rounded-xl overflow-hidden relative flex flex-col items-center justify-center border-[3px] border-[#161616]">
+                                        <MonitorPlay className="text-primary opacity-[0.03] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 pointer-events-none" />
+                                        
+                                        <div className="relative z-10 text-center w-full">
+                                            <div className="bg-white rounded-xl p-4 md:p-5 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-[#f0eaf2] w-[85%] md:w-[70%] mx-auto">
+                                                <div className="flex items-center gap-2 text-primary font-black text-sm mb-3 justify-center">
+                                                    <Video size={18} /> <span className="tracking-wide">REC</span>
+                                                </div>
+                                                <div className="h-2 md:h-2.5 bg-[#f0eaf2] rounded-full w-full mb-3 overflow-hidden">
+                                                    <div className="h-full bg-primary rounded-full relative animate-progress-loop">
+                                                        <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+                                                    </div>
+                                                </div>
+                                                <div className="text-[#888] text-[9px] md:text-[10px] uppercase font-bold tracking-wider">Adaptive Test in Progress</div>
                                             </div>
-                                            <div className="h-2 bg-[#f0eaf2] rounded-full w-full mb-2">
-                                                <div className="h-full bg-primary rounded-full w-[45%]"></div>
-                                            </div>
-                                            <div className="text-[#888] text-[10px] uppercase font-bold tracking-wider">Adaptive Test in Progress</div>
                                         </div>
                                     </div>
                                     
-                                    {/* Success floaty element */}
-                                    <div className="absolute -right-4 -bottom-4 bg-white p-3 rounded-xl shadow-lg border border-[#f0eaf2] flex items-center gap-2 transform -rotate-6 animate-pulse">
-                                        <CheckCircle2 size={18} className="text-green-500" />
-                                        <span className="font-bold text-xs">Audio Checked</span>
+                                    {/* Success floaty element (Positioned outside overflow-hidden) */}
+                                    <div className="absolute -right-2 md:-right-8 -bottom-4 md:-bottom-6 bg-white py-2 px-3 md:py-3 md:px-5 rounded-xl md:rounded-2xl shadow-xl border border-[#f0eaf2] flex items-center gap-2 md:gap-3 transform rotate-3 z-30 group-hover:-rotate-3 group-hover:scale-110 transition-all duration-500">
+                                        <div className="bg-green-100 p-1 md:p-1.5 rounded-full">
+                                            <CheckCircle2 size={16} className="text-green-600 shrink-0" strokeWidth={3} />
+                                        </div>
+                                        <span className="font-bold text-[11px] md:text-sm text-[#161616] whitespace-nowrap">Audio Checked</span>
                                     </div>
                                 </div>
-                            </div>
-                            {/* Laptop Keyboard Lip */}
-                            <div className="w-[380px] md:w-[500px] h-3 bg-[#ccc] rounded-b-xl mx-auto shadow-md -ml-[30px] md:-ml-[40px] relative z-20">
-                                <div className="w-16 h-1 bg-[#aaa] rounded-b-md mx-auto relative top-0"></div>
+
+                                {/* Laptop Keyboard Lip */}
+                                <div className="w-[360px] md:w-[480px] h-3 md:h-4 bg-[#e5e5e5] rounded-b-2xl shadow-2xl relative z-20 border-t border-[#d5d5d5] flex justify-center">
+                                    <div className="w-16 md:w-20 h-1 md:h-1.5 bg-[#c5c5c5] rounded-b-md relative top-0"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

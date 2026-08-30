@@ -118,7 +118,7 @@ const Features = () => {
                 
                 {/* Header, at the very top, bold and big */}
                 <div className="relative z-10 px-[20px] lg:px-[60px] max-w-[1200px] mx-auto mb-[20px] lg:mb-[10px]">
-                    <h2 className="font-sans font-bold text-[36px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
+                    <h2 className="font-sans font-bold text-[28px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1px]">
                         Headstart Programs<br />
                         <span className="text-primary font-medium">unlock your potential!</span>
                     </h2>

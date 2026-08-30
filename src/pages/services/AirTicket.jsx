@@ -37,7 +37,7 @@ const AirTicket = () => {
                         {/* Text Content */}
                         <div className="flex-1 text-center md:text-left z-10">
                             
-                            <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[26px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Visa Approved. <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">Now Let's Get You There.</span>
                             </h1>

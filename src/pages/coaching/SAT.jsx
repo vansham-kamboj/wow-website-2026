@@ -37,7 +37,7 @@ const SAT = () => {
                         {/* Text Content */}
                         <div className="flex-1 text-center md:text-left z-10">
                             
-                            <h1 className="font-sans font-bold text-[32px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
+                            <h1 className="font-sans font-bold text-[26px] md:text-[42px] lg:text-[52px] leading-[1.1] text-[#161616] tracking-[-1.5px] mb-6">
                                 Your First Big Step <br className="hidden md:block"/>
                                 <span className="text-primary font-medium">Toward a US Degree.</span>
                             </h1>
@@ -54,7 +54,7 @@ const SAT = () => {
                         </div>
                         
                         {/* Encouraging Student/Academic Visual */}
-                        <div className="flex-1 w-full max-w-[500px] relative z-10">
+                        <div className="flex-1 w-full max-w-[500px] relative z-10 mt-8 md:mt-0">
                             {/* Glow */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-orange-100 rounded-full blur-[60px]"></div>
                             
@@ -62,48 +62,48 @@ const SAT = () => {
                             <div className="relative mx-auto w-[320px] md:w-[420px] h-[340px] flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
                                 
                                 {/* Background Decorative Elements */}
-                                <div className="absolute top-[10%] left-[10%] text-yellow-400 animate-pulse"><Star size={32} fill="currentColor" /></div>
-                                <div className="absolute bottom-[20%] right-[10%] text-primary/40"><Heart size={40} fill="currentColor" /></div>
+                                <div className="absolute top-[5%] left-[5%] text-yellow-400 animate-pulse z-0"><Star size={40} fill="currentColor" /></div>
+                                <div className="absolute bottom-[10%] right-[5%] text-primary/40 animate-pulse z-0"><Heart size={48} fill="currentColor" /></div>
                                 
                                 {/* Central Composition */}
-                                <div className="relative z-10 w-[240px] md:w-[280px]">
-                                    {/* Book Stack */}
-                                    <div className="absolute -bottom-4 -left-8 w-full h-[60px] flex flex-col justify-end items-center z-10">
-                                        <div className="w-[180px] h-[14px] bg-blue-100 rounded-md border border-blue-200 mb-1"></div>
-                                        <div className="w-[190px] h-[16px] bg-green-100 rounded-md border border-green-200 mb-1"></div>
-                                        <div className="w-[200px] h-[20px] bg-primary/20 rounded-md border border-primary/30"></div>
+                                <div className="relative z-10 w-[260px] md:w-[300px]">
+                                    {/* Book Stack (Centered behind the card) */}
+                                    <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[85%] flex flex-col justify-end items-center z-0">
+                                        <div className="w-[85%] h-[12px] bg-blue-100 rounded-md border border-blue-200 mb-1"></div>
+                                        <div className="w-[92%] h-[14px] bg-green-100 rounded-md border border-green-200 mb-1"></div>
+                                        <div className="w-full h-[18px] bg-primary/20 rounded-md border border-primary/30"></div>
                                     </div>
                                     
                                     {/* Student/Laptop abstraction */}
-                                    <div className="bg-white rounded-[24px] shadow-2xl p-6 border border-[#f0eaf2] relative z-20 flex flex-col items-center">
+                                    <div className="bg-white rounded-[24px] shadow-2xl p-6 md:p-8 border border-[#f0eaf2] relative z-20 flex flex-col items-center">
                                         <div className="w-20 h-20 rounded-full bg-orange-50 border-4 border-white shadow-inner flex items-center justify-center mb-4">
                                             <GraduationCap size={40} className="text-orange-400" />
                                         </div>
                                         
                                         <div className="text-center mb-6">
-                                            <div className="text-[14px] font-bold text-[#161616] mb-1">Goal: Top US University</div>
-                                            <div className="text-[12px] text-[#888] font-medium">Digital SAT Prep Track</div>
+                                            <div className="text-[14px] md:text-[16px] font-bold text-[#161616] mb-1">Goal: Top US University</div>
+                                            <div className="text-[12px] md:text-[13px] text-[#888] font-medium">Digital SAT Prep Track</div>
                                         </div>
                                         
                                         {/* Progress Indicator */}
-                                        <div className="w-full bg-[#faf8fb] rounded-xl p-3">
+                                        <div className="w-full bg-[#faf8fb] rounded-xl p-3 md:p-4">
                                             <div className="flex justify-between items-center mb-2">
-                                                <span className="text-[11px] font-bold text-[#666]">Scholarship Target</span>
-                                                <span className="text-[11px] font-bold text-primary">1450+</span>
+                                                <span className="text-[11px] md:text-[12px] font-bold text-[#666]">Scholarship Target</span>
+                                                <span className="text-[11px] md:text-[12px] font-bold text-primary">1450+</span>
                                             </div>
-                                            <div className="h-2 bg-[#f0eaf2] rounded-full w-full">
+                                            <div className="h-2 md:h-2.5 bg-[#f0eaf2] rounded-full w-full">
                                                 <div className="h-full bg-primary rounded-full w-[75%] relative">
-                                                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white border-2 border-primary rounded-full"></div>
+                                                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 md:w-4 md:h-4 bg-white border-2 border-primary rounded-full shadow-sm"></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                {/* Floating Badge */}
-                                <div className="absolute top-[20%] -right-4 bg-white p-3 rounded-xl shadow-lg border border-[#f0eaf2] flex items-center gap-2 animate-bounce">
+                                {/* Floating Badge (Brought to front with z-30) */}
+                                <div className="absolute top-[15%] -right-2 md:-right-6 bg-white py-2 px-3 md:py-3 md:px-4 rounded-xl shadow-xl border border-[#f0eaf2] flex items-center gap-2 animate-bounce z-30">
                                     <CheckCircle2 size={18} className="text-green-500" />
-                                    <span className="font-bold text-[12px] text-[#161616]">Math Foundational</span>
+                                    <span className="font-bold text-[11px] md:text-[13px] text-[#161616]">Math Foundational</span>
                                 </div>
                             </div>
                         </div>
