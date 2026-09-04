@@ -21,6 +21,11 @@ app.set('trust proxy', 1);
 app.use(cors(corsOptions));
 app.use(express.json());
 
+// Root route for browser visitors
+app.get('/', (req, res) => {
+  res.send('Wow Global Backend is up and running!');
+});
+
 // Basic health check
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'Wow Global Backend is running' });
