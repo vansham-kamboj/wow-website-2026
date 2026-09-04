@@ -36,6 +36,6 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/leads', leadRoutes);
 app.use('/api/testimonials', testimonialRoutes);
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });

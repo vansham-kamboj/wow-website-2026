@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://api.wowglobalstudies.com/v1',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://genuine-quietude-production-4f84.up.railway.app/',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
