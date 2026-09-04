@@ -7,8 +7,15 @@ import './styles/App.css';
 import AppRoutes from './routes/AppRoutes';
 import EnquiryPopup from './components/common/EnquiryPopup';
 import FloatingCTA from './components/common/FloatingCTA';
+import api from './services/api';
 
 function App() {
+  // Wake up the backend server on initial load (useful for free tier hosting like Render/Heroku)
+  useEffect(() => {
+    api.get('/health').catch((err) => {
+      console.log('Server waking up...');
+    });
+  }, []);
   // Initialize Lenis for smooth scroll (momentum scrolling)
   useEffect(() => {
     const lenis = new Lenis({
