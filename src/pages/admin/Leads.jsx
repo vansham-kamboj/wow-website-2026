@@ -22,7 +22,7 @@ const Leads = () => {
       if (filterStatus) params.append('status', filterStatus);
       if (filterCountry) params.append('country', filterCountry);
 
-      const response = await fetch(`http://localhost:5000/api/leads?${params.toString()}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/leads?${params.toString()}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -44,7 +44,7 @@ const Leads = () => {
   const handleStatusChange = async (id, newStatus) => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`http://localhost:5000/api/leads/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/leads/${id}`, {
         method: 'PATCH',
         headers: { 
           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const Leads = () => {
   const handleSaveNotes = async (id) => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`http://localhost:5000/api/leads/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/leads/${id}`, {
         method: 'PATCH',
         headers: { 
           'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ const Leads = () => {
 
   const handleImportConfirm = async (data) => {
     const token = localStorage.getItem('adminToken');
-    const response = await fetch('http://localhost:5000/api/leads/import', {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/leads/import`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

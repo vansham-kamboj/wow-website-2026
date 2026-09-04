@@ -22,7 +22,7 @@ const Testimonials = () => {
     setIsLoading(true);
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('http://localhost:5000/api/testimonials', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/testimonials`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (!response.ok) throw new Error('Failed to fetch');
@@ -67,8 +67,8 @@ const Testimonials = () => {
       const token = localStorage.getItem('adminToken');
       const method = editingId ? 'PATCH' : 'POST';
       const url = editingId 
-        ? `http://localhost:5000/api/testimonials/${editingId}`
-        : 'http://localhost:5000/api/testimonials';
+        ? `${import.meta.env.VITE_API_BASE_URL}/testimonials/${editingId}`
+        : `${import.meta.env.VITE_API_BASE_URL}/testimonials`;
 
       const body = { ...formData };
       if (!editingId) {
@@ -100,7 +100,7 @@ const Testimonials = () => {
     if (!window.confirm('Are you sure you want to delete this testimonial?')) return;
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`http://localhost:5000/api/testimonials/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/testimonials/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -115,7 +115,7 @@ const Testimonials = () => {
   const handleTogglePublish = async (id, currentStatus) => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`http://localhost:5000/api/testimonials/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/testimonials/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -144,12 +144,12 @@ const Testimonials = () => {
       
       // Update both items in parallel
       await Promise.all([
-        fetch(`http://localhost:5000/api/testimonials/${id}`, {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/testimonials/${id}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
           body: JSON.stringify({ display_order: swapItem.display_order })
         }),
-        fetch(`http://localhost:5000/api/testimonials/${swapItem.id}`, {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/testimonials/${swapItem.id}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
           body: JSON.stringify({ display_order: currentOrder })
@@ -165,7 +165,7 @@ const Testimonials = () => {
 
   const handleImportConfirm = async (data) => {
     const token = localStorage.getItem('adminToken');
-    const response = await fetch('http://localhost:5000/api/testimonials/import', {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/testimonials/import`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

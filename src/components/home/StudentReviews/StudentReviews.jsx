@@ -8,7 +8,7 @@ const StudentReviews = () => {
     useEffect(() => {
         const fetchTestimonials = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/testimonials');
+                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/testimonials`);
                 if (!response.ok) throw new Error('Failed to fetch');
                 const data = await response.json();
                 
